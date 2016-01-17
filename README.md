@@ -1,2 +1,3 @@
-# fse16
+# fss16
+
 Foundations of Software Science
