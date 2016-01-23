@@ -2,9 +2,9 @@
 
 # http://www.flaticon.com/search/icse
 
-root=$1
-url=$2
-file=$3
+root="$1"
+url="$2"
+file="$3"
 title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "$file")
 
 (cat $root/_etc/header.html
