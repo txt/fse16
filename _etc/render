@@ -12,6 +12,7 @@ title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "$file")
   -x def_list  -x toc -x smart_strong         \
   -x attr_list -x sane_lists  -x  fenced_code  \
   -x "codehilite(linenums=True)"
+ cat $root/_etc/footer.html
 )                          |
 python $root/_etc/xpand.py |
 sed -e "s/\$FiLe/$file/g"     \
@@ -19,6 +20,4 @@ sed -e "s/\$FiLe/$file/g"     \
     -e "s?\$IcOnS?/img/icons?g" \
     -e "s?\$ImG?/img?g"          \
     -e "s?\$RoOt?$root?g"
-
-cat $root/_etc/footer.html
 
