@@ -30,7 +30,7 @@ title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "${file}.md")
  cat $root/_etc/footer.html
 )                          |
 python $root/_etc/xpand.py |
-sed -e "s/\$FiLe/$file/g"     \
+sed -e "s/\$FiLe/${file}.md/g"     \
     -e "s/\$TiTlE/$title/g"    \
     -e "s?\$IcOnS?/img/icons?g" \
     -e "s?\$ImG?/img?g"          \
