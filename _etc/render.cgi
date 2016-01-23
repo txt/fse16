@@ -14,7 +14,7 @@ then
      md=markdown_py
 else
      echo "Content-type: text/html"
-     echo
+     echo ""
      root=/home/stuff/fss16.unbox.org
      md=/home/stuff/env1/bin/markdown_py
 fi
