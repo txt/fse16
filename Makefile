@@ -46,7 +46,7 @@ xpand=$(root)/_etc/xpand.py
 
 %.html : %.md
 	@echo "# $(here)/$@"
-	@bash $(render) $(root) $(url) $<  | python $(xpand)  > $@
+	@bash $(render) $(root) $(url) $< > $@
 	@git add $@ $<
 
 setup:
