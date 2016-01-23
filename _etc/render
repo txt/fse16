@@ -1,0 +1,21 @@
+# -*- html -*-
+
+# http://www.flaticon.com/search/icse
+
+root=$1
+file=$2
+title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "$file")
+
+(cat $root/_etc/header.html
+ cat $file | markdown_py                     \
+  -x tables -x footnotes                     \
+  -x def_list  -x toc -x smart_strong         \
+  -x attr_list -x sane_lists  -x  fenced_code  \
+  -x "codehilite(linenums=True)"
+)                          |
+python $root/_etc/xpand.py |
+sed -e "s/\$FiLe/$file/g" -e "s/\$TiTlE/$title/g" \
+    -e "s?\$IcOnS?/img/icons?g" -e "s?\$ImG?/img?g"
+
+cat $root/_etc/footer.html
+

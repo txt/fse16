@@ -1,4 +1,4 @@
-url=fss16.unbox.org
+url=fss16.unbox.org#
 Make:= $(MAKE) -s --no-print-directory #
 root:=$(PWD)
 dirs:=$(shell find . -type d | grep -v \.git | grep -v '_')
@@ -9,11 +9,13 @@ typo:  ready
 	@- git status
 	@- git commit -am "saving"
 	@- git push origin master
+	@- wget -O - http://$(url)/update.cgi
 
 commit:  ready 
 	@- git status
 	@- git commit -a 
 	@- git push origin master
+	@- wget -O - http://$(url)/update.cgi
 
 update:; @- git pull origin master
 status:; @- git status
