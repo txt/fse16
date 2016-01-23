@@ -1,4 +1,4 @@
-url=fss16.unbox.org#
+url=fss16.unbox.org
 Make:= $(MAKE) -s --no-print-directory #
 root:=$(PWD)
 dirs:=$(shell find . -type d | grep -v \.git | grep -v '_')
