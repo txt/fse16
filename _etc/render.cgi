@@ -22,7 +22,6 @@ fi
 
 title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "$file")
 
-
 (cat $root/_etc/header.html
  cat $file | $md                    \
   -x tables -x footnotes                     \
