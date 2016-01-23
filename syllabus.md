@@ -6,18 +6,18 @@
 Fall 2016   
 North Carolina State University
 
-|Note| Details|
-|----|---------|
-|Instructor | Dr. Tim Menzies, (tim@menzies.us) |
-|Office Hours| Wed 6:00-8:45pm |
-|TAs | TBD|  
-|TA office hours| TBD|
-|Web page | TBD|  
-|Lectures| Wednesday 4:30 to 6:30pm  |
-|Textbook: |Storytelling with Data: A Data Visualization Guide for Business Professionals,  by Cole Nussbaumer Knaflic , Wiley, 1119002257 ($26) <br><br>    Data Science from Scratch: First Principles with Python, 2015, by Joel Grus, O'Reilly,2015  ($27) |
-|Readings| TBD |
-|Credit-hours| 3|
-|Prerequisites|CSC222 (Discrete Mathematics) and CSC311 (DataStructures), or similar, graduate or senior standing with at least 3.0 GPA, good knowledge of at least one high level programming language. |
+|Note         | Details|
+|-------------|-----------------------------------|
+|Instructor   | Dr. Tim Menzies, (tim@menzies.us) |
+|Office Hours | Wed 6:00-8:45pm                   |
+|TAs          | TBD                               |   
+|TA office hours| TBD                             |
+|Web page     | http://fss16.unbox.org            |
+|Lectures     | Wednesday 4:30 to 6:30pm          |
+|Textbook:    |Storytelling with Data: A Data Visualization Guide for Business Professionals,  by Cole Nussbaumer Knaflic , Wiley, 1119002257 ($26) <br><br>    Data Science from Scratch: First Principles with Python, 2015, by Joel Grus, O'Reilly,2015  ($27)                                 |
+|Readings     | TBD                               |
+|Credit-hours | 3                                 |
+|Prerequisites|CSC222 (Discrete Mathematics) and CSC311 (DataStructures), or similar, graduate or senior standing with at least 3.0 GPA, good knowledge of at least one high level programming language.          |
 
 # Outline
 
