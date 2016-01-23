@@ -1,6 +1,8 @@
-<img src="/_img/mad.jpg" align=right width=300>
 
-# Foundations of Software Science
+
+# Foundations of Software Science 
+
+<img src="/_img/mad.jpg" align=right width=300>
 
 Most software companies now learn their policies via
 data-driven methods. Modern practitioners treat
