@@ -8,7 +8,7 @@ file=$QUERY_STRING
 [ -z "$file" ] && file="$1"
 file=$(echo $file  | sed 's/[^\&\/=A-Za-z0-9._-]/_/g')
 
-if   which markdown_py
+if   which markdown_py > /dev/null
 then
      root="./"
      md=markdown_py
