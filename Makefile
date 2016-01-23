@@ -20,7 +20,7 @@ commit:  ready
 update:; @- git pull origin master
 status:; @- git status
 
-ready: gitting filesR
+ready: gitting # filesR
 
 filesR:
 	@$(foreach d,$(dirs), \
@@ -56,4 +56,3 @@ setup:
 setupBrew:
 	sudo pip install markdown pygments 
 	brew install aspell emacs-goodies-el
-
