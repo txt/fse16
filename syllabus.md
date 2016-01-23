@@ -3,7 +3,6 @@
 
 ## Foundations of Software Science 
 
-Jan 27, 2016   
 Fall 2016   
 North Carolina State University
 
