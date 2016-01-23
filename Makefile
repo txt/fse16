@@ -20,7 +20,7 @@ commit:  ready
 update:; @- git pull origin master
 status:; @- git status
 
-ready: gitting # filesR
+ready: gitting filesR
 
 filesR:
 	@$(foreach d,$(dirs), \
