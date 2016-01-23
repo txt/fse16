@@ -7,7 +7,6 @@ file=$QUERY_STRING
 
 [ -z "$file" ] && file="$1"
 file=$(echo $file  | sed 's/[^\&\/=A-Za-z0-9._-]/_/g')
-file="$file.md"
 
 if   which markdown_py
 then
@@ -20,10 +19,10 @@ else
      md=/home/stuff/env1/bin/markdown_py
 fi
 
-title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "$file")
+title=$(awk 'gsub(/^#[ \t]*/,"") { print $0; exit }' "${file}.md")
 
 (cat $root/_etc/header.html
- cat $file | $md                    \
+ cat ${file}.md | $md                    \
   -x tables -x footnotes                     \
   -x def_list  -x toc -x smart_strong         \
   -x attr_list -x sane_lists  -x  fenced_code  \
