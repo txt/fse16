@@ -19,7 +19,7 @@ exploring that data; then presenting that data in
 such a way to support business-level decision making
 for software projects.
 
-## But Why ``Software Science'' and not plain-old ``Data Science''
+## But Why "Software Science" and not plain-old "Data Science"
 
 Because software science is different. Consider what it means to reason about software:
 
