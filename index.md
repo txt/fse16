@@ -44,10 +44,10 @@ Points 1+2 means we must always be modeling, always checking old theories,
 never accepting the models from other people without due diligence.  
 
 Point 3 means that human factors will always be intruding and confusing any trite  mathematical characterization of the system (so   forget any notion of data being generated from some simple stochastic data model-- we will have to hunt
-for that signal using a range of algorithmic tools).
+for that signal using a range of algorithmic tools or creative visualizations).
 
 And if that sounds all too hard, then remember point 4. Naturalness is what makes it possible to understand software using
-simple  models (which is James Larus' point).  So, sure, soemtimes,  we
+simple  models (which is James Larus' point).  So, sure, sometimes,  we
 need deep learning etc etc for some complex text,video, audio
 artifacts. But also, for most other things we can generate
 simple models that people can use. And simplicity means comprehenssibility and usability.
