@@ -47,7 +47,7 @@ Point 3 means that human factors will always be intruding and confusing any trit
 for that signal using a range of algorithmic tools or creative visualizations).
 
 And if that sounds all too hard, then remember point 4. Naturalness is what makes it possible to understand software using
-simple  models (which is James Larus' point).  So, sure, sometimes,  we
+simple  models (which is [James Larus](https://www.youtube.com/watch?v=kO9OYnkeRTM)'s point).  So, sure, sometimes,  we
 need deep learning etc etc for some complex text,video, audio
 artifacts. But also, for most other things we can generate
 simple models that people can use. And simplicity means comprehenssibility and usability.
