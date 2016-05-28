@@ -188,6 +188,47 @@ collection experiments; collecting that data;
 exploring that data; then presenting that data in
 such a way to support business-level decision making
 for software projects.</p>
+<h2 id="but-why-software-science-and-not-plain-old-data-science">But Why "Software Science" and not plain-old "Data Science"</h2>
+<p>Because software science is different. Consider what it means to reason about software:</p>
+<ol>
+<li>
+<p>No underlying physical/chemical theory we can rely on for reasoning from first principles.  No background theory
+(e.g. Black–Scholes or E=mc^2). Welcome to Simon's
+<a href="http://courses.washington.edu/thesisd/documents/Kun_Herbert%20Simon_Sciences_of_the_Artificial.pdf">science of the artificial</a>: a constantly changing phenomena which we keep changing, every time we study it.</p>
+</li>
+<li>
+<p>Constantly changing effects: new developers, new platforms, new tools, new tasks.</p>
+</li>
+<li>
+<p>Socio-technical factors that mean we cannot reason just about software but we also have to reason over the communities of people that design, build, use, and host those tools</p>
+</li>
+<li>
+<p>A fundamental simplicity to the thing we are modeling (software). Welcome to Devanbu's <a href="http://macbeth.cs.ucdavis.edu/natural.pdf">naturalness of software</a>:</p>
+<ul>
+<li><em> Programmingg languages, in theory, are complex, flexible
+and powerful, but the programs that real people
+actually write are mostly simple and rather repetitive,
+and thus they have usefully predictable statistical properties
+that can be captured in statistical language models
+and leveraged for software engineering tasks.</em></li>
+</ul>
+</li>
+<li>
+<p>While other communities might be content to use data science software tools, built by others, software scientists know how
+to maintain and extend and deply rapdily changing software. Hence software scientists are well equiped to change and improve
+data science tools. </p>
+</li>
+</ol>
+<p>Points 1+2 means we must always be modeling, always checking old theories,
+never accepting the models from other people without due diligence.  </p>
+<p>Point 3 means that human factors will always be intruding and confusing any trite  mathematical characterization of the system (so   forget any notion of data being generated from some simple stochastic data model-- we will have to hunt
+for that signal using a range of algorithmic tools or creative visualizations).</p>
+<p>If that sounds all too hard, then remember point 4. Naturalness is what makes it possible to understand software using
+simple  models (which is <a href="https://www.youtube.com/watch?v=kO9OYnkeRTM">James Larus</a>'s point).  So, sure, sometimes,  we
+need deep learning etc etc for some complex text,video, audio
+artifacts. But also, for most other things we can generate
+simple models that people can use. And simplicity means comprehenssibility and usability.</p>
+<p>Finally, point 5 means that software scientists are sources of innovation and improvement for data science tools.</p>
      <br clear=all>
      <hr>
      <p><a href="/update.cgi">&copy; 2016, Tim Menzies</a>,
