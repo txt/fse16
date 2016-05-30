@@ -23,3 +23,17 @@ different sub-samples of the training data and
 includes tests for statistical significance and
 effect size.
 
+
+## Homeworks
+
+knn
+
+naiveBayes
+
+Smote
+
+decisionTree
+
+prism
+
+prism on relevants only

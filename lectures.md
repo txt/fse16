@@ -1,5 +1,14 @@
 # Lectures
 
+## Exploring the Premises
+
+No unifying theory
+
++ Counter case "unifying theories of software
+  engineering". Much research, including my one work
+  on abduction. Rejected by numerous conferences/journals.
+  Not operational. Countercase: Whitehead's power laws
+
 ## Data Mining 101
 
 Gentle walk through N learners
