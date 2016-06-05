@@ -37,3 +37,19 @@ decisionTree
 prism
 
 prism on relevants only
+
+## Big project
+
+Incremental learning
+
+- baseline. learn on all data
+- incremental. read data, N instances at a time. update models after N. j48. regrow. kdd the witten way. nb: icnremental.
+- report memory growth
+- if perforamce era i+1 old, turn off learner
+- if performance era i+1 worse, look for old learners that are useful (note: so no global learners)
+
+Build a decisiont ree elarner. Build a contrast set learner
+
+Build a recursive k-means . do anomaly detection. report how often subtrees are anomalous. do re-learning on sub-trees.
+
+As above, but use where.

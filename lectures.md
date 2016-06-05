@@ -90,3 +90,22 @@ SVM
 Decision Trees
 Logistics Regression
 Random Forest
+
+
+## The Process
+
+Sanity Cycles
+
+KDD cycles. From 1994
+
+Goal Cycles
+
+- find someone's hypothesis, that they care about
+- find what feature extractors are needed
+- consider if you need old vs new data
+    - some new data as a sanity check
+    - but generally, more old than new data (exception: Mechanical Turk)
+    - consider the use of surrogates (stand-ins for what you might want)
+    - e.g. surrogate: "happiness" = rate at which folks quit
+    
+    
