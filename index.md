@@ -26,10 +26,9 @@ Because software science is different. Consider what it means to reason about so
 1. Software Science is about software engineering which means that effective software scientists need extensive domain knowledge about software engineering.
 
 2. While other communities might be content to use data science software tools, built by others, software scientists know how
-to maintain and extend and deply rapdily changing software. Hence while other communities might look to AI researchers for
-better data miners, software scientists are the developers, maintainers of their own tools since they
-are best equipped to change and improve
-data science tools.
+to maintain and extend and deply rapdily changing software. Hence while  AI researchers might be the source of 
+better data miners algorithms, it is software  scientists who package and wrap those algorithms
+in environments that support usability, reproducibility, maintainability and scalability.
 
 3. Extensive sets of standard for what is a valid experiment.
 
@@ -40,7 +39,7 @@ data science tools.
 (e.g. Black–Scholes or E=mc^2). Welcome to Simon's
 [science of the artificial](http://courses.washington.edu/thesisd/documents/Kun_Herbert%20Simon_Sciences_of_the_Artificial.pdf): a constantly changing phenomena which we keep changing, every time we study it.
 
-7.  At the same time, inherent simplicities in the data we study:
+5.  At the same time, inherent simplicities in the data we study:
 
     - A fundamental simplicity to the thing we are modeling (software). Welcome to Devanbu's [naturalness of software](http://macbeth.cs.ucdavis.edu/natural.pdf):
           - <em> Programmingg languages, in theory, are complex, flexible
@@ -57,20 +56,12 @@ ethical practices in their work. Appropriate ethics for data science is still an
 evolving area-- which means that software scientists have to be more alert to
   ethical issues that  other kinds of data scientists 
 
-Points 1+2 means we must always be modeling, always
+Points 4 means we must always be modeling, always
 checking old theories,
 never accepting the models from other people without due diligence.  
 
-Point 3 means that human factors will always be
-intruding and confusing any trite mathematical
-characterization of the system (so forget any notion
-of data being generated from some simple stochastic
-data model-- we will have to hunt for that signal
-using a range of algorithmic tools or creative
-visualizations).
-
-If that sounds all too hard, then remember
-point 4. Naturalness is what makes it possible to
+And point 5 makes everything possible.
+Naturalness is what makes it possible to
 understand software using simple models (which is
 [James Larus](https://www.youtube.com/watch?v=kO9OYnkeRTM)'s
 point).  So, sure, sometimes, we need deep learning
