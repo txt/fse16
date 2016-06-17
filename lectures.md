@@ -13,6 +13,19 @@ No unifying theory
 
 Gentle walk through N learners
 
+10 learners in 10 pictures
+
+svm = walls in decision space
+
+k-means, mini-batch k-means
+
+"clustering" = clusters + naive Bayes + c4.5/cart
+
+good resource: https://rayli.net/blog/data/top-10-data-mining-algorithms-in-plain-english/
+
+top down dvision
+- c4.5 cart, pddp, (really, all of spatial trees)
+
 ## Maths 101
 
 bias, variance: basic laws 
