@@ -34,21 +34,16 @@ data science tools.
 3. Extensive sets of standard for what is a valid experiment.
 
 4. The inherent complexity of the task of software science:
-
-- Constantly changing effects: new developers, new platforms, new tools, new tasks.
-
-- Socio-technical factors that mean we cannot reason just about software but we also have to reason over the communities of people that design, build, use, and host those tools
-
-
-- No underlying physical/chemical theory we can rely on for reasoning from first principles.  No background theory
+     - Constantly changing effects: new developers, new platforms, new tools, new tasks.
+     - Socio-technical factors that mean we cannot reason just about software but we also have to reason over the communities of people that design, build, use, and host those tools
+     - No underlying physical/chemical theory we can rely on for reasoning from first principles.  No background theory
 (e.g. Black–Scholes or E=mc^2). Welcome to Simon's
 [science of the artificial](http://courses.washington.edu/thesisd/documents/Kun_Herbert%20Simon_Sciences_of_the_Artificial.pdf): a constantly changing phenomena which we keep changing, every time we study it.
 
-
 7.  At the same time, inherent simplicities in the data we study:
 
-- A fundamental simplicity to the thing we are modeling (software). Welcome to Devanbu's [naturalness of software](http://macbeth.cs.ucdavis.edu/natural.pdf):
-       - <em> Programmingg languages, in theory, are complex, flexible
+    - A fundamental simplicity to the thing we are modeling (software). Welcome to Devanbu's [naturalness of software](http://macbeth.cs.ucdavis.edu/natural.pdf):
+          - <em> Programmingg languages, in theory, are complex, flexible
 and powerful, but the programs that real people
 actually write are mostly simple and rather repetitive,
 and thus they have usefully predictable statistical properties
