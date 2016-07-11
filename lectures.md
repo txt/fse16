@@ -13,18 +13,27 @@ No unifying theory
 
 Gentle walk through N learners
 
-10 learners in 10 pictures
-
-svm = walls in decision space
-
-k-means, mini-batch k-means
-
-"clustering" = clusters + naive Bayes + c4.5/cart
-
-good resource: https://rayli.net/blog/data/top-10-data-mining-algorithms-in-plain-english/
-
-top down dvision
+- 10 learners in 10 pictures
+- svm = walls in decision space
+- k-means, mini-batch k-means
+- "clustering" = clusters + naive Bayes + c4.5/cart
+- good resource: https://rayli.net/blog/data/top-10-data-mining-algorithms-in-plain-english/
+- top down dvision
 - c4.5 cart, pddp, (really, all of spatial trees)
+
+What is the same about all these learners:
+
+- kmeans == nb (clustering)
+- prism == apriori (tiny explanations)
+- cart == j48 == fayyad iranni = scott-know
+- RF == logitboist (Sampling)
+- evaluation (precision, recall etc)
+- most rows and columns don't matter
+
+# theory of artifacts
+
+- engieners repsonsible for their oen tools and optimizing those tools
+- all those beuatiful artifacts
 
 ## Maths 101
 
@@ -120,5 +129,17 @@ Goal Cycles
     - but generally, more old than new data (exception: Mechanical Turk)
     - consider the use of surrogates (stand-ins for what you might want)
     - e.g. surrogate: "happiness" = rate at which folks quit
-    
+
+# reserach methods
+
+parts of a paper
+
+- standfor intro
+- data section (context variables)
+- stats
+- validity 
+
+# A vision of the future
+
+FSS taking over all. the london talk    
     

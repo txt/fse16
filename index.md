@@ -32,6 +32,9 @@ in environments that support usability, reproducibility, maintainability and sca
 
 3. Extensive sets of standard for what is a valid experiment.
 
+4. Software scientists must explain their results to software engineerings-- who are busy people. Hence, software
+scientists need to be very concerned about the comprehensibility of the learned models.
+
 4. The inherent complexity of the task of software science:
      - Constantly changing effects: new developers, new platforms, new tools, new tasks.
      - Socio-technical factors that mean we cannot reason just about software but we also have to reason over the communities of people that design, build, use, and host those tools
@@ -50,11 +53,14 @@ that can be captured in statistical language models
 and leveraged for software engineering tasks.</em>
 
 
-
-8. Finally, software engineers are engineers and hence are duty bound to follow
+6. Finally, software engineers are engineers and hence are duty bound to follow
 ethical practices in their work. Appropriate ethics for data science is still an
 evolving area-- which means that software scientists have to be more alert to
   ethical issues that  other kinds of data scientists 
+
+Point 2  means that software scientists are
+sources of innovation and improvement for data
+science tools.
 
 Points 4 means we must always be modeling, always
 checking old theories,
@@ -70,6 +76,3 @@ artifacts. But also, for most other things we can
 generate simple models that people can use. And
 simplicity means comprehenssibility and usability.
  
-Finally, point 5 means that software scientists are
-sources of innovation and improvement for data
-science tools.

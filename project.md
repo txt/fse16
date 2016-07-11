@@ -26,6 +26,8 @@ effect size.
 
 ## Homeworks
 
+normalization: 10bins znorm
+
 knn
 
 naiveBayes
