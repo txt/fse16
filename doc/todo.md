@@ -1,6 +1,15 @@
+[<img width=900 src="https://raw.githubusercontent.com/txt/fss16/master/img/fss16.png">](http://tiny.cc/fss2016)   
+[Home](http://tiny.cc/fss2016) |
+[At a glance...](OVERVIEW.md) |
+[Syllabus](SYLLABUS.md) |
+[Models](MODELS.md) |
+[Code](src) |
+[Lecturer](http://menzies.us) 
+
+
 # To do
 
-SOONISH
+<img src="http://tiny.cc/soonish" align=right>
 
 + Stats
       + Main Lesson: visualize first, get an intuition, then use stats as a sanity check
