@@ -2,8 +2,6 @@
 [Home](http://tiny.cc/fss2016) |
 [At a glance...](OVERVIEW.md) |
 [Syllabus](SYLLABUS.md) |
-[Models](MODELS.md) |
-[Code](src) |
 [Lecturer](http://menzies.us) 
 
 

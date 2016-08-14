@@ -1,3 +1,0 @@
-AddHandler cgi-script .cgi
-RewriteEngine on
-RewriteRule ^(.*)(.md)$ /_etc/render.cgi?$1
