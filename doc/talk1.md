@@ -5,7 +5,7 @@
 [Submit](http://tiny.cc/fss2016give) |
 [Discuss](https://fss16.slack.com/) |
 [Lecturer](http://menzies.us) |
-[@copy; 2016, CC4.0](https://github.com/txt/fss16/blob/master/LICENSE.md) 
+[&copy; 2016](https://github.com/txt/fss16/blob/master/LICENSE.md) 
 
 
 # Lecture 1
