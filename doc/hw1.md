@@ -28,8 +28,10 @@ For your project, pick a development language. Use anything you want but be awar
 the lecturer and tutor can only support students using
 Python on LINUX and Mac. Note also that all your team members should agree on the language.
 
-Form your team (if 500-level). Got to http://tiny.cc/fss2016give and register your
-team (or just yourself):
+Review your team. Ideally, a team should contain at least one moderate expert
+in what ever language you are using. Got to http://tiny.cc/fss2016give and check out
+our random assignments to the teams. Ask for a change if NO ONE on your team is
+expert on the language you are using. If you make a change:
 
 - mark your people with the same letter in column C, BELOW Row 20
 - add your Gibub url in column B ABOVE row 20
