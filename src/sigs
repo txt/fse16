@@ -1,0 +1,3998 @@
+#!/bin/bash
+
+uniques() {
+   gawk --source 'BEGIN { RS=""
+                          split("",seen,"") }
+                        { copy = tolower($0)
+                          gsub(/(--|::).*\n/,"",copy)
+                          gsub(/[^a-z0-9]/,"",copy)
+                          if ( ! (copy in seen) )
+                              print("\n" $0)
+                          seen[copy]} '
+}
+
+any() {
+    gawk -v Seed=$RANDOM\
+         --source 'BEGIN { srand(Seed); RS=""    }
+          NR==1 { print "\n" $0 "\n"     }
+          NR>1  { Recs[rand()] = $0 }
+          END   { for ( R in Recs ) {print Recs[R]; exit}}
+        '  $1
+}
+
+cat << SoMEI_mpOSSIblE_sYMBOl | uniques | any
+tim.menzies {
+  title:   dr (Ph.D.) and professor;
+  align:   cs, north carolina state university;
+  cell:   3298 EB II ; 
+  call:   1-304-376-2859; fax: 1-919-515-7896;
+  url:   http://menzies.us;
+  fyi:   unless marked "URGENT", i usually won't get 2 your email b4 5pm; 
+}
+
+There are 10 kinds of people in the world- those that 
+understand binary and those that don't.
+
+Doing a job RIGHT the first time gets the job done. Doing the job WRONG
+fourteen times gives you job security.
+
+Rome did not create a great empire by having meetings, they did it by
+killing all those who opposed them.
+
+INDECISION is the key to FLEXIBILITY.
+
+"When a subject becomes totally obsolete we make it a required
+course."  Peter Drucker
+
+I saw two shooting stars last night but they were only satellites .
+Its wrong to wish on space hardware. I wish, I wish, I wish you cared.
+-- Billy Bragg
+
+Then, in 1995, came the most amazing event in the
+history of programming languages: the introduction
+of Java.  -- Programming Languages: Principles and Practice
+
+Instant gratification takes too long.
+-- Carrie Fisher
+
+Complexity is easy. Simplicity is hard.
+--Unknown
+
+Motto for a research laboratory: What we work on today, others will
+first think of tomorrow.  -- Alan Perlis
+
+Every program is a part of some other program and rarely fits.
+-- Alan Perlis
+
+One man's constant is another man's variable.
+-- Alan Perlis
+
+"A language that doesn't affect the way you think about programming,
+is not worth knowing" -- Alan Perlis
+
+"Object-oriented programming is an exceptionally bad idea which could
+only have originated in California."  -- Edsger Dijkstra
+
+The bomb that fell on Hiroshima fell on America too. It fell on no
+city, no munition plants, no docks. It erased no church, vaporized no
+public buildings, reduced no man to his atomic elements. But it fell,
+it fell. -- Hermann Hagedorn
+
+A soldier will fight long and hard for a bit of colored ribbon.
+-- Napoleon Bonaparte
+
+Mankind must put an end to war before war puts an end to mankind.
+-- John F. Kennedy
+
+War is only a cowardly escape from the problems of peace.
+-- Thomas Mann
+
+The tragedy of war is that it uses man's best to do man's worst.
+-- Henry Fosdick
+
+Traditional nationalism cannot survive the fissioning of the atom. One
+world or none. -- Stuart Chase
+
+It is forbidden to kill; therefore all murderers are punished unless
+they kill in large numbers and to the sound of trumpets. -- Voltaire
+
+Only two great groups of animals, men and ants, indulge in highly
+organized mass warfare. -- Charles H. Maskins
+
+The draft is white people sending black people to fight yellow people
+to protect the country they stole from red people. -- James Rado
+
+Soldiers usually win the battles and generals get the credit for them.
+-- Napoleon Bonaparte
+
+When war is declared, truth is the first casualty.
+-- Arthur Ponsonby
+
+War is a series of catastrophes which result in victory.
+-- Albert Pike
+
+I venture to say no war can be long carried on against the will of the
+people. -- Edmund Burke
+
+Patriots always talk of dying for their country and never of killing
+for their country. -- Bertrand Russell
+
+Peace begets prosperity; Prosperity begets pride; Pride begets
+prejudice; Prejudice begets war; War begets poverty. -- Proverb
+
+The final war will be between Pavlov's dog and Schoedinger's Cat.
+--  Robert Anton Wilson
+
+Only the winners decide what were war crimes.
+-- Gary Wills
+
+As long as war is looked upon as wicked, it will always have its
+fascination. When it is looked on as vulgar, it will cease to be
+popular. -- Oscar Wilde
+
+Marriage is the only war in which you sleep with the enemy.
+-- Anonymous
+
+In a war of ideas, it is people who get killed.
+-- Anonymous
+
+Never advise anyone to go to war or to get married.
+-- Abigail Van Buren
+
+
+It would be superfluous in me to point out to your Lordship that this
+is war. -- Charles Francis Adams
+
+Every gun that is made, every warship launched, every rocket fired,
+signifies in the final sense a theft from those who hunger and are not
+fed, those who are cold and are not clothed. -- Dwight D. Eisenhower
+
+It ain't rocket science.
+
+The guns and bombs, the rockets and the warships, all are symbols of
+human failure. -- Lyndon Johnson
+
+What is pride? A whizzing rocket that would emulate a star.
+-- William Wordsworth
+
+The earth is like a spaceship that didn't come with an operating manual.
+-- Buckminster Fuller
+
+It's a very sobering feeling to be up in space and realize that one's
+safety factor was determined by the lowest bidder on a government
+contract.  -- Alan Shepherd
+
+A good driver turns in a small space.
+-- proverb
+
+Half of the modern drugs could well be thrown out of the window,
+except that the birds might eat them.  --Dr. Martin Henry Fischer
+
+
+Suburbia is where the developer bulldozes out the trees, then names
+the streets after them.   --Bill Vaughan
+
+All truth passes through three stages. First, it is ridiculed. Second,
+it is violently opposed. Third, it is accepted as being self-evident.
+-- Arthur Schopenhauer (1788 - 1860)
+
+Inspiration is wonderful when it happens, but the writer must develop
+an approach for the rest of the time... The wait is simply too long.
+-- Leonard Bernstein (1918 - 1990)
+
+It's not enough to create magic. You have to create a price for magic,
+too. You have to create rules.  -- Eric A. Burns
+
+Good teaching is one-fourth preparation and three-fourths theater.
+-- Gail Godwin
+
+Doubt is not a pleasant condition, but certainty is absurd.
+-- Voltaire (1694 - 1778)
+
+I'm a great believer in luck, and I find the harder I work
+the more I have of it. -- Thomas Jefferson (1743 - 1826)
+
+People always call it luck when you've acted more sensibly
+than they have. -- Anne Tyler
+
+Learning is not compulsory... neither is survival.
+-- W. Edwards Deming
+
+People are difficult to govern because they have
+too much knowledge. --Lao-tzu (604 BC - 531 BC),
+
+Genius may have its limitations, but stupidity is not
+thus handicapped. -- Elbert Hubbard (1856 - 1915)
+
+Desire, ask, believe, receive.
+-- Stella Terrill Mann
+
+I always admired atheists. I think it takes a lot of faith.
+-- Diane Frolov and Andrew Schneider,
+
+It well becomes a young man to be modest.
+-- Titus Maccius Plautus (254 BC - 184 BC)
+
+Humility is no substitute for a good personality.
+-- Fran Lebowitz
+
+Life is a long lesson in humility.
+-- James M. Barrie
+
+The most exciting phrase to hear in science, the one that heralds new
+discoveries, is not 'Eureka!' (I found it!) but 'That's funny ...'
+-- Isaac Asimov
+
+And the day came when the risk to remain tight in a bud was more
+painful than the risk it took to blossom. --Anais Nin
+
+Reality is that which, when you stop believing in it, doesn't go away.
+-- Philip K. Dic
+
+Realism...has no more to do with reality than anything else.
+-- Hob Broun
+
+Creativity is allowing yourself to make mistakes. Art is knowing which
+ones to keep.  --Scott Adams
+
+Never interrupt your enemy when he is making a mistake.
+-- Napoleon Bonaparte
+
+Not only is the universe stranger than we imagine, it is stranger than
+we can imagine. --  Sir Arthur Eddington
+
+It only takes 20 years for a liberal to become a conservative without
+changing a single idea. --Robert Anton Wilson
+
+A committee is a cul-de-sac down which ideas are lured and then
+quietly strangled.  -- Sir Barnett Cocks
+
+I can't understand why people are frightened of new ideas. I'm
+frightened of the old ones.  --John Cage
+
+Reality is nothing but a collective hunch.
+-- Lily Tomlin
+
+Doubt is not a pleasant condition, but certainty is absurd.
+-- Voltaire
+
+When they discover the center of the universe, a lot of people will be
+disappointed to discover they are not it.  -- Bernard Bailey
+
+Los Angelos- where cars are a religion, Buddha lives on 101 (north);
+and Nirvana is some place between drive and park. --me
+
+The software isn't finished until the last user is dead.
+-- Anonymous
+
+Software is written by humans and therefore has bugs.
+-- John Jacobs
+
+Skill without imagination is craftsmanship and gives us many useful
+objects such as wickerwork picnic baskets. Imagination without skill
+gives us modern art.  --Tom Stoppard
+
+It's easy to solve the halting problem with a shotgun. :-)
+-- Larry Wall in <199801151836.KAA14656@wall.org>
+
+ANASTEEMAPHILIA: attraction to taller or shorter partners or the
+preference for sexual partners of a different height to oneself.
+
+If Barbie is so popular, why do you have to buy her friends?
+
+When everything's coming your way, you're in the wrong lane
+and going the wrong way
+
+
+"Serious people have few ideas. People with ideas are never serious."
+-- Paul Valery
+
+"I've got the brains. You've got the looks. Lets make lots of money."
+--Pet Shop Boys.
+
+1859 A.D. - Charles Darwin writes "Origin of the Species". Like "Planet
+of the Apes", it fails to gross as much money.
+
+1930 A.D. - Pluto is discovered; the planet.
+The dog wasn't discovered until 1938.
+
+"Without fools the rest of us could not succeed." ~  Mark Twain
+
+"Life is one fool thing after another where as love is two fool things after
++each other." ~  Oscar Wilde
+
+"So deep, deep without a meaning. I knew you'd find me leaving" -- The Church
+
+"I must see new things and investigate them. I want to taste dark water
+and see crackling trees and wild winds." -- Schiele
+
+An ancient adage warns, "Never go to sea with two chronometers; take
+one or three." :: Frederick Brooks
+
+"Well, if it isn't my arch nemesis, Bart Simpson. And his sister Lisa
+to whom I'm fairly indifferent." ::Sideshow Bob
+
+"Your ideas intrigue me, and I wish to subscribe to your newsletter."
+:: Homer Simpson
+
+"They have the Internet on computers, now?"
+:: Homer Simpson
+
+"English - Who needs that? I'm never going to England!"
+:: Homer Simpson
+
+"They laughed at Columbus, they laughed at Fulton, they laughed at
+the Wright brothers. But they also laughed at Bozo the Clown."
+:: Carl Sagan
+
+"Common sense ain't common."
+:: Will Rogers
+
+"Reality is that which, when you stop believing in it, doesn't go away."
+:: Philip K. Dick
+
+"Children say that people are hung sometimes for speaking the truth."
+:: Joan of Arc
+
+"No amount of experimentation can ever prove me right; a single experiment
+can prove me wrong."
+:: Alnert Einstein
+
+"I'm locked in a box -- with a window and a clock."
+:: Milla Jovovich
+
+"I got a feeling something went wrong and now I own a blind camel."
+:: Lyle Rogers, Ishtar.
+
+"Oh, you hate your job? Why didn't you say so? There's a support group  for
+that. It's called EVERYBODY, and they meet at the bar." -- Drew
+
+"Life is like a dog-sled team. If you aren't the lead dog, the scenery
+never changes. ----Unknown
+
+"I made a wrong mistake."
+
+Life... is like a box of chocolates. A cheap, thoughtless, perfunctory gift
+that nobody ever asks for. Unreturnable, because all you get back is another
+box of chocolates. You're stuck with this undefinable whipped-mint crap that
+you mindlessly wolf down when there's nothing else left to eat. Sure, once
+in a while, there's a peanut butter cup, or an English toffee. But they're
+gone too fast, the taste is fleeting. So you end up with nothing but broken
+bits, filled with hardened jelly and teeth-crunching nuts, and if you're
+desperate enough to eat those, all you've got left is a... is an empty
+box... filled with useless, brown paper wrappers.
+::Cigarette Smoking Man
+
+Scully: "Should we arrest David Copperfield?"
+Mulder: "Yes, but not for this"
+
+"Give sorrow words. The grief that does not speak whispers
+the o're-fraught heart, and bids it break." --William Shakespeare
+
+"I wasted time, and now doth time waste me."
+::William Shakespeare
+
+"No, I'm from Iowa. I only work in outer space."
+::James T. Kirk
+
+"Medical scientists are nice people, but you should not
+let them treat you." --August Bier
+
+"To err is human, but it feels divine."
+::Mae West
+
+"Too much of a good thing is wonderful!"
+::Mae West
+
+"When choosing between two evils I like to try the one
+I've never tried before."  --Mae West
+
+Sex is an emotion in motion.
+::Mae West
+
+"We won't have a society if we destroy the environment."
+::Margaret Mead
+
+"Things are going to get a lot worse before they get worse."
+::Lily Tomlin
+
+"The trouble with the rat race is that even if you win,
+you're still a rat." --Lily Tomlin
+
+"Without love, benevolence becomes egotism."
+::Dr. Martin Luther King Jr.
+
+"I hate people. People make me pro-nuclear."
+::Margaret Smith
+
+"I hate quotations. Tell me what you know."
+::Ralph Waldo Emerson
+
+"I find it rather easy to portray a businessman. Being bland,
+rather cruel and incompetent comes naturally to me." --John Cleese
+
+"First secure an independent income, then practice virtue."
+::Greek Proverb
+
+"The artist is nothing without the gift, but the gift
+is nothing without work." --Emile Zola
+
+"Abortion should be safe, legal, and unneccesary."
+::William J. Clinton
+
+"If nothing ever changed, there'd be no butterflies."
+::Unknown
+
+"I feel just like Santa Claus except thinner and younger
+and female and well, Jewish." --Willow, from b.v.t.s.
+
+"If the apocalypse comes, beep me." -- b.t.v.s
+
+"Treat your mind like a bad neighborhood - don't go there alone."
+
+"Ten out of ten people die, so don't take life too seriously."
+
+"Be profound, funny or quiet."
+
+"I don't need your help today.... Love, God."
+
+"Want to hear God laugh? Tell Him your plans."
+
+"Children seldom misquote you. In fact, they usually repeat
+word for word what you shouldn't have said." --Unknown
+
+"After all, all he did was string together a lot of old, well-known
+quotations." --Henry Louis Mencken, on Shakespeare
+
+"All I wanted was to control you, myself and everything else."
+
+"For I am a bear of very little brain and long words bother me."
+::Winnie the Pooh
+
+"To invent, you need a good imagination and a pile of junk."
+::Thomas A. Edison
+
+"It has yet to be proven that intelligence has any survival value."
+::Arthur C. Clark
+
+"I you don't risk anything you risk even more."
+::Erica Jong
+
+"Seek simplicity, and distrust it."
+::Alfred North Whitehead
+
+"In mathematics you don't understand things. You just get used to them."
+::Johann von Neumann
+
+"I've wrestled with reality for 35 years, Doctor, and I'm happy to state I
+finally won out over it." --Jimmy Stewart
+
+"Art is a collaboration between God and the artist, and the less the artist
+does the better." --Andre Gide
+
+"So you see, imagination needs moodling- long, inefficient, happy idling,
+dawdling and puttering." --Brenda Ueland
+
+"I would rather have a mind opened by wonder than one closed by belief."
+:: Gerry Spence,
+
+"Where facts are few, experts are many."
+::Donald R. Gannon
+
+"My definition of an expert in any field is a person who knows
+enough about what's really going to be scared." --P. J. Plauger
+
+"If the facts don't fit the theory, change the facts."
+::Albert Einstein
+
+"If the world should blow itself up, the last audible voice would
+be that of an expert saying it can't be done." --Peter Ustinov
+
+"Money is an honest conversation".
+:: Tim Menzies
+
+"Daddy, the CD is stuck in the floppy drive again."
+
+"Politics is for the moment.  An equation is for eternity."
+:: Albert Einstein
+
+"There are only two ways to live your life. One is as though nothing
+is a miracle. The other is as though everything is." -- Albert Einstein
+
+"Two things are infinite: the universe and human stupidity; and I'm not
+sure about the the universe." -- Albert Einstein
+
+"A stone arch makes a fine bridge across a small stream, but it can't
+scale up 100-fold to cross the Golden Gate." -- Jon Bentley
+
+"If all else fails, immortality can always be assured by spectacular error."
+:: John Kenneth Galbraith
+
+"All programmers are optimists."
+:: Fred Brooks
+
+"The bearing of a child takes nine months, no matter how many women
+are assigned." -- Fred Brooks
+
+"One thing failing is a nightmare?  You must have very gentle dreams."
+
+"All of these trivial amounts of code are adding up fast, though."
+
+"I'll see your object, trade a process, and raise you a Thing."
+
+"Programming would be a more respectable profession if evolution worked on us."
+
+"Being in print does not make it true."
+:: Chris Torek
+
+"Work hard; increase production; prevent accidents, and be happy."
+:: Voice, THX 1138
+
+"Let us be thankful we have commerce. Buy more. Buy more now.
+Buy more and be happy." --Voice THX 1138
+
+"Time to repress another memory."
+:: Bart Simpson
+
+"Going cold turkey isn't as delicious as it sounds."
+:: Homer Simpson
+
+"I was working on a flat tax proposal and I accidentally proved
+there's no god." --Homer Simpson
+
+The standard definition of AI is that which we don't understand.
+::Bill Joy
+
+Inside every large program, there is a small program trying to get out.
+::Tony Hoare
+
+The job of formal methods is to elucidate the assumptions upon which
+formal correctness depends.  --Tony Hoare
+
+Phrases you wish you could say at work: "I'm out of my mind, but feel
+free to leave a message..."
+
+Phrases you wish you could say at work: "I don't work here. I'm a
+consultant."
+
+Phrases you wish you could say at work: "I will always cherish the
+initial misconceptions I had about you."
+
+Phrases you wish you could say at work: "Any connection between your
+reality and mine is purely coincidental."
+
+Phrases you wish you could say at work: "It's a thankless job, but I've
+got a lot of Karma to burn off."
+
+Phrases you wish you could say at work: "Yes, I am an agent of Satan,
+but my duties are largely ceremonial."
+
+Phrases you wish you could say at work: "You sound reasonable... Time
+to up the medication."
+
+Phrases you wish you could say at work: "Who me? I just wander from room
+to room"
+
+Phrases you wish you could say at work:  "Do I look like a people
+person?"
+
+Phrases you wish you could say at work: "This isn't an office. It's Hell
+with fluorescent lighting."
+
+Phrases you wish you could say at work: "I started out with nothing &
+still have most of it left."
+
+Phrases you wish you could say at work: "Does your train of thought have
+a caboose?"
+
+Phrases you wish you could say at work: "Errors have been made. Others
+will be blamed."
+
+Phrases you wish you could say at work: "A PBS mind in an MTV world."
+
+Phrases you wish you could say at work: "Whatever kind of look you were
+going for, you missed."
+
+Phrases you wish you could say at work: "Well, this day was a total
+waste of makeup."
+
+Phrases you wish you could say at work: "Can I trade this job for what's
+behind door 1?"
+
+Phrases you wish you could say at work: "Too many freaks, not enough
+circuses."
+
+Phrases you wish you could say at work: "Chaos, panic, & disorder -
+my work here is done."
+
+Phrases you wish you could say at work: "How do I set a laser printer
+to stun?"
+
+Phrases you wish you could say at work: "Sarcasm is just one more service
+we offer."
+
+If lawyers are disbarred and clergymen defrocked, then can politicians
+become devoted while software engineers become detested?
+
+Clones are people two.
+
+Jesus saves, passes to Moses; he shoots, he SCORES!
+
+Atheism is a non-prophet organization.
+
+Energizer bunny arrested, charged with battery.
+
+No sense being pessimistic. It wouldn't work anyway.
+
+"We have guided missiles and misguided men." - Martin Luther King Jr.
+
+Trust the computer industry to shorten 'Year 2000' to 'Y2K.'  It was
+this kind of thinking that caused the problem in the first place."
+:: Wired Magazine
+
+It was never clear what would come next but that's the risk and that's
+the test. And you were the only one so far to follow. -- Shawn Colvin
+
+"And dreams are what they'll have left when they are gone."
+::Shawn Colvin
+
+The Earth Is Full - Go Home
+
+Cleverly Disguised As A Responsible Adult
+
+The Face Is Familiar But I Can't Quite Remember My Name
+
+Eat Right, Exercise, Die Anyway
+
+Illiterate? Write For Help
+
+Where Are We Going And Why Am I In This Handbasket?
+
+I Haven't Lost My Mind, It's Backed Up On Disk Somewhere
+
+Boldly Going Nowhere
+
+Honk If You've Never Seen An Uzi Fired From A Car Window
+
+How Many Roads Must A Man Travel Down Before He Admits He Is Lost?
+
+"..just as many utensils are made from one metal, so too are myriad
+entities made of the fabric of self."
+
+"The hardest to learn was the lest complicated."
+
+In 1997, much brainpower and capital will be expended developing blurry,
+jerky video for the Internet, ignoring the full-motion, full-color video
+device often referred to as a "TV." --belated predictions from suck.com
+
+"Arms, my only ornament - my only rest, the fight."
+:: Cervantes, Don Quixote
+
+"To understand God's thoughts we must study statistics, for these are the
+measure of his purpose" - Florence Nightingale
+
+"Gingers Rogers did everything Fred Astaire did, only backwards and in
+high heels" - Ginger Rogers (who else?!)
+
+Lazlo's Chinese Relativity Axiom: No matter how great your triumphs or
+how tragic your defeats, 1,000,000,000 Chinese couldn't care less."
+
+"The philosophy of science is about as useful to scientists as
+ornithology is to birds" - Steven Weinberg (Nobel Laureate)
+
+"This time it was right, it would work, and no one would have to to get
+nailed to anything." -- HHGTTG
+
+"Humans are too heavy and die to easily."
+::Why NASA likes satellites.
+
+Abdicate - v. To give up all hope of ever having a flat stomach.
+
+Carcinoma - n. A valley in California, notable for its heavy smog.
+
+Esplanade - v., To attempt an explanation while drunk.
+
+Flabbergasted - adj., Appalled over how much weight you have gained.
+
+Negligent - adj., Describes a condition in which you absent-mindedly
+answer the door in your nightie.
+
+Gargoyle-n., An olive-oil flavored mouthwash.
+
+Bustard - n., A very rude Metrobus driver.
+
+Coffee - n., A person who is coughed upon.
+
+Balderdash - n., A rapidly receding hairline.
+
+Rectitude - n., The formal, dignified demeanor assumed by a proctologist
+immediately before he examines you.
+
+Oyster - n., A person who sprinkles his conversation with Yiddish
+expressions.
+
+Reintarnation: Coming back to life as a hillbilly.
+
+Giraffiti: Vandalism spray-painted very, very high. . .
+
+Tatyr: A lecherous Mr. Potato Head.
+
+Sarchasm: The gulf between the author of sarcastic wit and the recipient
+who doesn't get it.
+
+Inoculatte: To take coffee intravenously when you are running late.
+
+Hipatitis: Terminal coolness.
+
+Osteopornosis: A degenerate disease.
+
+Burglesque: A poorly planned break-in. (See: Watergate)
+
+Karmageddon: It's like, when everybody is sending off all these really
+bad vibes, right? And then, like, the Earth explodes and it's like a
+serious bummer.
+
+Dopeler effect: The tendency of stupid ideas to seem smarter when they
+come at you rapidly.
+
+Intaxication: Euphoria at getting a refund from the IRS, which lasts
+until you realize it was your money to start with.
+
+"Phase1: steal underwear. Phase2: ?. Phase3: profit."
+-exemplar business plan, from South Park
+
+...but who put an orange button in my mailbox with the legend, "my
+inner child is a mean little %$@#"?  Hmmmm?
+
+"These are not books, lumps of lifeless paper, but minds alive on the
+shelves."  - Gilbert Highet
+
+"There is so much about astrophysics I never learned. Oh, how I wish
+I had read the book by that wheelchair guy." -Homer J. Simpson
+
+"Lisa, in this house we obey the laws of thermodynamics!" - Homer J.
+Simpson concerning Lisa's perpetual motion machine.
+
+"Fine words! I wonder where you stole them." - Jonathon Swift
+
+"The best way to predict the future is to invent it." -Alan Kay
+
+"It's not an easy thing to meet your maker." -Roy Batty, (Blade Runner)
+
+"Try again. Fail again. Fail better." -Samuel Beckett
+
+"Beware of the man of one book." -Thomas Aquinas
+
+Laugh till you stop.
+
+"Theory informs data collection" is a polite way of saying that our
+prejudices blind us.
+
+A- 42
+Q- What largest number divides n^7-n for all n? (Leon Sterling)
+
+Seasons don't fear the reaper\ nor do the wind and the sun and the
+rain. -- Blue Oyster Cult
+
+They couldn't hit an elephant at this dist... -- Last words of General
+John Sedgwick, Battle of Spotsylvania, 1864
+
+Animals, which move, have limbs and muscles. The earth does not have
+limbs and muscles; therefore it does not move. -- Scipio Chiaramonti
+
+I have made this letter longer because I did not have time to make it
+shorter -- Blaise Pascal (1656)
+
+Models are made by humans  for other humans to enable  understanding.
+Any model that improves understanding is a good model.
+
+Fast, cheap, and out of control: a robot invasion of the solar system.
+:: Rodney Brooks
+
+The trouble isn't what people don't know; it's what they do know that
+isn't so. -- Will Rogers
+
+I have gone to seek a great perhaps.
+:: suicide note
+
+I found myself a child again\ asleep in baby lotion\ the air was filled
+with Scaletrix\ and the cars were in slow motion. -- Godley & Creme
+
+Southern DOS: Y'all reckon? (Yep/Nope)
+
+Backups? We don' *NEED* no steenking backups.
+
+I found myself designing rooms\ that wouldn't let the light in\ with no
+way in and no way out\ and space to fly my kite in. -- Godley & Creme
+
+No eternal reward will forgive us now for wasting the dawn.
+:: Jim Morrison
+
+Everything should be as simple  as possible, but not simpler.
+:: Albert Einstein
+
+Do you ever get the feeling that the story's too damn real and in the
+present tense? -- Jethro Tull
+
+No fate but what you make.
+:: John Conner
+
+Room service? Send up a  larger room!
+:: Groucho Marx
+
+I must down to the seas again, The lonely sea and the sky, And all I
+ask is tall ship, And a star to steer her by.
+
+Bumper sticker on stealth bomber:  "IF YOU CAN READ THIS, THEN WE WASTED
+50 BILLION BUCKS."
+
+Socialism and communism is for people who like their dictatorships
+obvious.
+
+In the beginning, there was nothing. And God said, "Let there be Light."
+And there was still nothing, but you could see it.
+
+A metaphor is like a simile.
+
+We all live in a yellow subroutine.
+
+A cliche' is only something well said in the first place.
+
+Reporter: Mr Gandhi, what do you think of Western Civilization?
+Gandhi: I think it would be a good idea.
+
+I love deadlines. I like the whooshing sound they make as they fly by.
+
+We don't like their sound.  Groups of guitars are on the way out.
+:: Decca Records, when turning  down the Beatles, 1962.
+
+Quantum particles: the dreams that stuff is made of.
+
+The worst battle is the one never entered.
+
+Time flies like an arrow. Fruit flies like a banana.
+:: Groucho Marx
+
+Shouldn't there be a shorter word for monosyllabic?
+
+If Satan ever loses his hair, there'll be hell toupee.
+
+And for the tourist who really wants to get away from it all- safaris
+in Vietnam. -- Newsweek, late 1960s
+
+Don't worry about people stealing your ideas. If your ideas are any good,
+you'll have to ram them down people's throats.
+
+Spring is nature's way of saying, 'Let's party!'
+
+"How can one be expected to govern a country with 246 kinds of cheese?"
+:: Charles de Gaulle
+
+Si fractum non sit, noli id  reficere (i.e. if it ain't , broke don't
+fix it).
+
+if they give you ruled paper, write the other way.
+::e. e. cummings
+
+Thoreau: Our life is frittered  away by detail... simplify, simplify.
+Clare: Why the second  simplify?
+
+"Sex between 2 people is a beautiful thing ; between 5 it's
+fantastic..." -- Woody Allen
+
+"The bombing begins in five minutes."
+:: R. Reagan
+
+2400 Baud makes you want to get out and push!!
+
+Nobody goes to bed hungry in America.
+:: R. Reagan
+
+Trees make more smog than cars.
+:: R. Reagan
+
+The United States has much to offer the third world war.
+:: R Reagan
+
+"The extreme always seems to make an impression."
+:: J.D.  "Heathers"
+
+I hit the CTRL key but I'm still not in control!
+
+"Our love is God.  Lets go grab a slushie"
+::J.D.  "Heathers"
+
+"I never forget a face, but I think I'll make an exception in your case
+(:-))." -- Groucho Marx
+
+"My teenage angst bullshit now has a body count."
+:: "Heathers"
+
+Veronica: "Why can't you just be my friend, Heather? Why do you have to
+be such a mega- bitch?" Heather Duke: "Because I can be."
+
+Veronica: "I just killed my  best friend.".
+JD: "And your worst enemy." Veronica: "Same difference."
+
+Human was the music\ Natural was the static ...
+:: John Updike
+
+Disk Full - Press F1 to belch.
+
+If the journey is not what you expect, do not be  surprised.
+
+All models are wrong, but some are useful.
+:: George Box
+
+The classification of the constituents of a chaos, nothing less here is
+essayed. -- Herman Melville,  in 'Moby-Dick'
+
+"Music is the space between the notes"
+::Debussy
+
+"Numbers are like people; torture them enough and they'll tell you
+anything."
+
+Clarke's first law:  To find the limits of the possible one must go a
+little way beyond into the impossible.
+
+Backup not found: (A)bort (R)etry (P)anic
+
+Clarke's third law: Any sufficiently advanced technology is
+indistinguishable from magic.
+
+"Brother, Life's a bitch.  And she's back in heat."
+:: "They Live"
+
+Life's a beach,  then you dive.
+
+Life's a bitch, then you diet.
+
+Life's a bitch, then you die.
+
+History will be kind to me for I intend to write it.
+:: Winston Churchill
+
+I don't know why I did it, I don't know why I enjoyed it, and I don't
+know why I'll do it again. -- Bart Simpson
+
+Language is a virus from outer space.
+:: William S. Burroughs
+
+Artiformological- intactitudinarianisminist (one who studies 4-5 letter
+Latin prefixes and suffixes)
+
+Eloquence is logic on fire.
+
+If the enemy is in range, so are you.
+:: Murphy's Law of Combat
+
+A model is a lie that lets you know the truth.
+
+"Join the struggle while you may\ revolution is just a t-shirt away"
+:: Billy Bragg
+
+(A)bort, (R)etry, (T)ake down entire network?
+
+"Every dream has a name\ and names tell your story."
+:: David Byrne
+
+"The mind of the beginner is empty, free of the habits of the expert,
+ready to accept, to doubt, and open to all possibilities."
+:: Baker Roshi
+
+"Introducing Zappo! Its new! Its fab! It does something so utterly
+fantastic that we can't even tell you about it!!"
+
+"Cast your dancing spell my way\ I promise to go under it."
+:: Bob Dylan
+
+"Ya'll never know till youse gives it a go."
+:: A. Yobbo
+
+I only know two tunes. One is Yankee Doodle and the other isn't.
+:: General President Ulysses S. Grant
+
+HOLMES: "When you have eliminated the impossible, whatever is left must be
+the truth." ME: "Errr, lets just go back a little to that first part..."
+
+If a little knowledge is dangerous, where is the man (sic) who has so
+much as to out of danger? -- T.H. Huxley
+
+How to make a whale blubber pie: first, catch a whale. Next...
+:: Mythical Eskimo cookbook
+
+"It's amazing how much 'mature wisdom' resembles being too tired."
+:: Lazarus Long
+
+"Every cloud has a silver lining, every tree a wood-cutter, and every
+fence a fence-sitter."
+
+Don't ever take a fence down until you know why it was put up.
+::G.K. Chesterton
+
+"Don't talk to me about Women's Liberation. They've already got me right
+just where it hurts!!" -- Joe Jackson
+
+REALITY.SYS corrupted: Reboot universe? (Y/N/Q)
+
+"Often, I am surprised.  And why not?  What a dull place the world would
+be if it was merely as good as our wildest dreams."
+
+The only good answers  are the ones that destroy the question.
+:: Susan Sontag
+
+"To have knowledge, first you must doubt."
+
+#include trite.remark
+#include standard.disclaimer
+for(i=i; i<=10; i++) printf("%s","ha ");
+
+Sped up my XT; ran it on 220v! Works greO?_~"
+
+Sane, Plain, And tedious to know.
+:: The epitaph of the computer
+scientist
+
+"Just because there's a reason\ Doesn't mean its understood."
+:: Stiff Little Fingers, circa (?) 1977
+
+I'm terribly sorry, but my karma just ran over your dogma.
+:: me
+
+I can accept the theory of relativity as little as I can accept the
+existence of atoms and other such dogma -- Ernst Mach
+
+A Master is someone who started before you did.
+:: Gary Zukav
+
+NOTWORK: n. A network when it is acting flaky. Origin (?) IBM.
+:: Hackers Dictionary
+
+"We are all fallible, and prone to error; let us then pardon each other's
+folly. This is the first principle of natural right." --Voltaire
+
+Heaven and earth were created all together in the same instant on October
+23rd,  4004 B.C. -- Dr. John Lightfoot
+
+"Butterflies live for exactly the right amount of time."
+:: Amanda
+
+What is observed is not nature itself, but nature exposed to our method
+of questioning. -- Werner Heisenberg
+
+If you cannot- in the long run- tell everyone what you have been doing,
+your doing has been worthless. -- Erwin Schroedinger
+
+A poem is never finished, only abandoned.
+:: Verlaine
+
+Not to know certain things is a great part of wisdom.
+:: Hugo Gratius
+
+For all is but a woven web of guesses.
+:: Xenophanes
+
+"I don't know what the answer is, but I admire the problem."
+:: Ashley
+Brilliant
+
+"Practice random acts of kindness and senseless beauty."
+:: Oz car sticker
+
+"I gave her all she every wanted. It wasn't what she wanted."
+:: U2
+
+"The aim of AI is to make computers act like the ones in the movies."
+:: Graham Mann
+
+"The roots go down and the plant goes up and nobody knows why or how,
+but we are all like that."
+
+"One cloud feels lonely."
+:: Richard Adams
+
+"The world is moved by  jerks."
+:: timm.
+
+"Scientific progress  goes 'BOINK' ? "
+:: Hobbes
+
+"You laughed cause you knew that you were un- touchable\ not because
+what I said was wrong." -- Sinead O'Conner
+
+"I raise my quill; I am responsible."
+:: Voltaire
+
+"Small, dark, noisy room for rent. Get a haircut, a job, and a life then
+apply." -- sign outside a flat,  Venice Beach, LA, USA
+
+"I have come here to chew bubblegum and kick ass, and I'm all out of
+bubblegum." -- Roddy Piper
+
+"Pay no attention to the man behind the curtain."
+:: Wizard of OZ
+
+"Immediately after the ceremony, the bride and bridegroom go into the
+vestry and sigh." -- Women's Magazine
+
+"Marriage is a sort of special friendship recognised by the police."
+:: R.L. Stevenson
+
+"I could live in a nutshell and count myself king of infinite space,
+if I did not have such strange dreams." -- Hamlet
+
+"Veni, vidi, vici, nanah, nanah, nah nah!"
+:: Paul Compton
+
+Veni, Vidi, Visa.
+
+"Captain, I must protest! I am NOT a merry man!!"
+:: Worf (Star Trek, TNG, "Qpid")
+
+"Fortunately, I say, fortunately, I keep my feathers numbered for just
+such an emergency." -- Foghorn Leghorn
+
+"We have many sayings, but no doings."
+
+^^^^^ ^^^ ^^^ ^^^^^ ^^B^ ^^^^ ^^^^^^ ^^^^
+:: A Bee in a carrot patch.
+
+Think fiercely, Write boldly, Spell correctly.
+::Plea above the contribution book of a student newspaper.
+
+What garlic is to food, insanity is to art.
+
+A professor is one who talks in someone else's sleep.
+
+Hey, you sass that hoopy For Prefect? There's a frood who really knows
+where his towel is. -- Douglas Adams
+
+Legend: a lie that has attained the dignity of age.
+:: H.L. Mencken
+
+Life is a whim of several billion cells to be you for a while.
+
+Every once and a while, a film comes along. This is  such a film.
+:: Mad Magazine.
+
+There's never enough  time to do all the  nothing you want.
+:: Calvin
+
+The most incomprehensible thing about the world is that it is
+comprehensible. -- Albert Einstein
+
+When we try to pick out anything by itself, we find it hitched to
+everything else in the universe. -- John Muir
+
+A good many dramatic situations begin with screaming.
+:: Barbarella
+
+For never anything can be  amiss, when simpleness and duty tender it.
+:: Midsummer's Night Dream
+
+I'll play with it first and tell you what it is later.
+:: Miles Davis
+
+Some people like me advice so much they frame it upon the wall instead
+of using it. -- Gordon R. Dickson
+
+One who makes no mistakes, never makes anything.
+::English proverb
+
+An expert is a person who has made all the mistakes that can be
+made in a very narrow field.  --Niels Bohr
+
+The person who says it cannot be done should not interrupt the person doing it.
+::Chinese Proverb
+
+It is easier to get forgiveness than permission.
+::Grace Murray Hopper
+
+The best way to have a good idea is to have lots of ideas.
+::Linus Pauling
+
+We made too many wrong mistakes.
+:: Yogi Berra
+
+A  halo has to fall  only a few inches to become a noose.
+:: Farmer's Almanac
+
+Hypocrisy is the lubricant of society.
+:: David Hull
+
+Mummy always told me not to look into the light of the sun\ but mamma,
+that's were the fun is. -- Manfred Mann
+
+"They only put in a  nickel and they want a dollar song. And all I ever
+wanted was the nickel." -- Melanie
+
+"Well I don't mind that they're lucky\ but it seems like they always win\
+and gambling is illegal in the state of mind I'm in." -- Melanie
+
+Every act of organisation must be preceded by a period of dithering.
+
+You can never success- fully determine before  hand which side of the
+bread to butter.
+
+People who love sausage and respect the law should never watch either
+being made.
+
+The solution to the problem changes the problem.
+:: Peer's Law
+
+The ultimate law: all general statements are false.
+
+What really matters is the name you succeed in imposing on facts, not
+the facts themselves. -- Cohen's Law
+
+You can lead a man to slaughter, but you can't make him think.
+
+People will accept your idea much more readily if you tell them Benjamin
+Franklin said it first. -- Lomin's Law
+
+The real world is a special case.
+:: Horngern's Observation
+
+People will believe anything if you whisper it.
+
+Certum quod factum (i.e. one is certain of only what one builds).
+:: Giovannu Battiista Vico 1668-1744
+
+Thems what can, do. Thems what can't, teach. Thems what can't teach,
+teach the teachers.
+
+I hear it and I forget it. I see it and I remember it. I do it and I
+learn it. -- old Chinese proverb
+
+T'is time to fear when tyrants seem to kiss
+:: Pericles
+
+Consider the peaceful repose of the sausage compared with the
+aggressiveness and violence of bacon.
+
+She thought of things that lovely young women usually think about when
+they are relaxing in treetops and unhampered by underwear.
+
+"I assumed you were versed, or at least interested, in... that knowledge
+that lies outside the empirical play pen." -- Amanda
+
+Life is either a daring adventure or nothing
+:: Helen Keller
+
+Q: What is the worst thing about Irish jokes? The timing.
+A:
+
+Five boxes preserve our freedoms:  soap, ballot, jury, witness, and
+cartridge.
+
+Be nice to your kids. They'll choose your nursing home.
+
+Beauty is in the eye of the beer holder...
+
+3 kinds of people: those who can count & those who can't.
+
+Why is "abbreviation" such a long word?
+
+Don't use a big word where a diminutive one will suffice.
+
+...Every morning is the dawn of a new error...
+
+A flying saucer results when a nudist spills his coffee.
+
+For people who like peace and quiet: a phoneless cord.
+
+I can see clearly now, the brain is gone...
+
+The beatings will continue until morale improves.
+
+I used up all my sick days, so I'm calling in dead.
+
+Mental Floss prevents Moral Decay.
+
+Flight by machines heavier than air is unpractical and insignificant, if
+not utterly impossible -- Simon Newcomb, 18 months before Kitty Hawk
+
+Madness takes its toll. Please have exact change.
+
+Proofread carefully to see if you any words out.
+
+There cannot be a crisis today; my schedule is already full.
+
+I'd explain it to you, but your brain would explode.
+
+Ever stop to think, and forget to start again?
+
+A conclusion is simply the place where you got tired of thinking.
+
+I don't have a solution but I admire the problem.
+
+Don't be so open-minded your brains fall out.
+
+If at first you DO succeed, try not to look astonished!
+
+Diplomacy is the art of saying 'Nice doggie!'... till you can find a rock.
+
+Diplomacy - the art of letting someone have your way.
+
+If one synchronized swimmer drowns, do the rest have to drown too?
+
+If things get any worse, I'll have to ask you to stop helping me.
+
+If I want your opinion, I'll ask you to fill out the necessary forms.
+
+Don't look back, they might be gaining on you.
+
+It's not hard to meet expenses, they're everywhere.
+
+Help Wanted: Telepath. You know where to apply.
+
+Look out for #1.  Don't step in #2 either.
+
+Budget: A method for going broke methodically.
+
+Car service:  If it ain't broke, we'll break it.
+
+Shin: A device for finding furniture in the dark.
+
+Do witches run spell checkers?
+
+Demons are a Ghouls best Friend.
+
+Copywight 1994 Elmer Fudd.  All wights wesewved.
+
+Dain bramaged.
+
+Department of Redundancy Department
+
+Headline: Bear takes over Disneyland in Pooh D'Etat!
+
+What has four legs and an arm?  A happy pit bull.
+
+Cannot find REALITY.SYS. Universe halted.
+
+COFFEE.EXE Missing - Insert Cup and Press Any Key
+
+Buy a Pentium 586/90 so you can reboot faster.
+
+2  2 = 5 for extremely large values of 2.
+
+Computers make very fast, very accurate mistakes.
+
+Computers are not intelligent. They only think they are.
+
+My software never has bugs.  It just develops random features.
+
+C:\WINDOWS C:\WINDOWS\GO C:\PC\CRAWL
+
+C:\DOS   C:\DOS\RUN RUN\DOS\RUN
+
+Best file compression around:  "DEL *.*" = 100% compression
+
+The Definition of an Upgrade: Take old bugs out, put new ones in.
+
+BREAKFAST.COM Halted...Cereal Port Not Responding
+
+The name is Baud......, James Baud.
+
+BUFFERS=20 FILES=15 2nd down, 4th quarter, 5 yards to go!
+
+Access denied--nah nah na nah nah!
+
+C:\> Bad command or file name! Go stand in the corner.
+
+Bad command. Bad, bad command! Sit! Stay! Staaay..
+
+Why doesn't DOS ever say "EXCELLENT command or filename!"
+
+As a computer, I find your faith in technology amusing.
+
+E Pluribus Modem
+
+... File not found. Should I fake it? (Y/N)
+
+Ethernet (n): something used to catch the etherbunny
+
+A mainframe: The biggest PC peripheral available.
+
+An error?  Impossible! My modem is error correcting.
+
+CONGRESS.SYS Corrupted: Re-boot Washington D.C (Y/n)?
+
+Does fuzzy logic tickle?
+
+A computer's attention span is as long as it's power cord.
+
+24 hours in a day...24 beers in a case...coincidence?
+
+Disinformation is not as good as datinformation.
+
+Windows: Just another pane in the glass.
+
+SENILE.COM found . . . Out Of Memory . . .
+
+Who's General Failure & why's he reading my disk?
+
+Ultimate office automation: networked coffee.
+
+RAM disk is *not* an installation procedure.
+
+Shell to DOS...Come in DOS, do you copy? Shell to DOS...
+
+All computers wait at the same speed.
+
+DEFINITION: Computer - A device designed to speed and automate errors.
+
+Rail travel at high speed is not possible, because passengers, unable
+to  breathe, would die of asphyxia. -- Dr. Dionsys Lardner (1793-1865)
+
+Press <CTRL>-<ALT>-<DEL> to continue ...
+
+Smash forehead on keyboard to continue.....
+
+Enter any 11-digit prime number to continue...
+
+ASCII stupid question, get a stupid ANSI!
+
+E-mail returned to sender -- insufficient voltage.
+
+Help! I'm modeming... and I can't hang up!!!
+
+All wiyht. Rho sritched mg kegtops awound?
+
+Error: Keyboard not attached. Press F1 to continue.
+
+"640K ought to be enough for anybody."
+:: Bill Gates, 1981
+
+DOS Tip #17: Add DEVICE=FNGRCROS.SYS to CONFIG.SYS
+
+Hidden DOS secret: add BUGS=OFF to your CONFIG.SYS
+
+Press any key... no, no, no, NOT THAT ONE!
+
+Press any key to continue or any other key to quit...
+
+If you don't know where you are going, you'll end up somewhere else.
+
+Excuse me for butting in, but I'm interrupt-driven.
+
+Error reading FAT record: Try the SKINNY one? (Y/N)
+
+Hit any user to continue.
+
+It is not enough merely to have a good mind; you  must also use it.
+:: Rene Descartes
+
+Will the information superhighway have any rest stops?
+
+For truth can never be confirm'd enough, though doubts did ever sleep.
+:: Pericles
+
+Backup not found: (A)bort (R)etry (T)hrowup
+
+Fortune favors the prepared mind.
+
+(A)bort, (R)etry, (G)et a beer?
+
+If debugging is the process of removing bugs, then programming must be
+the process of putting them in.
+
+Who makes the fairest snow, means most deceit.
+:: Pericles
+
+Programmers don't die, they just GOSUB without RETURN.
+
+Programmer - A red-eyed, mumbling mammal capable of conversing with
+inanimate objects.
+
+Real programmers don't document.  If it was hard to write, it should be
+hard to understand."
+
+"Surfer's Paradise: what Australians have instead  of an after-life."
+
+"Good Americans go to Paris when they die." Q: "And where do bad
+Americans go?"  A: "America." -- Oscar Wilde
+
+But plans are one thing and fate another. When they coincide,  success
+results. -- Tom Robbins
+
+There have been cans of dog food more splendiferous than South
+Richmond. Land mines more tender.
+
+My days in Redfern where spent in drug-induced hazes, my nights in
+mathematical ecstacies.
+
+The ugly may be beautiful,  the pretty never.
+:: Paul Gauguin.
+
+Something in the springtime had telephoned her limbic system and reversed
+the charges.
+
+Every blaze is an occasion of chemical joy... to burn down a police
+station is to hold homecoming for billions of happy molecules.
+
+I've proven that people aren't trees, so it is false when they speak of
+roots. -- Sissy Hankshaw.
+
+This sentence is made of lead (and a sentence of lead gives a reader an
+entirely different sensation from one made of magnesium).
+
+A generation which ignores history has no past- and no future.
+
+Small change can often be found under seat cushions.
+
+Men rarely (if ever) manage to dream up a god superior to themselves. Most
+gods have the manners and morals of a spoiled child.
+
+Wherever you end up, that is where you are.
+:: Mike Brady
+
+Don't be ridiculous 99, we  have to shoot, maim. and kill. We represent
+everything that's wholesome and good in the world. -- Max Smart
+
+Music, comedy and  architecture- all just timing carved out in space.
+:: Gerry Connolly
+
+Yeah, now I've meet me another spinner of strange and gauzey threads.
+:: Suzanne Vega
+
+"And please do not ever look for me\ but with me you will stay\ and you
+will hear yourself in song blowing by one day." -- Suzanne Vega
+
+"Oh hold me like a baby that will not fall asleep\ Curl me upside inside
+you and let me hear you through the heat." -- Suzanne Vega
+
+A clean desk is the sign of a blank mind.
+
+A conservative doesn't want anything to happen for the first time;
+a liberal feels it should happen, but not now. -- Mort Sahl
+
+A little rudeness and disrespect can elevate a meaningless interaction
+to a battle of wits and add drama to an otherwise dull day!! -- Calvin
+
+A pessimist is an optimist in full possession of the facts.
+
+This is the way the world ends. This is the way the world ends. This is
+the way the world ends. Not with a bang, but with a whi
+
+All information wants to be free.
+:: an old Hacker's adage
+
+Altruism is a fine motive, but if you want results, greed works
+much better -- Henry Spencer @ U of Toronto Zoology,
+
+Anarchy may not be the best form of government, but it's better than no
+government at all.
+
+... and I say to them, 'Where the hell were you when the page was blank?'
+:: Harlan Ellison
+
+And if you take cranberries and stew them like prunes, it tastes much
+more like applesauce than rhubarb does. -- Groucho Marx
+
+"And tell me, how did you come to have so many children?" "Well, Groucho,
+I love my wife." "I love my cigar too, but I take it out sometimes."
+
+Any company large enough to have a research lab is large enough not to
+listen to it. -- Alan Kay
+
+Being intelligent doesn't mean you aren't stupid.
+:: Robert Fulghum
+
+By God, Mr. Chairman, at this moment I stand astonished at my own
+moderation! -- Baron Robert Clive
+
+Bye and bye, God caught his eye,
+:: Epitaph for a waiter.
+
+Churchill's Commentary on Man: Man will occasionally stumble over the
+truth, but most of the time he will pick himself up and continue on.
+
+Come, let us retract the foreskin of misconception and apply
+the wire brush of enlightenment. -- Geoff Miller,
+
+Damn the consequences.
+:: Lord Milner
+
+"Data! Data! Data! I can't make bricks without clay."
+:: Sherlock Holmes
+
+"Someone who knows how will always have a job.
+They will work for someone who knows why."
+
+One of the advantages of being disorderly is that one is
+constantly making exciting discoveries.  --A. A. Milne
+
+I'm all in favor of keeping dangerous weapons out of the hands of
+fools. Let's start with typewriters.  --Solomon Short
+
+Democracy is the theory that the people know what they want, and deserve
+to get it good and hard. -- H.L.  Mencken
+
+Disease and deprivation stalk the land like two giant.... stalking things.
+:: Rowan Atkinson, _Black Adder the Third_
+
+Don't go around saying the world owes you a living. The world owes you
+nothing. It was here first.  -- Mark Twain
+
+Endless Loop: n., see Loop, Endless.  Loop, Endless: n., see Endless Loop.
+:: Random Shack Data Processing Dictionary
+
+Every particle continues in its state of rest or uniform motion in a
+straight line except insofar as it doesn't.  -- Sir Arthur Eddington
+
+Every technical corrigendum is met by an equally troublesome new defect
+report.  -- Norman Diamond
+
+Excuse me, do you know what time it is?  Its about about noon. I'd prefer
+something more exact. Alright, its about noon, dtupid.
+
+Experience is what you get when you don't get what you want.
+
+Experience is what you have got after you needed it.
+
+Fear not the evil men do in the name of evil, but heaven protect us from
+the evil men do in the name of good.
+
+Getting information off the Internet is like drinking from a fire hydrant.
+:: Mitchell Kapor (Lotus)
+
+God is real, unless declared integer.
+:: Johan Montald,
+
+Hit the button Chewie!
+:: Han Solo
+
+Ho, HaHa, Dodge, Parry, Spin, HA! THRUST!
+:: Donald Duck
+
+"How do you know I'm Mad?" asked Alice.  "You must be," said the Cat,
+"or you wouldn't have come here."
+
+I am a Bear of Very Little Brain and long words Bother Me.
+:: Winnie-the-Pooh
+
+I drank what?!?
+:: Socrates
+
+I have seen all the works that are done under the sun; and, behold,
+all is vanity and vexation of spirit.
+
+I must construct my own System, or be enslaved to another Man's.
+:: William Blake
+
+I need your clothes, your boots, and your motorcycle.
+:: Arnold
+Schwarzenegger, Terminator 2
+
+"I'll be back."
+:: Arnold Schwarzenegger, Terminator 1
+
+"I know I've made some bad decisions lately, but I'm feeling much better
+now." -- Hal, 2001, after killing most of the crew
+
+I put instant coffee in a microwave oven and almost went back in time.
+:: Stephen Wright
+
+I thought about being born again, but my mother refused.
+
+I thought back to other headaches from my past and sneered at their
+ineffectiveness. -- Harry Harrison
+
+If all those pretty coeds were laid end to end, I would not be surprised.
+:: Dorothy Parker
+
+If everybody's on the record denying it, you've got no problem.
+:: Bill Clinton
+
+Insisting on perfect safety is for people who don't have the balls to
+live in the real world. -- Mary Shafer, NASA Ames Dryden
+
+It's as if all of Scottish cuisine is based on a dare.
+:: Saturday
+Night Live
+
+Life IS pain, highness... anyone who tries to tell you different is
+trying to sell you something.  -- Wesley, The_Princess_Bride
+
+Life is uncertain.  Eat dessert first.
+:: Jim Blandy
+
+Morality is the herd-instinct in the individual.
+:: Nietzsche
+
+Nonsense. Space is blue, and birds fly through it.
+:: Heisenberg
+
+Real Daleks don't climb stairs.... Real Daleks level the building.
+:: Adrian Tritschler, ajft@ajft_sun.cs.adfa.oz.au
+
+Rebel without a clue, Born to be mild.
+:: Kevin.Lowey@Usask.CA,
+DoD #0975
+
+Smoke me a kipper, I'll be back for breakfast.
+:: Red Dwarf
+
+Software engineering? That's like military intelligence, isn't it?
+:: Doug Mohney <sysmgr@king.eng.umd.edu>
+
+Sometimes, you're the windshield....  sometimes, you're the bug!
+:: Mark Knopfler
+
+Tachyon: A gluon that's not completely dry.
+
+Television is an invention that permits you to be entertained in your
+living room by people you wouldn't have in your home. -- David Frost
+
+Testing can show the presence of bugs, but not their absence.
+:: Dijkstra
+
+TeX: When you pronounce it correctly to your computer, the terminal may
+become slightly moist.  - D. E.  Knuth.
+
+The British Interplanetary Society? How many planets are members then?
+:: G. Robb
+
+The first ninety percent of the task takes ninety percent of the time,
+and the last ten percent takes the other ninety percent.
+
+The Force. It surrounds us; It enfolds us; It gets us dates on Saturday
+Nights.  - Obi Wan Kenobi, Famous Jedi  Knight and Party Animal.
+
+The impossible we understand right away - the obvious takes a little
+longer.
+
+The point of quotations is that one can use another's words to be
+insulting. -- Amanda Cross
+
+The revolution will not be televised.  - Mike Mitten,   gnome@pd.org,
+DoD#522
+
+The street finds its own uses for things.  - William Gibson
+
+The word is not the thing. The map is not the territory.  The symbol is
+not the thing symbolized.   - S.I.  Hayakawa
+
+There are three kinds of lies: lies, damned lies, and statistics.
+:: Benjamin Disraeli
+
+There is hopeful symbolism in the fact that flags do not wave in a vacuum.
+:: Arthur C. Clarke
+
+There's a fine line between fishing and standing on the shore like
+an idiot. -- Steven Wright
+
+They shouldn't get any new nuclear weapons until they've used the ones
+they've got. - Murff
+
+This one goes to eleven.
+:: Nigel Tufnel, lead guitar, Spinal Tap
+
+Tiggers don't like honey.
+:: A.A.Milne, The   House at Pooh Corner
+
+What a waste it is to lose one's mind - or not to have a mind. How true
+that is. -- VP Dan Quayle
+
+What's fair got to do with it? It's going to happen.
+::Lawrence of Arabia
+
+What would this country be without this great land of ours?
+:: Ronald Reagan
+
+Love is not just looking at each other, it's looking in the same
+direction. -- Samuel Johnson
+
+Wait here, Audrey. This is between me and the vegetable.
+:: Rick Moranis,
+'Little Shop of Horrors'
+
+"We can lick gravity, but  sometimes the paperwork is  overwhelming"
+:: Wernher von Braun   on bureaucracy
+
+Life is what happens while you are making other plans.
+:: John Lennon
+(1940-1980)
+
+"Vacuums are nothings. We only mention them to let them know we know
+they're there."
+
+"I am not sure how clouds get formed.  But the clouds know how and that
+is the important thing."
+
+"Wind is like the air, only pushier."
+
+"No" President Jimmy Carter's daughter Amy when asked by   a
+reporter if she had any message for the children of America.
+
+668: the neighbor of the beast.
+
+"Measurements are not to provide numbers but insight."
+:: Ingrid Bucher
+
+"A man with one watch knows what time it is.  A man with two watches
+is never sure." --Segal's Law (via Rich Friedrich)
+
+"Who the hell wants to hear actors TALK?"
+::  Harry M. Warner, Warner Bros., 1927
+
+"Everything that can be invented has already been invented."
+::  C. Duell, Director US Patent office, 1899
+
+"I think there is a world market for about five computers."
+:: Thomas J. Watson, Chairman of the Board of IBM, 1943.
+
+"Computers in the future may weigh no more than 1.5 tons."
+:: Popular Mechanics, forecasting the  march of science, 1949.
+
+"But what... is it good for?" --  Engineer at the Advanced Computing
+Systems Division of IBM, 1968, commenting on the microchip.
+
+"Sensible and responsible women do not want to vote."
+::  Grover Cleveland, 1905
+
+"There is no likelihood man can ever tap the power of the atom."
+:: Robert Millikan, Nobel Prize (Physics) 1923
+
+"Heavier-than-air flying machines are impossible."
+::  Lord Kelvin, President, Royal Society, 1895
+
+"He's an honest politician. He stays bought."
+::  Robert Heinlein, "Stranger in a Strange Land"
+
+"Poets have been curiously silent on the subject of cheese."
+:: G.K.Chesterton
+
+"When the map and the terrain differ -- trust the terrain."
+:: Swiss Army instructions
+
+"Freedom's dirty little secret is that you're on your own."
+:: Clarence Thomas
+
+"Problems cannot be solved by the same level of thinking that created
+them." --  A. Einstein
+
+You see things and you say "Why?"; but I dream things that never were
+and I say "Why not?" --  George Bernard Shaw
+
+"Bubbles and arrows don't crash."
+::  Bertrand Meyer
+
+What luck for the rulers that men do not think.
+::  Adolf Hitler
+
+"Sometimes when you fill a vacuum, it still sucks."
+:: Dennis Ritchie on X
+
+"It is dangerous to be right in matters on which the established
+authorities are wrong." --  Voltaire
+
+Simple things should be simple.  Complex things should be possible.
+:: Alan Kay
+
+Sometimes I wonder if men and women really suit each other.  Perhaps they
+should live next door and just visit now and then. --  Katharine Hepburn
+
+Everyone feels instinctively that all the beautiful sentiments in the
+world weigh less than a single lovely action. --  James Russell Lowell
+
+I believe that every right implies a responsibility; every opportunity,
+an obligation; every possession, a duty. --  John D. Rockefeller, Jr.
+
+In the long-run, every Government is the exact symbol of its People,
+with their wisdom and unwisdom. --  Thomas Carlyle
+
+"Measure it with micrometer, mark it with chalk, and cut it with
+an axe." --  Ray
+
+"There are no bad haircuts in cyberspace."
+::  Dave Barry
+
+"The concept is simply staggering.  Pointless, but staggering."
+:: The Doctor (Dr. Who)
+
+"Reality is a sandwich that I did not order."
+::  Zippy the Pinhead
+
+"We are all in the gutter, but some of us are looking at the stars."
+:: Oscar Wilde
+
+"Research is what I'm doing when I don't know what I'm doing."
+:: Werner von Braun
+
+"I think the highest and lowest points are the important ones. All the
+points in between are, well, in between." --  Jim Morrison
+
+"I used to think that the brain was the most wonderful organ in the
+body. Then I  realized who was telling me  this." --  Emo Phillips
+
+"If you want to do something, just do it.  It is easier to apologize
+later than ask for permission up front." --  Admiral Grace Hopper
+
+"Man will occasionally stumble over the truth, but most of the time he
+will  pick himself up and continue." --  Winston Churchill
+
+"Sir, you are drunk!" "Madam, you are ugly.  The difference being, that
+tomorrow I shall be sober." -- Lady Nancy Astor and  Winston Churchill
+
+"Where were you when the page was empty?"
+::  Truman Capote
+
+"If you talk to God, you are praying; If God talks to you, you have
+schizophrenia." --  Thomas Szasz
+
+"Reality is the leading cause of stress for those in touch with it."
+:: Lily Tomlin
+
+"I used to be able to sing the blues, but now I have too much money."
+:: Bruce Dickinson
+
+"Any smoothly functioning technology will have the appearance of
+magic." --  Clarke
+
+"Men never do evil so cheerfully and so completely as when they do so
+from religious conviction." -- Blaise Pascal
+
+"Good bye, good luck, and thanks for all the fish."
+:: The Dolphins Last Words (HHGTTG)
+
+"Life? Don't talk to me about life ..."
+::  Marvin (HHGTTG)
+
+"If only you could see what I've seen with your eyes."
+::  Blade Runner
+
+"Just remember -- wherever you go, there you are."
+::  Buckaroo Bonsai
+
+"Minds are like parachutes. They only function when they are open."
+:: Sir James Dewar
+
+"No one can make you feel inferior without your consent."
+::  Eleanor Roosevelt
+
+"God does not play dice with the universe."
+:: Albert Einstein
+
+"I put up my thumb... and it blotted out the planet Earth."
+:: Neil Armstrong
+
+"Babies don't really need vacations, yet I always see them at the
+beach." --  Stephen Wright
+
+"All Indians walk in single-file.  At least the one I saw did"
+:: [An un-trained observer]
+
+"Be careful about what you teach your children.  They might believe
+you." --  Bob Niland
+
+"It is no coincidence that in no known language does the phrase "As
+pretty as an Airport" appear. --  Douglas Adams
+
+"Flying is easy: just fall down and miss the ground."
+::  Douglas Adams
+
+"Don't try to out-weird _me_! I get stranger things than you free with
+my breakfast cereal!" -- Zaphod Beeblebrox,
+
+"Paradise Is exactly like Where you are right now Only much... much...
+better!" --  Laurie Anderson, Home of the Brave
+
+There is never enough time to do it properly, but always enough time to
+do it again.
+
+...no one believes an hypothesis  except its originator but  everyone
+believes an experiment except the experimenter. -- W.I.B. Beveridge
+
+"Then would you read a Sustaining Book, such as would help and comfort
+a Wedged Bear in Great Tightness?" -- A.A. Milne
+
+"Help, help, a Herrible Heffalump! Hoff, Hoff, a Hellible Horralump! Holl,
+Holl, a Hoffable Hellerump!" -- Piglet, in great distress.
+
+First you get the sugar, then you get the flour, then you get the  wine,
+then you get the women. -- Homer Simpson
+
+But pity the warrior who slays all his foes.
+:: The Fall of Kang (translated from the original Klingon)
+
+"Ha-ha," said Eeyore bitterly. "Merriment and what-not. Don't
+apologize. It's just what _would_ happen."
+
+"Ah!" said Rabbit, who never let things come to him, but always went
+and fetched them.
+
+I am only an egg
+:: Stranger in a Strange Land
+
+"Supposing a tree fell down, Pooh, when we were underneath it?" "Suppose
+it didn't," said Pooh after careful thought.
+
+"Owl," said Pooh, "I have thought of something." "Astute and Helpful
+Bear," said Owl.
+
+Confucius say.. but who will listen?
+
+Hats are wasted on people with no heads.
+
+"My son. it is not for you, a son of Adam, to know what faults a star
+can commit." --C.S.Lewis
+
+"If I could, you know that I'd give you my world\ How can I, when you
+won't take it from me?\ You can go your own way." --Fleetwood Mac
+
+"What shall I call my dear little dormouse? His eyes are small but his
+tail is e-nor-mouse" --A.A. Milne
+
+And I'd say to myself as I looked so lazily down at the sea: "There's
+nobody in the world, and the world was made for me". --A.A. Milne
+
+"But now I am Six, I'm as clever as clever. So I think I'll be six now
+for ever and ever." --A.A. Milne
+
+"My God- look at that son-of-a-bitch go!"
+:: Captain Robert Lewis, co-pilot of the Enola Gay
+
+"Well now, I've always believed that done properly, armed robbery doesn't
+have to be a totally unpleasant experience". --Thelma & Louise
+
+Those who will be able to conquer software will be able to conquer the
+world. - Tadahiro Sekimoto, president,  NEC Corp.
+
+May your future be limited only by your dreams.
+:: Christa McAuliffe
+
+No one can forbid us the future.
+:: Inscription on the base of   Paris's monument to Leon  Gambetta
+
+The past, the future,--two eternities!
+:: Thomas Moore. 1779-1852.
+
+He who has never envied the  vegetable has missed the human drama.
+:: E.M. Cioran
+
+A man who has the knowledge but lacks the power to express it is no
+better off than if he never had the  ideas at all. -- Thucydides
+
+"This idea isn't even  false." -- Neils Bohr delivering the greatest
+put-down of the twentieth  century.
+
+"I was born not knowing  and have only have a little  time to change
+that here and there." -- Richard Feynman
+
+"You can't say A is made of B or vice versa. All  mass is interaction."
+:: Richard Feynman
+
+"Our friend Dirac, too, has a religion, and its guiding principle is
+'There is no God and Dirac is His prophet.'" -- Wolfgang Pauli
+
+"I always keep two legs going, with one trying to reach the other."
+:: John Archibald Wheeler
+
+"In any field find the strangest thing and then  explore it."
+:: John Archibald Wheeler
+
+"It's wrong to thing that  the task of physics is to find out how nature
+is.  Physics concerns only what we  can _say_ about nature." -- Neils Bohr
+
+"God forbid that we should give out a dream of our own imagination for
+a pattern of the world." -- Francis Bacon
+
+"Computers are useless. They can only give you answers."
+:: Pablo Picasso
+
+"Me thinks she protests too much."
+:: Hamlet
+
+"Love's got teeth and she bites so hard\leaving you for dead like a
+deadly shark\ and it doesn't leave a lot to desire." -- Split Enz
+
+"Entia non sunt multiplicanda  praeter de necessitatum." -- William of
+Occam (c 1350)
+
+"Ships in harbour are safe ..... but that's not what  ships are built
+for."
+
+Isn't there a hyphen  in "anal retentive"?
+
+Commitment can be illustrated by a breakfast of ham and eggs. The chicken
+was involved. The pig was committed.
+
+Round up the usual suspects!
+
+"Now Rodney, yaw take that diaper off yaw head and put it back on yaw
+sister."
+
+"He who finishes physics, finishes philosophy and religion at the
+same time." --  C.C.
+
+"The time is out of join :- O cursed spite, that ever I was born to set
+it right!" -- Hamlet
+
+QUEEN: "More matter, with less art."
+POLONIUS: "Madam, I swear I use no art at all."
+
+POLONIUS: "I will most humbly take my leave of you."  HAMLET: "You cannot,
+sir, take from me anything that I will more willingly part withal."
+
+"There is nothing either good or bad, but thinking makes it so."
+:: Hamlet
+
+"To die, - to sleep:- to sleep! Perchance to dream:- ay, there's the rub;
+for in that sleep of death what dreams may come..." -- Hamlet
+
+"I eat the air, promised-cramed. You cannot feed capons so."
+:: Hamlet
+
+"I pr'ythee, take thy fingers from my throat; for though I am not
+splenitive and rash, yet have I something in me dangerous.." -- Hamlet
+
+"Well my baby's so vain\ she is almost a mirror\ and the sound of her
+name sends a permanent shiver\ down my spine."
+
+If I gotta be damned you know I wanna be damned, dancing through the
+night with you!!
+
+"I think I'm gonna be sad\ I think it's today\ The girl that's driving
+me mad\ Is going away\ She's got a ticket to ride."
+
+"Get me a ticket for airplane\ Ain't got time for no fast train\ Oh,
+my lonely days are gone\ I'm coming home\ My baby just wrote me a letter."
+
+What does "it" mean in the sentence "What time is it?"?
+
+The universe does not have laws; it has habits -- and habits can be
+broken.
+
+Q1: Why do ducks have flat feet? A1: To stamp out forest fires.
+Q2: Why do elephants have flat feet? A2: To stamp out burning ducks.
+
+"Here lies one whose name was writ in water." -- Keat's epithat for
+himself.
+
+Isn't it interesting that the same people who laugh at science fiction
+listen to weather forecasts and economists? -- Kelvin Throop III
+
+Never offend people with style when you can offend them with substance.
+:: Sam Brown, "The Washington Post", January 26, 1977
+
+Math is like love -- a simple idea but it can get complicated.
+:: R. Drabek.
+
+Maternity pay? Now every Tom, Dick and Harry will get pregnant.
+:: Malcolm Smith
+
+"And today's fortune teller's conference has been cancelled due to
+unforeseen circumstances."
+
+"If I've told you once, I've told you a million times - don't exaggerate!"
+
+"The big print giveth and the small print taketh away"
+:: Tom Waits
+
+"If you're not living on the edge, you're taking up too much room"
+:: No Fear slogan
+
+"Everyone who lives must die, but not everyone who dies can say they've
+really lived" -- No Fear slogan
+
+"The old-fashioned respect for the young is fast dying out."
+:: Oscar Wilde
+
+"Patience. The companion of wisdom."
+:: St. Augustine
+
+"All my life I wanted to be someone; I guess I should have been more
+specific." -- Jane Wagner
+
+A copy of the universe is not what is required of art; one of the damned
+things is ample. -- Rebecca West
+
+"Throw open the switches on the sonic oscillator and step up the reactor
+power input three more points!!" -- Frank-n-Furter, RHPS
+
+"Michael Rennie was ill the day the earth stood still, but he told us
+where we stand." --Rocky Horror Picture Show
+
+"May silence prevail. May the strength of the wind and the storm be
+mine." -- Javanese saying
+
+"If we don't succeed, we run the risk of failure."
+:: J.  Danforth Quayle
+
+"Republicans understand the importance of bondage between a mother
+and child." -- Dan Quayle
+
+"Welcome to President Bush, Mrs. Bush, and my fellow astronauts."
+:: Dan Quayle
+
+"What a waste it is to lose one's mind.  Or not to have a mind is being
+very wasteful. How true that is." --Dan Quayle
+
+"I believe we are on an irreversible trend toward more freedom and
+democracy - but that could change." -- Dan Quayle, 5/22/89
+
+"One word sums up probably the responsibility of any vice president,
+and that one word is 'to be prepared'." -- Dan Quayle, 12/6/89
+
+"Verbosity leads to unclear, inarticulate things."
+:: Dan Quayle, 11/30/88
+
+"We don't want to go back to tomorrow, we want to go forward."
+:: Dan Quayle
+
+"I have made good judgments in the Past. I have made good judgments in
+the Future." -- Dan Quayle
+
+"The future will be better tomorrow."
+:: Dan Quayle
+
+"We're going to have the best-educated American people in the world."
+:: Dan Quayle, 9/21/88
+
+"People that are really very weird can get into sensitive positions and
+have a tremendous impact on history." -- Dan Quayle
+
+"I stand by all the misstatements that I've made."
+:: Dan Quayle to Sam Donaldson, 8/17/89
+
+"We have a firm commitment to NATO, we are a *part* of NATO. We have a
+firm commitment to Europe. We are a *part* of Europe." -- Dan Quayle
+
+"I am not part of the problem. I am a Republican."
+::Dan Quayle
+
+"I love California, I practically grew up in Phoenix."
+:: Dan Quayle
+
+"A low voter turnout is an indication of fewer people going to the polls."
+:: Dan Quayle
+
+"Illegitimacy is something we should talk about in terms of not having
+it." -- Dan Quayle, 5/20/92  (reported in Esquire, 8/92)
+
+"Murphy Brown is doing better than I am.  At least she knows she still
+has a job next year." -- Dan Quayle, 8/18/92
+
+"We are ready for any unforeseen event that may or may not occur."
+:: Dan Quayle, 9/22/90
+
+"For NASA, space is still a high priority."
+:: Dan Quayle, 9/5/90
+
+"Quite frankly, teachers are the only profession that teach our children."
+:: Dan Quayle, 9/18/90
+
+"The American people would not want to know of any mis-quotes that Dan
+Quayle may or may not make." --  Dan Quayle
+
+"We're all capable of mistakes, but I do not care to enlighten you on
+the mistakes we may or may not have made." -- Dan Quayle
+
+"It isn't pollution that's harming the environment.  It's the impurities
+in our air and water that are doing it." -- Dan Quayle
+
+"It is madness to attempt that which has never been done, except using
+means never as yet tried." -- Francis Bacon
+
+"Our vision is to speed up time, eventually eliminating it."
+:: Alex Schure
+
+Order and simplification are the first steps toward the mastery of
+a subject". --Thomas Mann.
+
+O Body swayed to music. O brightening glance, how can we know the dancer
+from the dance? --W.B. Yeats.
+
+If a camel flies, no one will laugh if it does not get very far.
+:: Paul White
+
+User n.: A programmer who will believe anything you tell him.
+
+"Deliver yesterday, code today,  think tomorrow."
+
+"In these words, I often think you'll recognize me."
+:: Midnight Oil
+
+"Sing me songs of no denying."
+:: Midnight Oil
+
+The gods gave man fire and he invented fire engines.  They gave him love
+and he invented marriage.
+
+Mencken and Nathan's Second Law of The Average American:  All the
+postmasters in small towns read all the postcards.
+
+Finally, Zippy drives his 1958 RAMBLER METROPOLITAN into the faculty
+dining room.
+
+The opposite of "analysis paralysis" is a "WISKY" culture:  "Why Isn't
+Someone Coding Yet?". Both diseases can be fatal.
+
+"What is God was one of us? Just a slob like one of us? Just a stranger
+on the bus, trying to make his way home?" --Joan Osborne
+
+One seldom sees a monument to a committee.
+
+Insanity is hereditary. You get it from your kids.
+
+"The idea is to die young  as late as possible."
+:: Ashley Montagu
+
+"I'm not in the business...  I am the business."
+:: Rachel, Blade Runner
+
+The steady state of disks is full.
+:: Ken Thompson
+
+Q:   What do you get when you cross a post-modernist with a mafioso?
+A:   Someone who makes you an offer you can't understand.
+
+Living in LA is like not having a date on Saturday night.
+:: Candice Bergen
+
+There's no trick to being a humorist when you have the whole government
+working for you. -- Will Rodgers
+
+Oliver's Law:  Experience is something you don't get until just after
+you need it.
+
+A year spent in artificial intelligence is enough to make one believe
+in God.
+
+'I die by the help of too many physicians'
+:: Alexander the Great.
+
+'Hungry bellies have no ears'
+:: Ronald MacDonald
+
+'Huc propius me, Dum doceo insanire omnes, vos orrdine adite' Come near
+me all in order, and I will convince you that you are mad, every one. Hor.
+
+'Human beliefs, like all other natural growths, elude the barriers of
+system' --George Eliot (not a s/w engineer)
+
+'Intellect is not speaking and logicising; it is seeing and ascertaining'
+::Carlyle
+
+'Inter malleum et incudem' Between the hammer and the anvil (rock and
+a hard place)
+
+'Learned without sense and venerably dull'
+:: Churchill
+
+'Learning passes for wisdom amongth them who want both' Temple
+
+'We are in a series of which we do not know the extremes, and believe
+that it has none' -- Emerson
+
+'Altissima quaeque flumina minnimo sono labuntur' The deepest rivers
+flow with the least noise.
+
+'All things are symbolical, and what we call results are beginnings'
+:: Plato
+
+'All balloons give up their gas in the pressure of things, and collapse
+in a sufficiently wretched manner erelong' -- Carlyle
+
+'All disputation makes the mind deaf, and when people are deaf I am dumb'
+:: Joubert.
+
+'Activity is the presence, and character the record, of function'.
+
+'How many people make themselves abstract to appear profound! The greatest
+part of abstract terms are shadows that hide a vacuum' -- Joubet
+
+'Human reason is like a drunken man on horseback; set it up on one side,
+and it tumbles over on the other' -- Luther
+
+'Humanum est errae' (to err is human)
+
+'If we cannot help committing errors, we must build none'
+:: Goethe
+
+It happens sometimes. People just explode. Natural causes.
+:: Repo Man.
+
+"Who will continue to say "ni" to you if you do not appease us."
+:: MP&THG
+
+Ted, we're dead, dude.
+:: Bill S. Preston, Esquire
+
+I'm shootin' pool, Fats.  When I miss you can shoot.
+:: Fast Eddie
+Felson
+
+Crash programs fail because they are based on the theory that, with nine
+women pregnant, you can get a baby a month. -- Wernher von Braun
+
+"She could clean the house for hours or rearrange the flowers or run naked
+through the shady street screaming all the way." --Ballad Of Lucy Jordan
+
+"No, "Eureka" is Greek for "This bath is too hot."
+::Dr.  Who
+
+"What's the use of a good quotation if you can't change it?"
+:: The Doctor
+
+"Millihelen, n.: Amount of beauty necessary to launch a single ship."
+
+There are two ways to write error-free programs.  Only the third one
+works.
+
+'I can go on.  I can't go on. I must go on'
+:: Samuel Beckett
+
+President Thieu says he'll quit if he doesn't get more than 50% of the
+vote.  In a democracy, that's not called quitting. -- The Washington Post
+
+You can't hold a man down without staying down with him.
+:: Booker T. Washington
+
+Someone's at the door.
+::American Gothic
+
+"What is wanted is not the will to believe, but the will to find out,
+which is the exact opposite." -- Bertrand Russell "Skeptical  Essays"
+1928
+
+Flon's Law:  There is not now, and never will be, a language in which
+it is the least bit difficult to write bad programs.
+
+"... After all, all he did was string together a lot of old, well-known
+quotations." -- H.L. Mencken, on Shakespeare
+
+A baby is an alimentary canal with a loud voice at one end and no
+responsibility at the other.
+
+"I don't think so," said Rene Descartes.  Just then, he vanished.
+
+Boy,n.: A noise with dirt on it.
+
+"I'm not real bright, but I can lift heavy things."
+:: Lou Reed
+
+The older I grow, the less important the comma becomes. Let the reader
+catch his own breath. -- Elizabeth Clarkson Zwart
+
+Just because your doctor has a name for your condition doesn't mean he
+knows what it is.
+
+Coincidences are spiritual puns.
+:: G. K. Chesterton
+
+The early bird catches the worm. But look what happened to the early
+worm...
+
+California is a fine place to live -- if you happen to be an orange.
+:: Fred Allen
+
+Under deadline pressure for the next week.  If you want something,
+it can wait.  Unless it's blind screaming paroxysmally hedonistic ...
+
+Lockwood's Long Shot:  The chances of getting eaten up by a lion on Main
+Street aren't one in a million, but once would be enough.
+
+Call on God, but row away from the rocks.
+:: Indian proverb
+
+Unfair animal names: tsetse fly; bullhead; booby; duck-billed platypus;
+sapsucker; Clarence -- Gary Larson
+
+Even if you win the rat race, you're still a rat.
+
+Kiss me twice. I'm schizophrenic.
+
+Know what I hate most? Rhetorical questions.
+:: Henry N. Camp
+
+If you wish to make an improved product, you must already be engaged in
+making an inferior one.
+
+Learned men are the cisterns of knowledge, not the fountainheads.
+
+David was Hebrew king skilled at playing the liar. Solomon, one of David's
+sons, had 300 wives and 700 porcupines. -- Student essay from America
+
+"Years from now when I'm successful and happy...  and he's in prison... I
+hope I'm not too mature to gloat." -- Calvin
+
+"I don't need to compromise my princples, because they don't have the
+slighest bearing on what happens to me anyway." -- Calvin
+
+"Why waste time learning when ingorance is instantaneous?"
+::Hobbes
+
+"I don't know what's weirder- that you're fighting a stuffed animal or
+that you seem to be losing." --Susie, to Calvin
+
+People often find it easier to be a result of the past than a cause of
+the future.
+
+"I didn't know it was impossible when I did it."
+
+The curtain drops by deep request.
+
+"... Had this been an actual emergency, we would have fled in terror,
+and you would not have been informed."
+
+"For three days after death hair and fingernails continue to grow but
+phone calls taper off." -- Johnny Carson
+
+Living on Earth may be expensive, but it includes an annual free trip
+around the Sun.
+
+"Why not?"
+:: Last words of Timothy Leary
+
+Can't talk. Eating.
+:: Homer Simpson
+
+"Hello," he lied.
+:: Don Carpenter quoting a  Hollywood agent
+
+"Two wrongs don't make a right. But three lefts do!"
+
+"Two wrongs don't make a right, but two Wrights make an aeroplane and
+a third right takes you onto the freeway."
+
+The law of gravity says no fair jumping up without coming back down.
+:: Grade school science exam
+
+When people run around and around in circles we say they are crazy.
+When planets do it we say they are orbiting. -- Grade school science exam
+
+Rainbows are just to look at, not to really understand.
+:: Grade school science exam
+
+While the earth seems to be knowingly keeping its distance from the sun,
+it is really only centrificating. -- Grade school science exam
+
+Most books now say our sun is a star.  But it still knows how to change
+back into a sun in the daytime. -- Grade school science exam
+
+Many dead animals in the past changed to fossils while others preferred
+to be oil. -- Grade school science exam
+
+Some oxygen molecules help fires burn while others help make water,
+so sometimes it's brother against brother. -- Grade school science exam
+
+To most people solutions mean finding the answers.  But to chemists
+solutions are things that are still all mixed up. -- Grade school
+science exam
+
+Clouds are high flying fogs.
+:: Grade school science exam
+
+Clouds just keep circling the earth around and around. And around.
+There is not much else to do. -- Grade school science exam
+
+Water vapor gets together in a cloud.  When it is big enough to be called
+a drop, it does. -- Grade school science exam
+
+Humidity is the experience of looking for air and finding water.
+:: Grade school science exam
+
+A hurricane is a breeze of a bigly size.
+:: Grade school science exam
+
+Isotherms and isobars are even more important than their names sound.
+:: Grade school science exam
+
+It is so hot in some places that the people there have to live in
+other places. -- Grade school science exam
+
+Clarke's Observation: Any program that is finally working correctly
+is obsolete.
+
+Iversen's Law: There's never time to do it properly, but always time to
+completely re-do it.
+
+Osborne's Law: Variables won't, constants aren't.
+
+Rhode's Rule of Life: Inside every unworkable, unusable, unattractive
+program is a really useful routine struggling to be seen.
+
+"For the world is hollow and I have touched the sky!!"
+:: Stardate 5476.4.
+
+You probably wouldn't worry about what people think of you if you could
+know how seldom they do. --Olin Miller.
+
+"The chief enemy of creativity is 'good' taste".
+::Picasso
+
+"For they had a machine, a dream of a machine, with springs and gears
+and perfect in every respect." --The Cyperiad
+
+Vill God I Zall (Will God I shall); Motto of clan Menzies.
+
+British Union Finds Dwarfs in Short Supply
+:: Actual Newspaper Headline
+
+Some Pieces of Rock Hudson Sold at Auction
+:: Actual Newspaper Headline
+
+Include your Children when Baking Cookies
+:: Actual Newspaper Headline
+
+Something Went Wrong in Jet Crash, Expert Says
+:: Actual Newspaper Headline
+
+Survivor of Siamese Twins Joins Parents
+:: Actual Newspaper Headline
+
+Prostitutes Appeal to Pope
+:: Actual Newspaper Headline
+
+Plane Too Close to Ground, Crash Probe Told
+:: Actual Newspaper Headline
+
+Juvenile Court to Try Shooting Defendant
+:: Actual Newspaper Headline
+
+Two Soviet Ships Collide, One Dies
+:: Actual Newspaper Headline
+
+Never Withhold Herpes Infection from Loved One
+:: Actual Newspaper Headline
+
+Cold Wave Linked to Temperatures
+:: Actual Newspaper Headline
+
+Enfields Couple Slain; Police Suspect Homicide
+:: Actual Newspaper Headline
+
+"Its never too late to have a happy childhood."
+
+"What part of "NO" didn't you understand?"
+
+"'NOT A MORNING PERSON' doesn't even begin to cover it."
+
+"I still miss my ex-wife, but my aim is improving."
+
+"Thank you for turning a simple transaction into a bizarre ritual."
+
+"The two most common things in the universe are Hydrogen and stupidity."
+-- Harlan Ellison
+
+"New clinical studies show that there are no answers."
+
+"Attitute without a cause."
+
+"We are the most powerful planet on Earth"
+:: Quayle.
+
+"You must be from the shallow end of the gene pool."
+
+"I'm too young to be this old."
+
+"The last time I had this much fun they said I wasn't going to pull
+through."
+
+"Out of my mind. Back in 5 minutes."
+
+"Erotic is using the feather. Kinky is using the whole chicken."
+
+"What exactly is that haricut trying to say?"
+
+"We make up our own answers."
+
+"Consciousness: that annoying time between naps."
+
+"I see you never exercise your right to remain silent."
+
+"Don't be stupid. We have politicians for that."
+
+"Oh sure. But what's the speed of dark?"
+
+"Five out of four people are schizophrenic."
+
+"It's easier for kids to grow up if their parents do first."
+
+"Imagination is intelligence having fun."
+
+"Somethimes you're the bird. Sometimes your the windshield."
+
+"Dogs think they're human. Cats think they're gods."
+
+"One day we'll laugh at my hair\ And the clothes that we wore\ Like
+we've all laughed before." -- Melanie
+
+"Well you drink some of yours, boy and I'll drink some of mine\ Because
+I can't find a taker for this leftover wine."
+:: Melanie
+
+"I feel like a military academy: bits of me keep passing out."
+:: HHGTTG
+
+There is nothing more ugly than an orthodoxy without understanding or
+without compassion. --Francis A. Schaeffer
+
+Unix was not designed to stop people from doing stupid things, because
+that would also stop them from doing clever things. --Doug Gwyn
+
+Work for something because it is good, not just because it stands a
+chance to succeed. --Vaclav Havel
+
+What is written without effort is in general read without pleasure.
+::Samuel Johnson
+
+As you know, Joel, children have always looked up to cowboys as role
+models. And vice versa.
+
+A mathematician is a device for turning coffee into theorems.
+::P. Erdos
+
+Every artist is a cannibal, every poet is a thief; All kill their
+inspiration and sing about the grief. --U2
+
+If I hear the phrase "everything is an object" once more, I think I
+will scream. --Michael Stonebraker
+
+... with proper design, the features come cheaply. This approach is
+arduous, but continues to succeed. --Dennis Ritchie
+
+Whatever you can do or dream you can, begin it. Boldness has genius,
+power, and magic in it. --Johann Wolfgang von Goethe
+
+Good work is always done in defiance of management.
+::R. Woodward
+
+I never understood people who don't have bookshelves.
+::George Plimpton
+
+The novelist says in words what cannot be said in words. --Ursula K. Le
+Guin, in her 1976 introduction to The Left Hand of Darkness
+
+Any philosophy that can be put in a nutshell belongs there.
+::Sydney J. Harris
+
+The effect of his affected accent affected her, and effected a change
+in her affections. --Steve Chapin
+
+A witty saying proves nothing.
+::Voltaire
+
+Hydrogen is a colorless, odorless gas which, given enough time, turns
+into people. --Henry Hiebert
+
+He seems to have an inordinate fondness for beetles.
+::Naturalist J.B.S. Haldane, on God
+
+The trouble with the world is that the stupid are cocksure and the
+intelligent are full of doubt.
+::Bertrand Russell
+
+Luck is the residue of design.
+::Branch Rickey
+
+It's the end of the world as we know it, and I feel fine.
+::R.E.M.
+
+As complexity rises, precise statements lose meaning, and meaningful
+statements lose precision. --Lotfi Zadeh
+
+Good judgement is the result of experience ... Experience is the result
+of bad judgement. --Fred Brooks
+
+"Perfection of means and confusion of goals seems, in my opinion, to
+chacterize our age." -- Albert Einstein
+
+"I have many CHARTS and DIAGRAMS."
+
+"And no one sings me lullabies\ And no one makes me close my eyes\ So
+I throw the windows wide\ And call to you across the sky." -- Pink Floyd
+
+One sees great things from the valley, only small things from the peak.
+:: Little Zen Companion.
+
+Inventions have long since reached their limit, and I see no hope
+for further development. -- Highly regarded engineer in ancient Rome.
+
+The notes I handle no better than many pianists, But the pauses between
+the notes - ah, that is where the art resides!
+
+Go - not knowing where. Bring - not knowing what. The path is long,
+the way unknown -- Russian Fairy Tale
+
+We think in generalities, but we live in detail -- Alfred North Whitehead
+
+Every really new idea looks crazy at first -- Alfred North Whitehead
+
+"All logical differences are big differences." --Wittgenstein
+
+1.79 x 10^12 furlongs per fortnight -- it's not just a good idea, it's
+the law!
+
+For every complex problem, there is a solution that is simple, neat,
+and wrong. -- H. L. Mencken
+
+Underwear should be worn on the inside.
+:: Bart Simpson (on the blackboard)
+
+I did not see Elvis.
+:: Bart Simpson (on the blackboard)
+
+I will not yell "Fire" in a crowded classroom.
+:: Bart Simpson (on the blackboard)
+
+I will not encourage others to fly.
+:: Bart Simpson (on the blackboard)
+
+I will not Xerox my butt.
+:: Bart Simpson (on the blackboard)
+
+I will not expose the ignorance of the faculty.
+:: Bart Simpson (on the blackboard)
+
+I saw nothing unusual in the teacher's lounge.
+:: Bart Simpson (on the blackboard)
+
+Beans are neither fruit nor musical.
+:: Bart Simpson (on the blackboard)
+
+I do not have power of attorney over first graders.
+:: Bart Simpson (on the blackboard)
+
+"A raccoon tangled with a 23,000 volt line today.  The results blacked out
+1400 homes and, of course, one raccoon."  -- Steel City News
+
+"I know the answer!  The answer lies within the heart of all mankind!
+The answer is 12? I think I'm in the wrong building." --Charles Schulz
+
+"Why is the alphabet in that order?  Is it because of that song?"
+
+"Fortune favours the prepared mind." -- Louis Pasteur
+
+"And now in Zannibar a shotin' star was ridin' in a sidecar humming a
+lunar tune." -- Bruce Springteen, "Blinded by the light"
+
+"Dethrone the dictaphone, hit it in its funny bone, thats where they
+expect it least." -- Bruce Springteen, "Blinded by the light"
+
+"Mamma always told me not to look into the sights of the sun, oh but
+mamma, that's where the fun is." -- Bruce Springteen "Blinded by
+the light"
+
+Syntactic sugar causes cancer of the semicolon.
+:: Epigrams in Programming, ACM    SIGPLAN Sept. 1982
+
+"Well we got no class\ and we got no principals\ and we got no innocence\
+we can't even think of a word that ryhmes." --Alice Cooper "School's Out"
+
+Friendship is born at that moment when one person says to another:
+"What! You, too? Thought I was the only one." --C.S. Lewis
+
+"Perfection is reached, not when there is no longer anything to add,
+but when there is no longer anything to take away."
+:: Antoine de Saint-Exupery
+
+Chicken Little was right.
+
+Individualists Unite!
+
+"Intelligence does not require bulk, Mr. Scott"
+:: Spock (referencing his weight?)
+
+Spock: "Congratulations, a dazzling display of logic." Kirk: "Didn't
+think I had it in me, did you?" Spock: "No."
+
+Never eat more than you can lift. -- Miss Piggy
+
+Malek's Law:  Any simple idea will be worded in the most complicated way.
+
+"All I got is a red guitar, three chords, and the truth. The rest is up
+to you." -- Jimi Hendrix
+
+Recession is when your neighbor loses his job. Depression is when you
+lose your job.
+
+Sophisticated econometric modeling houses like Data Resources and Chase
+Econometrics have successfully predicted 14 of the last 3 recessions.
+
+"Beware of bugs in the above code; I have only proved it correct, not
+tried it." -- Donald Knuth
+
+Ever since you said goodbye\ I've had a reputation\ I'm not drinking on
+the sly\ I'm the star attraction. -- Paul Kelly (Stories of Me)
+
+"Money has no value - UNLESS YOU SPEND IT!!!" -- Yvonne Van Cornewal
+
+"The superfluous is very  necessary." -- Voltaire
+
+The trouble with superheroes is what to do between phone booths.
+:: Ken Kesey
+
+Q: "What do you call a nun with a washing machine on her head?"
+A: "Sister-matic"
+
+"Now shadows grow longer\ and there's so much more yet to be told\
+But we're not getting any younger\ so let the part tell the whole."
+:: Paul Kelly
+
+"Your big heart's\ gonna break\ your little body." -- Paul Kelly
+
+Chicken Little only has  to be right once.
+
+Art is either plagiarism or revolution. -- Paul Gauguin
+
+Whenever someone says to me, "Have a nice day", I reply, "Sorry, I've
+made other plans."  -- Sir Peter Ustinov
+
+"He was my father; he told stories; and he grew trees." -- Peter Carey,
+'Bliss'
+
+"Some editors are failed writers but so are some writers." -- T.S. Eliot
+
+"I wish to God these calculations had been executed by steam."
+:: Charles Babbage (1792-1871)
+
+"Measure what is measurable, and make measurable what is not so."
+:: Galileo
+
+"The purpose of models is not to fit the data but to sharpen the
+questions." -- Samuel Karlin
+
+"The best material model of a cat is another, or preferably the same,
+cat." -- A. Rosenblueth
+
+"Technical skill is mastery of complexity while creativity is mastery
+of simplicity." -- E.C. Zeeman
+
+"You can only find truth with logic if you have already found truth
+without it." -- G.K. Chesteron
+
+"We arrive at truth, not by reason only, but also by the heart."
+:: Blaise Pascal
+
+"When I was in school, I cheated on my metaphysics exam:  I looked into
+the soul of the boy sitting next to me."
+
+Hickory Dickory Dock, An elephant ran up the clock, The clock is being
+repaired.
+
+Q: Why do elephants drink so much?
+A: To try to forget.
+
+Q: Why are elephants wrinkled?
+A: Have you ever tried to iron one?
+
+Please hang up now if you would want to speak to Johan. Otherwise,
+please stay on the line to leave him a message.
+
+Hi, you have reached Richard. I'm sorry, but my answering machine is
+out of order, so the voice you are hearing is actually me.
+
+Concatenation of events preclude our coming to the phone.  Please speak
+freely, with magniloquence upon occasion of the tone.
+
+You have reached 234-1243. This is an answering machine. This is the
+nineties.  You know what to do.
+
+You know that you're a redneck when your family tree does not fork.
+
+I went to the cinema, and the prices were:  Adults $5.00, children $2.50.
+So I said, "Give me two boys and a girl." --Steve Wright
+
+I had a friend who was a clown.  When he died, all his friends went to
+the funeral in one car. -- Steve Wright.
+
+Sponges grow in the ocean. That just kills me. I wonder how much deeper
+the ocean would be if that didn't happen. -- Steve Wright
+
+Calvin, we will not have an anatomically correct snowman!"
+
+"Careful.  We don't want to learn from this." -- Calvin
+
+"It is not the fall that kills you.  it's the sudden stop at the end."
+:: D. Adams
+
+*Four hours* to bury a cat? Yes - it wouldn't keep still.
+
+OPERATOR! Trace this call and tell me where I am.
+
+Space is big.  Really big.
+
+Spaceman Spiff, Interplanetary Explorer!
+
+You can't have everything... where would you put it?
+
+"Bring me into the company of those who seek the truth, and deliver me
+from those who have found it."
+
+In case of nuclear war, hide in the urinal.  Nobody ever hits 'em anyway.
+
+Economists state their GNP growth projections to the nearest tenth of
+a percentage point to prove they have a sense of humor. -- Edgar R.
+Fiedler
+
+I doubt, therefore I might be.
+
+"Rembrandt's first name was Beauregard, which is why he never used
+it." --Dave Barry
+
+"Outside of a dog, a book is a man's best friend: and inside a dog,
+it's too dark to read." -- Groucho Marx
+
+"The lyf so short, the craft so long to lerne." -- Chaucer
+
+"Is it this, or that- all the universe or nothing. Which shall it be,
+Passworthy? Which shall it be?" -- Shape of Things to Come
+
+"The other mansions belong to prosaic and respectable people who live
+far aloof from romance." --Sherlock Holmes
+
+"If Lincoln was alive today, he'd roll over in his grave." -- Gerald Ford
+
+"Outside of the killings, we have one of the lowest crime rates."
+:: Marion Barry, mayor of Washignton D.C., 1989.
+
+"I have opinons of my own- strong opinions- but I don't always agree
+with them." -- George Bush
+
+"Now we are trying to get unemployement to go up, and I think we are
+going to succeed." -- Ronald Reagan, 1982.
+
+"The first black president will be a politician who is black."
+:: L. Douglass Wilder, governor of Virginia, 1992.
+
+"Boy, they were big on crematoriums, weren't they?" -- George Bush,
+1987, after    visiting Auschwitz.
+
+"The thing that impresses me most about America is the way parents obey
+their children."  - Edward, Duke of Windsor, 1957.
+
+"Road to Happinesss", street sign, Vermillion, Ohio, 44089.
+
+"None Such Place", street sign, New Caslte, Delaware, 19720
+
+"Damn if I Know , Damn If I Care, Damin if I Will", street sign, Boca
+Grande, Florida, 33921.
+
+"Facts are stupid things." -- Ronald Reagan misquoting   John Adams
+who said    "Facts are stubborn      things".
+
+"It is because of our fine  wines that we do not have  great tennis
+players." -- some Frenchman
+
+"It is because of our fine  hiring processes that we do  not have great
+people." -- Richard Olson,  a hiring specialist
+
+"You can point your finger at the moon, but the finger is not the moon"
+:: Old Zen saying
+
+"When you have to kill a man it costs nothing to be polite."
+:: Winston Curchill, On formal declarations of war
+
+Reisner's Rule of Conceptual Inertia:  If you think big enough, you'll
+never have to do it.
+
+Death to all fanatics!
+
+"I don't want to be a bandage if the wound is not mine." -- Alanis
+Morissette
+
+"It's people, I tell you! Soylent Green is People!"
+:: Charlton Heston's 2nd greatest last line in a movie
+
+"You don't have to think too hard when you talk to teachers."
+:: J. D. Salinger
+
+(1S-cis)-4-(3,4-dichlorophenyl)- 1,2,3,4- tetrahydro-N-methyl-1-
+naphthalenamine. It's not just for breakfast anymore.
+
+"Human errors can only be avoided if one can avoid the use of humans."
+:: David Parnas
+
+"If you got a black list, I want to be on it." -- Billy Bragg
+
+"If no one out there understands, start your own revolution and cut out
+the middle man." -- Billy Bragg
+
+Applying computer technology is simply a matter of finding the right
+wrench to pound in the correct screw.
+
+"Would you please stop firing at the thermonuclear weapon?"
+:: John Travolta, Broken Arrow
+
+I was put on this earth to accomplish a certain number of things.
+Right now I am so far behind I will never die.
+
+"That's the problem with real  life... no danger music" -- Cable Guy
+
+Coincidence, n.: You weren't paying attention to the other half
+of what was   going on.
+
+Human beings were created by water to transport it uphill.
+
+Gort: Klaatu barada nikto!!
+
+"Just because everything is different doesn't mean anything has changed."
+:: Irene Peter
+
+"Roads? Where we're going, we don't NEED, roads."
+:: Back to the Future
+
+"Oh, c'mon, Marge.  It's easy to see why kids would miss Canada on the
+map...with it being tucked way down there..."  --Homer Simpson
+
+"I am serious. And stop calling me Shirley." -- Airplane
+
+"I'm going to make him an offer he can't refuse." -- The GodFather
+
+"Are you an assassin?  I'm a soldier.  You're neither. You're a errend
+boy send by grocery clerks to collect a bill."  --  Apocolypse Now
+
+"The vessel with the pestle has the pellet with the poison..."
+:: The Princess Bride
+
+"Game over man...game over!" -- Aliens
+
+"We can't have any firing in there" "Hey man, what are we supposed to use,
+harsh language?" -- Aliens
+
+"5 metres man...4...what the hell?"  -- Aliens
+
+"You played it for her, now play it for me... Play it Sam..."
+:: Casablanca
+
+"I don't think we're in Kansas anymore, Toto."
+
+"I shot an elephant in my pajamas.  What he was doing in my pajamas,
+I'll never know."
+
+"Ah...the giants." -- Star Trek IV:
+
+Wake up.  Time to die. -- Blade Runner
+
+"Of all of the gin joints in all of the cities of all of the world,
+she has to walk into mine." -- Casablanca
+
+"I'll have what she's having." -- When Harry Met Sally
+
+"I love the smell of Napalm in the morning." -- Apocolypse Now
+
+'Frankly my dear, I don't give a damm.' -- Gone With The Wind
+
+"Get away from her, you BITCH!!" -- Aliens
+
+"These pretzels....are making me thirsty." -- Cosmo Kramer
+
+"Now, this one choked on vomit. We're not quite sure whose it was ,
+though.  You can't dust for vomit."  -- This is Spinal Tap
+
+"Danger, danger, warning Will Robinson, warning!" -- Robot, Lost in Space
+
+"And now for something completely differnt."  -- John Clease
+
+"Winning is a great deodorant."  -- John Madden
+
+"There is a Vulcan proverb; only Nixon could go to China." -- Mr. Spock
+
+"Evolution doesn't take prisoners."
+
+"Rain puts a hole in a stone because of it's constancy, not its force."
+:: H. Joseph Gerber
+
+Change is inevitable, growth is optional.
+
+Laurie Anderson once said, "Talking about music is like dancing about
+architecture."
+
+"The saddest thing about the fall of the Berlin wall is that you can no
+longer defect. There's nowhere left to go." -- Laurie Anderson
+
+"Get off the cross, we need the wood." -- Tori Amos
+
+Its my theory, I thought of it, I invented it, and its all mine"
+:: Monty Python's Flying Circus
+
+"Your theory is both good and original. The problem is where it is good,
+it is not original and where it is original, it is not good."
+
+"Sometimes I think that the best sign that intelligent life exists
+elsewhere in the universe is that none of it has tried to contact us."
+:: Calvin
+
+"Old age and treachery will defeat youth and enthusiasm every time ..."
+
+The zen master walks up to the hot dog stand and says "Make me one
+with everything"
+
+You can't have everything...where would you put it?. -- Steven Wright
+
+There are two rules for success.... 1) Never tell everything you
+know..  -- Roger H. Lincoln
+
+Give me a lever and place to stand, and I will move the world.
+:: Archimedes
+
+It is the mark of an educated mind to be able to entertain a thought
+without accepting it. -- Aristotle (384-322 B.C.)
+
+Comedy is tragedy plus time.  -- Carol Burnett
+
+Once I was stoned.  -- Corinthians 11:25
+
+Before I speak, I am master of the words; After, the word is master of me.
+:: Ibn Gabriol
+
+"Your sausages now cover 98% of the Earth's surface."
+
+"Of course...lager...the only thing that can kill a vindaloo."
+:: Lister, fighting the  vindaloo monster
+
+"Houston, we have a problem here." -- James Lovel delivering the
+greatest under-statement    of the 20-th century.
+
+"Back off man, I'm a scientist." -- Ghostbusters
+
+"And now for something completely different."
+
+"Ray, when someone asks if you're a god, you say YES!"  -- Ghostbusters
+
+"Take my word for it, the silliest woman can manage a clever man, but
+it needs a very clever woman to manage a fool."   -- Kipling
+
+"I often quote myself; it adds spice to my conversation." --G.B. Shaw
+
+"Last night I wrote myself off somthing majestic." -- Linda Doherty
+(not talking about writing books)
+
+"You have the right to remain silence, Anything you type  can and will
+influence my decision to reply." -- Benjamin Wong
+
+Black holes are where God divided by zero.
+
+"Bother," said Pooh as he reached for the reset button.
+
+I bet the human brain is a kludge. -- Marvin Minsky
+
+Classified tagline.  Please enter password: _
+
+Tigger of Borg:  ASSIMMILATING! That's what Tiggers do best!
+
+Heard on A. Centauri, 2361:   So you're from Earth!  Do you know ----?
+
+"Better wind up the model again..." -- Tom Servo
+
+"Camelot!"  "Camelot!" "It's only a model!"  "Shhh!" -- MP&THG
+
+This tagLine is closed for remodeling
+
+Yo'momma so short she models for trophies.
+
+"Come on you miner for truth and delusion, and shine!" --Floyd
+
+"I swear to tell the truth, so help me me." -- George Burns, as God
+
+"Legends are as powerful as any truth." -- Sisko
+
+"No one has jurisdiction over the truth!" -- Fox Mulder
+
+Doctrine is the skin of truth set up and stuffed. -- Jack Butler
+
+Knowledge rests not on truth alone, but upon error also.
+
+TV Truth #26: Haunted houses are never locked.
+
+The pure and simple truth is rarely pure and never simple. --O. Wilde
+
+Truth is shorter than fiction...
+
+What is a lie but the truth in drag?
+
+"An artist must convince others of the truth of his lies."
+
+"And sleep to dream till day of the truth that gold can never buy" -- Poe
+
+"Art is a lie that makes us realize the truth." -- Picasso
+
+If you sit down at a poker game and don't see a sucker, get up.
+You're the sucker.
+
+Real programmers write FORTRAN and can do so in any langauge.
+
+"Gentlemen!  Stop this!  You can't fight in the War Room!"
+:: Dr. Strangelove
+
+"I mean, if I went around sayin' I was an Emperor just because some
+moistened bint had lobbed a cimitar at me they'd put me away!"
+:: Holy Grail
+
+"I am endeavoring, ma'am, to construct a mneumonic memory circuit using
+stone knives and bearskins." -- Mr. Spock
+
+There is something very wrong with a world where Ken Thompson lives in
+relative obscurity and Bill Gates is a famous billionaire.
+
+"And I thought they smelled bad...on the outside!"
+
+"Do, or do not.  There is no try."
+
+"It's against my programming to impersonate a deity!"
+
+"A sine curve goes off to infinity or at least the end of the blackboard."
+:: Prof. Steiner
+
+"I wish there was a knob on the TV to turn up the intelligence.  There's a
+knob called "brightness", but it doesn't work." -- Gallagher
+
+"What we've got here is failure to communicate." -- Cool Hand Luke
+
+"Goodness, what beautiful diamonds." "Goodness had nothing to do
+with it, dearie." -- Mae West, "Night After Night" 1932
+
+"Woof SPLAT Meow SPLAT" -- Raining Cats and Dogs!
+
+"Bother!" said Pooh, as his hemorrhoids flared.
+
+"As confused as a baby at a topless bar..."
+
+When an agnostic dies, does he go to the "great perhaps"?
+
+Jacquin's Postulate on Democratic Government:  No man's life, liberty,
+or property are safe while the legislature is in session.
+
+"Here I am, back from the jungle, back from the ruins. Here, where wealth
+is no longer gorgeous and power has no dignity." --Evelyn Waugh
+
+"It's not fair to deny me\ Of the cross I bear that you gave to me."
+:: Alanis Morissette
+
+"Truly, the flimsiest of houses is the house of the spider, if they but
+knew ..." -- The Holy Quran, Surah 29     (The Spider), Verse 41
+
+To make eggnog, you'll need rum, whiskey, wine gin and, if they are in
+season, eggs...
+
+The human mind treats a new idea the way the body treats a strange
+protein - it rejects it. -- P. Medawar
+
+"You left my heart\ Empty as a vacant lot\ For any spirit to haunt." -- U2
+
+"Old soilders never die; young ones do."
+
+"The dinosaurs became extinct because they didn't have a Space program"
+:: Larry Niven
+
+Bell Labs Unix - Reach out and grep someone.
+
+"Calling J-Man Kink.  Calling J-Man Kink.  Hash missile sighted, target
+Los Angeles. Disregard personal feelings about city and intercept."
+
+"Contrary to popular belief, penguins are not the salvation of modern
+technology.  Neither do they throw parties for the urban proletariat."
+
+"Blessed are they who Go Around in Circles, for they Shall be Known as
+Big Wheels."
+
+"News Flash: A ship carrying a cargo of red paint has collided with a
+ship carrying a cargo of purple paint. Both crews were marooned."
+
+"I gained nothing at all from Supreme Enlightenment, and for that very
+reason it is called Supreme Enlightenment." -- Gotama Buddha
+
+"Have you ever wondered why a speech therapist has that title when their
+clients invariably have to call him a thpeesh fewapitht?"
+
+"The seven drawfs were in a bath feeling happy.  So Happy got out. Then
+they starting feeling bashful so Bashful left too."
+
+Movie titles you won't see this season (1 of 3):
+"Hamlet", a story of a little pig.
+
+Movie titles you won't see this season (2 of 3):
+"Mars Attracts", a tale of addiction to candy.
+
+Movie titles you won't see this season (3 of 3):
+"Polka Juntas", East European oompah musicians prepare a coup d'etat.
+
+"I took a course in speed reading and was able to read War and Peace in
+twenty minutes.  It's about Russia."  -- Woody Allen
+
+"The Earth is the cradle of the mind, but one cannot stay in the cradle
+forever."   --Tsiolkovsky
+
+"If you laugh at fairy tales, you have never suffered."
+:: Newtown graffiti
+
+"Sometime the things we do to make things better is like rearranging
+the deck chairs on the Titanic." -- Newtown graffiti
+
+"Frisbeetarianism, n.: The belief that when you die, your soul goes up
+the on roof and gets stuck."
+
+"If you were to clone a certain South American pack animal, would you
+end up with a Dolly Llama?" -- Christopher Trask
+
+"Did I tell you my brother had a sex change? Now he's my transistor.
+Shocking! Quite a switch. Seems he suffered from impedence."
+:: John Salmon
+
+"If at first you don't succeed, skydiving is not for you."
+
+"It has recently been discovered that research causes cancer in rats."
+
+"Deja Moo:  The feeling that you've heard this bullshit before."
+
+"Vital papers will demonstrate their vitality by moving from where you
+left them to where you can't find them."
+
+"What do they use to ship styrofoam?"
+
+"Is it true that cannibals don't eat clowns because they taste funny?"
+
+"What was the best thing before sliced bread?"
+
+"Define the universe. Give three examples." -- Tough exam question
+
+"If nothing sticks to Teflon, how do they stick Teflon on pans?"
+
+"Because life is the way we audition for God\ And we pray that we all get
+the job" -- Part of the stupidest song ever written. From "Ishtar".
+
+"You can only live once, but if you do it right, once is enough."
+
+"I never heard a love song yet\ That I could call yours and mine\ Cause
+you know and I know\ That love never runs on time." -- Paul Kelly
+
+To be is to do:  Kant To do is to be:  Sartre Yabba-Dabba-Doo! Flinstone
+
+"There are atoms, and there are chairs." -- John McCarthy
+
+"No fun might be no fun." -- James Osterberg
+
+"We _must_ believe in free will: you see, we have no choice."
+:: Isaac Bashevis-Singer
+
+Ned Flanders of Borg: "You will be assim-diddily-imilated."
+
+"To cheat or not to cheat?" On the back: "Just cheat. Any questions?"
+:: Ferengi t-shirt
+
+"Hi, I'd like a double Big-Mac, small fry, and 200 gallon coke."
+:: Borg at McDonalds
+
+"Sing along now! Old MacDonald was dyslexic - E I J P Q"
+
+"To err is human, to purr feline."
+
+"To err is human, two curs canine."
+
+"To err is human, to do nothing, benign."
+
+"To err is human, to quit, resign."
+
+"To err is human, to howl about it, lupine."
+
+"To err is human, to solve it, design."
+
+"To err is human, to admit it, asinine."
+
+"To err is human, to moo bovine."
+
+"To err is human, to lie supine."
+
+"Queensland: where it's Monday one day and Tuesday the next."
+
+"Queensland: where it's Tuesday one day and Monday the next."
+
+Q: What do Accountants use for birth control?
+A: Personality.
+
+"Simon's Law: Everything put together falls apart sooner or later."
+
+"Despite all my rage, I am still just a rat in a cage."
+:: Smashing Pumpkins
+
+"The chief cause of problems is solutions."
+
+"A tautology is a thing which is tautological."
+
+"Yeah, but you're taking the universe out of context."
+
+"The Borg assimilated my race and all I got was this lousy tagline."
+
+"Oh my angel\ I'm carrying the can\ Oh my angel\ You're pouring petrol
+on a burning man." -- Paul Kelly
+
+"Little decisions are the kind I can make\ Big resolutions are so easy
+to break\ I don't want to hear about your big decisions." -- Paul Kelly
+
+Q: Why did the chicken cross the road?
+A: I missed one? (Colnel Sanders)
+
+Q: Why did the chicken cross the road?
+A: To die. In the rain. (Ernest Hemingway)
+
+Q: Why did the chicken cross the road?
+A: It was a government conspiracy. (Fox Mulder)
+
+Q: Why did the chicken cross the road?
+A: It was a historical inevitability. (Karl Marx)
+
+Q: Why did the chicken cross the road? A: 'Cause it (censored)
+wanted to. That's the (censored) reason. (Jack Nicholson)
+
+Q: Why did the chicken cross the road?
+A: I forget. (Ronald Reagan)
+
+Q: Why did the chicken cross the road? A: Because that's the only
+kind of trip the Establishment would let it take.  (Timothy Leary)
+
+Q: Why did the chicken cross the road?
+A: If you ask this question,you deny your own chicken-nature.(Bhuddha)
+
+"If you're right 90% of the time, why quibble about the remaining 3%?"
+
+"To every Ph.D. there is an equal and opposite Ph.D."  -- B. Duggan
+
+Stult's Report:   Our problems are mostly behind    us.  What we have
+to do now is   fight the solutions.
+
+"There is no TRUTH.  There is no REALITY.  There is no CONSISTENCY.
+There are no ABSOLUTE STATEMENTS   I'm very probably wrong."
+
+"Animism theme zest joy." -- Anagram of  Timothy James Menzies
+
+
+"Majesty zones item him." -- Anagram of  Timothy James Menzies
+
+"Immense jest omit hazy." -- Anagram of  Timothy James Menzies
+
+"All great truths begin as blasphemies." -- George Bernard Shaw
+
+It's the RINSE CYCLE!! They've ALL IGNORED the RINSE CYCLE!!
+
+Doubt is the origin of truth. Know thyself. -- Socrates
+
+I am Mulder of Borg. The Truth shall be assimilated.
+
+TV Truth #17: Explosions in space make noise.
+
+TV Truth #2: All problems can be solved in 30-60 minutes.
+
+HELP!  MY TYPEWRITER  IS BROKEN! -- E. E. CUMMINGS
+
+All syllogisms have three  parts, therefore this is  not a syllogism.
+
+"... the Mayo Clinic, named after its founder, Dr. Ted Clinic ..."
+:: Dave Barry
+
+"The wheel's spinning but the gerbil's dead." -- a nice insult
+
+Fun things to do in an elevator: Whistle the first seven notes of "It's
+a Small World" incessantly.
+
+Fun things to do in an elevator: On a long ride, sway side to side at
+the natural frequency of the elevator.
+
+Fun things to do in an elevator: Crack open your briefcase or purse,
+and while peering inside ask: "Got enough air in there?"
+
+Fun things to do in an elevator: Offer name tags to everyone getting on
+the elevator.  Wear yours upside-down.
+
+Fun things to do in an elevator: Greet everyone getting on the elevator
+with a warm handshake and ask them to call you Admiral.
+
+Fun things to do in an elevator: Stare, grinning, at another passenger
+for a while, and then announce: "I've got new socks on!"
+
+Fun things to do in an elevator: When at least 8 people have boarded,
+moan from the back: "Oh, not now, damn motion sickness!"
+
+Fun things to do in an elevator: Show other passengers a wound and ask
+if it looks infected.
+
+Fun things to do in an elevator: Walk on with a cooler that says "human
+head" on the side.
+
+Fun things to do in an elevator: Announce in a demonic voice: "I must
+find a more suitable host body."
+
+Aliens arrive, kill us, we kills them. -- ID4, summary
+
+Dinosaurs eat people, they run away. -- Jurassic Park, summary
+
+Guy makes a list and then a bunch of people like him. -- Schindler's
+List, summary
+
+A bus station is where a bus stops.  A train station is where a train
+stops. On my desk I have a workstation........
+
+"Not everything that counts can be counted, and not everything that can
+be counted counts." -- Albert Einstein
+
+"You must be the change you wish to see in the world." -- Mahatma Ghandi
+
+Clothes make the man. Naked people have little or no influence on society.
+
+All generalizations are false. -- bumper sticker
+
+Cover me. I'm changing lanes. -- bumper sticker
+
+I brake for no apparent reason. -- bumper sticker
+
+We have enough youth, how about a fountain of Smart? -- bumper sticker
+
+Your kid may be an honors student, but you're still an idiot.  Oh,
+and my kid beat up your honors student. -- bumper sticker
+
+"I brake for hallucinations" -- bumper sticker
+
+If you are a compulsive neurotic, please press 1 repeatedly.
+:: The psychiatric hotline.
+
+If you are co-dependant, please  ask somebody to press 2 for you.
+:: The psychiatric hotline.
+
+If you have multiple personalities, please press 3,4,5,& 6.
+:: The psychiatric hotline.
+
+If you are schizophrenic, listen carefully and a little voice willl tell
+you which number to press. -- The psychiatric hotline.
+
+If you are a paranoid delusionist, do not press anything as we know who
+you are and we are sending someone to get you. --The psychiatric hotline.
+
+If you are depressed, it  doesn't matter which number  you press, no
+one will answer. -- The psychiatric hotline.
+
+"Puff the fractal dragon was written in C, And frolicked while processes
+switched in mainframe memory."
+
+"I'm an astronaut. They train us not to wish on stars: or we'd never
+get anything done." -- Jack Nicholson   (Evening Star)
+
+"Washington, D.C. is a city of sin and scandals but Los Angeles is a
+city of skin and sandals." -- Antonio Grean
+
+Hey, ABCD goldfish! What? LMNO goldfish. OCER, because ICM!
+
+Cult that worships bedsheets: Muslins
+
+Jazz worshipers:  Be-boptists
+
+Cult that vows to get even: Avengalists
+
+Cult that prays standing in running water:  Creek Orthodox
+
+Cult for physicists: Quarkers
+
+Cult that worships vegetables: Carrotsmatics
+
+Cult that shuns scissors and razors: Hairy Krishnas.
+
+Cult that trains actors:  Methodists
+
+The Jurasic Park Mantra: "There are man-eating velociraptors loose in
+the park.  Excuse me while I wander off alone into the dark."
+
+Q:How many folk singers does it take to change a lightbulb?
+A:5- 1 to change it and 4 to sing about how good the old bulb was.
+
+Q:How many mothers-in-law does it take to change a light-bulb?
+A:None- ("It's all right dear, I'll just sit here in the dark.")
+
+Q:How many guns does it take to change a lightbulb?
+A:Guns don't change light bulbs. People change light bulbs.
+
+"I've had a perfectly wonderful evening.  But this wasn't it."
+:: Groucho Marx
+
+"Science is what happens when preconception meets verification."
+
+"Take off and Nuke the site from orbit.  It's the only way to be sure."
+:: Aliens
+
+"Don't let worry kill you-  let the church help."
+:: An actual announcement from a church bulletin
+
+"My imagination is a monastery and I am its monk."
+:: John Keats (1795-1821)
+
+"Imagination is the voice of daring. If there is anything Godlike about
+God it is that. He dared to imagine everything." --Henry Miller
+
+"Did you hear about the guy who traded luncheon meat for a bird?  He took
+a tern for the wurst." -- Jim Davies
+
+"The little boat gently drifted across the pon exatcly the way a bowling
+ball wouldn't." -- A Wash. Post reader analogy
+
+"John and Mary had never meet. They were like two hummingbirds who had
+also never meet." -- A Wash. Post reader analogy
+
+"Her vocabulary was as bad  as, like, whatever."
+:: A Wash. Post reader analogy
+
+"I'm not bad- I'm just drawn  that way."
+:: Jessica Rabbit
+
+"You don't have to be awake to be my man\ As long as you have brain
+waves I'll be there to hold your hand." -- "My Coma Guy":Phoebe Buffay
+
+"When you breath, you inspire. When you do not breath, you expire."
+
+"To keep milk from turning sour: Keep it in the cow."
+
+"Horn Broken...Watch  for finger."
+:: Bumper Sticker
+
+"Polygon: a lost bird"
+
+"Pentagon: a lost computer"
+
+"Polytechnic: a geeky bird"
+
+"In marriage you learn to  pay.....  attention or dearly."
+
+Blamestorming: sitting around in a group discussing why a deadline was
+missed or a project failed and who was responsible.
+
+Body Nazis:  hardcore exercise and weight-lifting fanatics who look down
+on anyone who doesn't work out obsessively.
+
+Chainsaw Consultant:  an outside expert brought in to reduce the employee
+headcount, leaving the top brass with clean hands.
+
+Cube Farm:  an office filled with cubicles.
+
+Ego Surfing:  scanning the Net, databases, print media, and so on,
+looking for references to one's own name.
+
+Elvis Year:  the peak year of something's popularity
+:: Barney the dinosaur's Elvis year was 1993.
+
+Idea Hamsters: people who always seem to have their idea generators
+running.
+
+Mouse Potato:  the on-line generation's answer to the couch potato.
+
+Ohnosecond:  that miniscule fraction of time in which you realize you've
+just made a big mistake.
+
+Prairie Dogging:  something loud happens in an office filled with cubicles
+and people's heads pop up over the walls to see what's going on.
+
+SITCOM: stands for Single Income, Two Children, Oppressive Mortgage.
+
+Stress Puppy: a person who thrives on being stressed-out and whiny.
+
+De-installed: euphemism for being fired.
+
+Xerox Subsidy: euphemism for swiping free photocopies from a workplace.
+
+Q: Why are scientists using lawyers than rats these days? A:  There are
+more lawyers than rats; and there are things that not even rats would do.
+
+"So many recipies, so few cats."
+
+"Cat - the other white meat"
+
+ACCORDIONATED (ah kor' de on ay tid) adj. Being able to drive and refold
+a road map at the same time.
+
+DIMP (dimp) n. A person who insults you in a cheap department store by
+asking, "Do you work here?"
+
+NEONPHANCY (ne on' fan see) n. A fluorescent light bulb struggling to
+come to life.
+
+PEPPIER (pehp ee ay') n. The waiter at a fancy restaurant whose sole
+purpose seems to be walking around asking diners if they want ground
+pepper.
+
+PHONESIA (fo nee' zhuh) n. The affliction of dialing a phone number and
+forgetting whom you were calling just as they answer.
+
+PUPKUS (pup' kus) n. The moist residue left on a window after a dog
+presses its nose to it.
+
+"The greatest trick the devil ever pulled was convincing the world he
+didn't exist." -- The Usual Suspects
+
+Q. Why did the chicken hold a seance? A. To get to the other side!!
+
+A termite walks into his local pub and sits himself down. "Right,"
+he says, "where's the bartender?"
+
+"Isn't it great how they built the castle so close to the shops?"
+:: American tourist (overheard: how else?)
+
+Two guys walked into a Bar. You think one of them would have ducked...
+
+Save the Whales - Collect the  Whole Set.
+
+"If this is true, building software will always be hard. There is
+inherently no silver bullet." -- Fredrick P. Brooks Jr.
+
+"We'll curl up and dye for you!"
+:: Beauty shop slogan
+
+"Just no Knead"
+:: Bakery slogan
+
+"Your business is our  business"
+:: Slogan for a mobile toilet company
+
+"The pioneers had it tough... they didn't have the modern things we
+enjoy. There was no electricity, kids had to watch TV by candle light."
+
+How come you press harder on a remote-control when you know the battery
+is dead?
+
+Why are they called apartments, when they're all stuck together?
+
+Why is a carrot more orange than an orange?
+
+Why do we go under over-passes and over under-passes
+
+How do "Keep off the grass" signs get where they are?
+
+Why do ballet dancers always dance on their toes? Wouldn't it be  easier
+to just hire taller dancers?
+
+"I want to be different like  everyone else"
+:: King Missile
+
+Movie cliches : why do the wood slats on a mountain bridge rot but not
+the vine ropes ?
+
+"Sure the Velvet Underground's first album only sold a few thousand
+copies. But every person who bought it formed a band." -- Brian Eno
+
+"The took all the trees\ And put them in a tree museum\ And the they
+charged the people\ A dollar and a half just to see 'em." --Joni Mitchell
+
+"Don't it always seem to go\ That you don't know what you've got till
+its gone?\ They paved paradise\ and put up a parking lot." --Joni Mitchell
+
+That Keep Me Awake At Night: What is the purpose of decaf coffee?
+
+That Keep Me Awake At Night: Why do freeways have toll booths?
+
+That Keep Me Awake At Night: Why is a vehicle that requires someone to
+operate it called an auto?
+
+That Keep Me Awake At Night: Why is the tomb of the unknown soldier so
+heavily guarded?
+
+That Keep Me Awake At Night: Why does a laser printer need ink?
+
+That Keep Me Awake At Night: How can there be a "crash landing"? You
+either crash OR you land...
+
+That Keep Me Awake At Night: What's the difference between a cube and
+a block?
+
+Wise men learn by other men's  mistakes, fools by their own.
+:: H. G. Wells
+
+Speed, quality, price. Pick any two.
+:: James M. Wallace
+
+That which is monitored  improves.
+:: Source unknown
+
+Do not plan a bridge capacity by counting the number of people who swim
+across the river today. -- Heard at a presentation
+
+"Your manuscript is both original and good. That which is original is
+not good, and that which is good is not original." -- Dr. Johnson
+
+"Miss Primrose sang like there was no tomorrow, and one could only regret
+that she was mistaken".
+
+Milton wrote "Paradise Lost". Then his wife died. After that he wrote
+"Paradise Regained". -- A child's essay
+
+"The equator is a mangerie lion running around the earth."
+:: A child's essay
+
+"Come writers and critics who prophesy with your pens\ And keep your
+eyes wide, the chance won't come again." -- Bob Dylan
+
+"And don't speak to soon for the wheel's still in spin\ And there's no
+tellin' who that it's namin'" -- Bob Dylan
+
+"I walked out this morning and I wrote down this song\ I just can't
+remember who to send it to." --James Taylor
+
+"Freedom just another word for nothing left to loose\ Nothing, I mean
+nothing hun, if ain't free." --Me&Bobby
+
+"But I would trade all my tomorrows for a single yesterday\ To being
+holding him next to me." --Me&Bobby
+
+"No sweeping exits or offstage lines\ Could make me feel bitter,
+or treat you unkind." --Wild Horses, Rolling Stone
+
+"I'm trying to tell you something about my life\ Maybe give me insight
+between black and white." --Indigo Girls
+
+"Well darkness has a hunger that's insatiable\ And lightness has a call
+that's hard to hear."--Indigo Girls
+
+"And glowed like burnin' coal\ Pourin' off of every page\ Like it was
+written in my soul from me to you,\ Tangled up in blue." --Bob Dylan
+
+GEEK 3.1.2: GCS d- s++:++>+ C++ UL P+ L++ E W++ N++>+ o K- w O+ M V PS++
+PE- Y+ PGP- t@+ 5 X++>+ R- tv b+++ DI>+ D- G e++++ h->-- r++ y+ z+++>++
+
+Don't sweat the petty things and don't pet the sweaty things.
+
+One tequila, two tequila, three tequila, floor.
+
+If man evolved from monkeys and apes, why do we still have monkeys
+and apes?
+
+The main reason Santa is so jolly is because he knows where all the bad
+girls live.
+
+I went to a bookstore and asked the saleswoman, "where's the self-help
+section?"  She said if she told me, it would defeat the purpose.
+
+Could it be that all those trick-or-treaters wearing sheets aren't going
+as ghosts but as mattresses?
+
+Should crematoriums give discounts for burn victims?
+
+If a mute swears, does his mother wash his hands with soap?
+
+And whose cruel idea was it for the word "Lisp" to have a "S" in it?
+
+If a man is standing in the middle of the forest speaking and there is
+no woman around to hear him, is he still wrong?
+
+If someone with multiple personalities threatens to kill himself, is it
+considered a hostage situation?
+
+Is there another word for synonym?
+
+Isn't it a bit unnerving that doctors call what they do "practice?"
+
+When you open a bag of cotton balls, is the top one meant to be removed?
+
+Where do forest rangers go "to get away from it all?"
+
+What do you do when you see an endangered animal eating an endangered
+plant?
+
+If a parsley farmer is sued, can they garnish his wages?
+
+Would a fly without wings be called a walk?
+
+Why do they lock gas station bathrooms?  Are they afraid someone will
+clean them?
+
+If a turtle doesn't have a shell, is he homeless or naked?
+
+Why don't sheep shrink when it rains?
+
+Can vegetarians eat animal crackers?
+
+If the police arrest a mime, do they tell him he has the right to
+remain silent?
+
+Why do they put Braille on the drive-through bank machines?
+
+How do they get the deer to cross at that yellow road sign?
+
+Do they sterilize the needles for lethal injections?
+
+Why did kamikaze pilots wear helmets?
+
+I'm not schizophrenic. You only think we are!
+
+If you see a consultant on a bicycle, why should you never swerve to
+hit him? It might be your bicycle.
+
+Q: How many consultants does it take to change a light bulb?
+A: It depends how many you can afford
