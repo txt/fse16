@@ -7,12 +7,7 @@
 [Lecturer](http://menzies.us) 
 
 
-# To do
+# Syllabus
 
 
-![](http://tiny.cc/soonish)
-
-+ Stats
-      + Main Lesson: visualize first, get an intuition, then use stats as a sanity check
-
-+ Reproduction: https://psychology.stanford.edu/sites/all/files/Science-2011-Peng-1226-7.pdf
+![fss16](https://fss16.slack.com/)
