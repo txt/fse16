@@ -9,7 +9,8 @@
 
 # To do
 
-<img src="http://tiny.cc/soonish" align=right>
+
+![](http://tiny.cc/soonish)
 
 + Stats
       + Main Lesson: visualize first, get an intuition, then use stats as a sanity check
