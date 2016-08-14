@@ -1,0 +1,6 @@
+Debugger entered--Lisp error: (void-variable guid)
+  eval(guid nil)
+  eval-last-sexp-1(nil)
+  eval-last-sexp(nil)
+  call-interactively(eval-last-sexp nil nil)
+  command-execute(eval-last-sexp)
