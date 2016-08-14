@@ -24,7 +24,7 @@ timm:
 	@git config --global user.name "Tim Menzies"
 
 prep:
-	@$(foreach f,$F, if [ "etc/header" -nt "$f" ]; then echo "# updating $f ... "; gawk -f etc/headers.awk $f > .tmp; mv .tmp $f; fi; )
+	@$(foreach f,$F, if [ "etc/header" -nt "$f" ]; then echo "# updating $f ... "; gawk -f etc/headers.awk $f | sed -f etc/strings.sed > .tmp; mv .tmp $f; fi; )
 
 prepping:
-	@$(foreach f,$F, echo "# updating $f ... "; gawk -f etc/headers.awk $f > .tmp; mv .tmp $f;  )
+	@$(foreach f,$F, echo "# updating $f ... "; gawk -f etc/headers.awk $f | sed -f etc/strings.sed > .tmp; mv .tmp $f;  )

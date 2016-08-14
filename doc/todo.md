@@ -1,6 +1,6 @@
 # To do
 
-![](http://tiny.cc/soonish)
+SOONISH
 
 + Stats
       + Main Lesson: visualize first, get an intuition, then use stats as a sanity check
