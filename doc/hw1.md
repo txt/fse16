@@ -16,10 +16,14 @@
 ## Before you begin
 
 - Get your Github environment going (public github, not ncstate). Add `timm` and
-`bigfatnoob`
-as collaborators  to that repo.
-- Get your development environment going. This should be code that is checked into git
-and saved, regularly to your Gibhub account, and shared with any team members.
+`bigfatnoob` as collaborators  to that repo.
+- Get your development environment going. This should be:
+       - code that is checked into git and saved, regularly to your Gibhub account, and shared with any team members.
+       - Some Unix-type environment: LINUX, Mac (with xcode installed), c9.io (a free web-based IDE).
+       - Some folks report success with Windows and
+         gitbash (https://git-for-windows.github.io/) but that is up to you.
+       - Note that all your team members need to running the same environment (which makes
+           c9.io an attractive option).
 - For your project, pick a development language. Use anything you want but be aware that
 the lecturer and tutor can only support students using
 Python on LINUX and Mac. Note also that all your team members should agree on the language.
@@ -36,6 +40,8 @@ Write a summary of one research paper from 2012 relating to data mining and soft
 For more details see [Reading12345678](Reading12345678.md).
 
 ## Install Something
+
+The following 
 
 Into a fresh subdirectory, download and unpack https://github.com/dotninjas/dotninjas.github.io/archive/master.zip.
 
