@@ -10,8 +10,8 @@
 
 # At a Glance
 
+<a href="https://raw.githubusercontent.com/txt/mase/master/img/learning.png"><img width=300  align=right src="img/learning.png"> </a>
 
-## Where
 We 6:00PM - 8:45PM  
 EE1. 1005  
 

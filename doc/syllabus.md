@@ -118,7 +118,7 @@ Grades will be added together using:
 + Homeworks : 24 = 8 * 3
 + Mid-term/final exam: 10/21
 + Paper (on the software science): 15
-+ Big project (on model-based SE): 20 (essay) 10 (presentation)
++ Big project (on software s): 23 (essay) 7 (presentation)
 
 The mid-term will be held
 ### Homeworks 
@@ -127,12 +127,12 @@ The mid-term will be held
   + 591 students: groups of three
   + 791 students: groups of one
 + Homeworks will be written into a public Github repo which students will create.
-+ Students will shorten the url (using something like goo.gl) of the the main file of each homework submission
++ Students will shorten the url (using something like tiny.cc) of the the main file of each homework submission
     + That url wull be pasted into the spreadsheet [http://tiny.cc/fss2016give](http://tiny.cc/fss2016give)
 + Homeworks will be of two forms:
-    + Coding: worht 2 marks
+    + Coding: worth 2 marks (and marked 0,1,2)
     + Reading: with 1 mark
-+ Students cannot do homework <em>i+1</em> till  homework <em>i</em> gets at least a ``1''.
++ Students cannot do homework <em>i+1</em> till  homework <em>i</em> get full marks.
 + Homeworks can be submitted multiple times
   + No late penalties
   + No points taken off for repeat submissions
@@ -142,10 +142,16 @@ The mid-term will be held
 
 ### Attendance
 
+
 Attendance is extremely important for your learning
 experience in this class. Once you reach three
 unexcused absences, each additional absence will
 reduce your attendance grade by 10%.
+
+Except for officially allowed reasons, your presence in the class if required from day one. 
+Late-comers will have to work in their own solo groups (to avoid disruptions to existing groups).
+
+Note that absences for weddings (your own, or someone else's, is not an offically allowed reason).
 
 Exceptions: this subject  will support students who are absent for any of the following
 officially allowed reasons:
@@ -162,6 +168,7 @@ Examples of anticipated situations include
 
 That support will include changing the schedule of deliverables and/or (in extreme
 case) different grading arrangements.
+
 
 ### Academic Integrity
 
