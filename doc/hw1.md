@@ -22,6 +22,8 @@
        - Some Unix-type environment: LINUX, Mac (with xcode installed), c9.io (a free web-based IDE).
        - Some folks report success with Windows and
          gitbash (https://git-for-windows.github.io/) but that is up to you.
+              - GitBash https://git-for-windows.github.io/
+              - Chocolatey package manager https://chocolatey.org/
        - Note that all your team members need to running the same environment (which makes
            c9.io an attractive option).
 - For your project, pick a development language. Use anything you want but be aware that
@@ -114,8 +116,8 @@ The commmands are
 
 Notes:
 
-- To understand eg5, look up
-[this paper](http://menzies.us/pdf/07precision.pdf) and read the definitions
+- Hint. Read the notes in https://github.com/dotninjas/dotninjas.github.io/blob/master/ninja/ninja.rc.md
+- To understand eg5, look up [this paper](http://menzies.us/pdf/07precision.pdf) and read the definitions
 column2, page1.
 - For eg6, answer the following question. Is this code doing stratified cross-validation (read more
 [here](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation).
