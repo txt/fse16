@@ -10,6 +10,10 @@
 
 # Lecture 1: What is The Science of Software?
 
+
+
+<img src="../img/class.png" align=right>
+
 Most software companies now learn their policies via
 data-driven methods. Modern practitioners treat
 every planned feature as an experiment, of which
