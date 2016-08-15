@@ -86,7 +86,7 @@ Science has escaped the lab, and now roams free.
      - In London or New York,  ambulances wait for your call at a location determined by a software model.
        http://goo.gl/8SMd1p
 
-<img width=600 src="https://en.wikipedia.org/wiki/Data_science#/media/File:Data_visualization_process_v1.png">
+<img width=600 src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Data_visualization_process_v1.png">
 
 Maybe old wine in new bottles?
 
