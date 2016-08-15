@@ -10,7 +10,7 @@
 
 # Homework1
 
-![](http://tiny.cc/homeworkish)
+<img src="../img/homework.png" align=right>
 
 
 ## Before you begin
