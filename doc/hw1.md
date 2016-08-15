@@ -10,11 +10,10 @@
 
 # Homework1
 
-<img src="../img/homework.png" align=right>
-
 
 ## Before you begin
 
+- Get your URL shortener going. Go get an account at http://tiny.cc. 
 - Get your Github environment going (public github, not ncstate). Add `timm` and
 `bigfatnoob` as collaborators  to that repo.
 - Get your development environment going. This should be:

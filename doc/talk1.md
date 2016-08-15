@@ -8,11 +8,8 @@
 [&copy; 2016](https://github.com/txt/fss16/blob/master/LICENSE.md) tim@menzies.us
 
 
-# Lecture 1: What is The Science of Software?
+# <img src="../img/class.png" align=right> Lecture 1: What is The Science of Software?
 
-
-
-<img src="../img/class.png" align=right>
 
 Most software companies now learn their policies via
 data-driven methods. Modern practitioners treat
