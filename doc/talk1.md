@@ -122,7 +122,7 @@ Software Data](https://www.amazon.com/Art-Science-Analyzing-Software-Data/dp/012
 - 2016: For a broader view: lists dozens of small ``mantras'' of software science:
 [Perspectived on Data Science](https://www.amazon.com/Perspectives-Data-Science-Software-Engineering/dp/0128042060/ref=sr_1_1?s=books&ie=UTF8&qid=1471278031&sr=1-1&keywords=perspectives+on+data+science)
 
-[![](../img/books3.pg)
+![](../img/books3.png)
   
 
 
