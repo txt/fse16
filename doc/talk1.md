@@ -114,7 +114,7 @@ Software Analytics, So What?
 
 ![](../img/questions.png)
 
-Recent books on software analytics
+Recent books on software analytics (optional, no need to buy)
 
 - 2014: Me and my friends:  [Sharing Data and Models[(https://www.amazon.com/Sharing-Data-Models-Software-Engineering/dp/0124172954). Come geek out with timm!
 - 2015: Details, from the mining software repositories community: [The Art and Science of Analzyzing
