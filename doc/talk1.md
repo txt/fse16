@@ -27,7 +27,7 @@ for software projects.
 
 
 
-## Science
+## But what is Science?
 
 ![](../img/science.png)
 
@@ -51,14 +51,14 @@ FYI: most "scientific" papers are a post-hoc rationalization of an essentially r
         to report that such that your peers will be interested.
 
 For a fine read, try [Arthur Kpestler's  Sleepwalkers](https://www.amazon.com/Sleepwalkers-History-Changing-Universe-Compass/dp/0140192468/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1471281223&sr=1-1-catcorr&keywords=Arthur+Koestler%27s+-+The+Sleepwalkers):
--- What if our greatest scientific discoveries had been stumbled upon by chance? In The SleepwalkersArthur Koestler recounts the history of cosmology - from the Babylonians through to Newton - exploring how genius and progress flourished unexpectedly in the space between science and humanity, faith and reason
+- What if our greatest scientific discoveries had been stumbled upon by chance? In The SleepwalkersArthur Koestler recounts the history of cosmology - from the Babylonians through to Newton - exploring how genius and progress flourished unexpectedly in the space between science and humanity, faith and reason
 -  "Some of the greatest discoveries...consist mainly in the clearing away of psychological roadblocks which obstruct the approach to reality; which is why,post factum they appear so obvious." <br>-- Arthur Kpestler
 
 
 
 (BTW, for a formal model of science, see _Karl Popper, Conjectures and Refutations Routledge and Keagan Paul, 1963._)
 
-## Data Science
+## And what is Data Science?
 
 Sometimes, data science is _science_:
 
@@ -69,7 +69,7 @@ Sometimes, data science is _science_:
        - Are conclusions replayable (so not 1000 clicks in a pretty GUI but a script that can re-run)
 
 
-## Software Science
+## So what is Software Science?
 
 Sometimes data science is about _software science_:
 
@@ -130,9 +130,8 @@ and we know how dumb we can be)
 - Otherwise, people can get hurt
      - Space shuttle Columbia ice strike (size= 1200 cm<sup>3</sup>; speed: 477 mpg)
      - Certified as “safe” by CRATER: a micro-meteorite software model
-     - Typical  CRATER training example: (size=3 cm<sup>2<sup>; speed= 100 mpg)
-     - Lesson: conclusions should come with “certification envelope”
-             - Raise alert when new problems fall outside of old envelope 
+     - Typical  CRATER training example: (size=3 cm<sup>2<s/up>; speed= 100 mpg)
+     - Lesson: conclusions should come with “certification envelope” (aise alert when new problems fall outside of old envelope)
 
 ![](http://image.newsru.com/pict/id/large/511809_20030203102740.gif)
 
@@ -151,7 +150,7 @@ evolving area-- which means that software scientists have to be more alert to
 
 ## Resources
 
-Sorry, biased by the author.
+Can you pick the bias in the following story?
 
 ### Data sets
 
@@ -163,7 +162,7 @@ So many places. Too many to list. One place to start:
 
 Software Analytics, So What?
 
-- [Menzies and Zimemrmann, 2013](http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&arnumber=6547619)
+- [Menzies and Zimmermann, 2013](http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&arnumber=6547619)
 -  Argues that before we ask "what tool to use?" we ask "what questions are useful to  ask, a lot"
 - Initially, we have to ask many many questions before we find the most useful ones
 - Finally, we can code tools to make those "most useful questions" easy to be asked.
@@ -172,70 +171,13 @@ Software Analytics, So What?
 
 ###  Recent books on software analytics (optional, no need to buy)
 
-- 2014: Me and my friends:  [Sharing Data and Models[(https://www.amazon.com/Sharing-Data-Models-Software-Engineering/dp/0124172954). Come geek out with timm!
+- 2014: Me and my friends:  [Sharing Data and Models](https://www.amazon.com/Sharing-Data-Models-Software-Engineering/dp/0124172954). Come geek out with timm!
 - 2015: Details, from the mining software repositories community: [The Art and Science of Analzyzing
 Software Data](https://www.amazon.com/Art-Science-Analyzing-Software-Data/dp/0124115195/ref=pd_sim_14_1?ie=UTF8&dpID=51oNmb8bLJL&dpSrc=sims&preST=_AC_UL160_SR130%2C160_&psc=1&refRID=MG3VE0637M484XBQ7Z9Q) : 100s of top names in SE including several from NC State CSC
 - 2016: For a broader view: lists dozens of small ``mantras'' of software science:
-[Perspectived on Data Science](https://www.amazon.com/Perspectives-Data-Science-Software-Engineering/dp/0128042060/ref=sr_1_1?s=books&ie=UTF8&qid=1471278031&sr=1-1&keywords=perspectives+on+data+science)
+[Perspectives on Data Science](https://www.amazon.com/Perspectives-Data-Science-Software-Engineering/dp/0128042060/ref=sr_1_1?s=books&ie=UTF8&qid=1471278031&sr=1-1&keywords=perspectives+on+data+science)
 
 ![](../img/books3.png)
   
-
-
-
-## But Why "Software Science" and not plain-old "Data Science"
-
-Because software science is different. Consider what it means to reason about software.
-
-Software Science is about software engineering which means that effective software scientists need extensive domain knowledge about software engineering.
-
-
-2. While other communities might be content to use data science software tools, built by others, software scientists know how
-to maintain and extend and deply rapdily changing software. Hence while  AI researchers might be the source of 
-better data miners algorithms, it is software  scientists who package and wrap those algorithms
-in environments that support usability, reproducibility, maintainability and scalability.
-
-3. Extensive sets of standard for what is a valid experiment.
-
-4. Software scientists must explain their results to software engineerings-- who are busy people. Hence, software
-scientists need to be very concerned about the comprehensibility of the learned models.
-
-4. The inherent complexity of the task of software science:
-     - Constantly changing effects: new developers, new platforms, new tools, new tasks.
-     - Socio-technical factors that mean we cannot reason just about software but we also have to reason over the communities of people that design, build, use, and host those tools
-     - No underlying physical/chemical theory we can rely on for reasoning from first principles.  No background theory
-(e.g. Black–Scholes or E=mc^2). Welcome to Simon's
-[science of the artificial](http://courses.washington.edu/thesisd/documents/Kun_Herbert%20Simon_Sciences_of_the_Artificial.pdf): a constantly changing phenomena which we keep changing, every time we study it.
-
-5.  At the same time, inherent simplicities in the data we study:
-
-    - A fundamental simplicity to the thing we are modeling (software). Welcome to Devanbu's [naturalness of software](http://macbeth.cs.ucdavis.edu/natural.pdf):
-          - <em> Programmingg languages, in theory, are complex, flexible
-and powerful, but the programs that real people
-actually write are mostly simple and rather repetitive,
-and thus they have usefully predictable statistical properties
-that can be captured in statistical language models
-and leveraged for software engineering tasks.</em>
-
-
-
-Point 2  means that software scientists are
-sources of innovation and improvement for data
-science tools.
-
-Points 4 means we must always be modeling, always
-checking old theories,
-never accepting the models from other people without due diligence.  
-
-And point 5 makes everything possible.
-Naturalness is what makes it possible to
-understand software using simple models (which is
-[James Larus](https://www.youtube.com/watch?v=kO9OYnkeRTM)'s
-point).  So, sure, sometimes, we need deep learning
-etc etc for some complex text,video, audio
-artifacts. But also, for most other things we can
-generate simple models that people can use. And
-simplicity means comprehenssibility and usability.
- 
 
 
