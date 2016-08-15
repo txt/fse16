@@ -50,7 +50,8 @@ Into a fresh subdirectory, download and unpack https://github.com/dotninjas/dotn
       cd ninja/
       sh ninja
 
-That should generate the following ouput:
+That should generate the following lame Ascii Art version of a ninja throwing a star.
+
 
 ```
           ___                                                             
