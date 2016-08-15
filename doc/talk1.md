@@ -19,7 +19,7 @@ Agenda:
 
 ## About this subject.
 
-![](../img/science.png]
+![](../img/science.png)
 
 _Science_ is about making and maintaining and monitoring our best current guesses about X,Y,Z...
 
@@ -112,12 +112,12 @@ Software Analytics, So What?
 - Initially, we have to ask many many questions before we find the most useful ones
 - Finally, we can code tools to make those "most useful questions" easy to be asked.
 
-![](../doc/questions.png)
+![](../img/questions.png)
 
 Recent books on software analytics
 
-- 2014: Me and my friends:  [Sharing Data and Models[)https://www.amazon.com/Sharing-Data-Models-Software-Engineering/dp/0124172954). Come geek out with timm!
-- 2015: Details, from the mining software repositories community: ![The Art and Science of Analzyzing
+- 2014: Me and my friends:  [Sharing Data and Models[(https://www.amazon.com/Sharing-Data-Models-Software-Engineering/dp/0124172954). Come geek out with timm!
+- 2015: Details, from the mining software repositories community: [The Art and Science of Analzyzing
 Software Data](https://www.amazon.com/Art-Science-Analyzing-Software-Data/dp/0124115195/ref=pd_sim_14_1?ie=UTF8&dpID=51oNmb8bLJL&dpSrc=sims&preST=_AC_UL160_SR130%2C160_&psc=1&refRID=MG3VE0637M484XBQ7Z9Q) : 100s of top names in SE
 - 2016: For a broader view: lists dozens of small ``mantras'' of software science:
 [Perspectived on Data Science](https://www.amazon.com/Perspectives-Data-Science-Software-Engineering/dp/0128042060/ref=sr_1_1?s=books&ie=UTF8&qid=1471278031&sr=1-1&keywords=perspectives+on+data+science)
