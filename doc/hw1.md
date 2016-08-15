@@ -41,11 +41,8 @@ For more details see [Reading12345678](Reading12345678.md).
 
 ## Install Something
 
-The following 
 
-Into a fresh subdirectory, download and unpack https://github.com/dotninjas/dotninjas.github.io/archive/master.zip.
-
-- Important note: the pathname to that directory should not have any spaces in it.
+Into a fresh subdirectory, download and unpack https://github.com/dotninjas/dotninjas.github.io/archive/master.zip. Important note: the pathname to that directory should not have any spaces in it.
 
       wget https://github.com/dotninjas/dotninjas.github.io/archive/master.zip
       unzip master.zip 

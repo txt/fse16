@@ -45,7 +45,7 @@
 </td><td valign=top xwidth="100px">
 
 
-0. <a href="doc/hw1.md">hw11</a>
+0. <a href="doc/hw1.md">hw1</a>
 
 </td><td valign=top><small>
 
