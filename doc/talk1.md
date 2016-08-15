@@ -160,7 +160,18 @@ So many places. Too many to list. One place to start:
 
 ### Papers
 
-Software Analytics, So What?
+
+2011: [The Inductive Engineering Manifesto](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/menzies2011ise.pdf)
+
+- Users before algorithms
+- Plan for scale
+- Early feedback
+- Be open-minded
+- Do smart learning
+- Live with the data you have
+- Broad skill set, big toolkit
+
+2013: Software Analytics, So What?
 
 - [Menzies and Zimmermann, 2013](http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&arnumber=6547619)
 -  Argues that before we ask "what tool to use?" we ask "what questions are useful to  ask, a lot"

@@ -120,6 +120,7 @@ Grades will be added together using:
 + Paper (on the software science): 15
 + Big project (on model-based SE): 20 (essay) 10 (presentation)
 
+The mid-term will be held
 ### Homeworks 
 
 + All deliverables are group-based (one deliverable per group)
