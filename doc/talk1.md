@@ -50,9 +50,9 @@ FYI: most "scientific" papers are a post-hoc rationalization of an essentially r
       - you'll know enough about your field to know (a) why that is interesting and (b) how
         to report that such that your peers will be interested.
 
-For a fine read, try [Arthur Kpestler's  Sleepwalkers](https://www.amazon.com/Sleepwalkers-History-Changing-Universe-Compass/dp/0140192468/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1471281223&sr=1-1-catcorr&keywords=Arthur+Koestler%27s+-+The+Sleepwalkers):
+For a fine read, try [Arthur Koestler's  Sleepwalkers](https://www.amazon.com/Sleepwalkers-History-Changing-Universe-Compass/dp/0140192468/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1471281223&sr=1-1-catcorr&keywords=Arthur+Koestler%27s+-+The+Sleepwalkers):
 - What if our greatest scientific discoveries had been stumbled upon by chance? In The SleepwalkersArthur Koestler recounts the history of cosmology - from the Babylonians through to Newton - exploring how genius and progress flourished unexpectedly in the space between science and humanity, faith and reason
--  "Some of the greatest discoveries...consist mainly in the clearing away of psychological roadblocks which obstruct the approach to reality; which is why,post factum they appear so obvious." <br>-- Arthur Kpestler
+-  "Some of the greatest discoveries...consist mainly in the clearing away of psychological roadblocks which obstruct the approach to reality; which is why,post factum they appear so obvious." <br>-- Arthur Koestler
 
 
 
