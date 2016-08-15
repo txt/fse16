@@ -16,6 +16,20 @@
 - Get your URL shortener going. Go get an account at http://tiny.cc. 
 - Get your Github environment going (public github, not ncstate). Add `timm` and
 `bigfatnoob` as collaborators  to that repo.
+     + The name of that repo should be `fss16xxx` where `xxx` is anything you like.
+     + Add directories to that repo as follows
+
+```
+project
+paper
+read   -- all your weeklies readings go here
+code/1 -- code for week1.
+code/1/README.md : answers to any questions asked this week
+code/2
+code/3
+etc
+```
+
 - Get your development environment going. This should be:
        - code that is checked into git and saved, regularly to your Gibhub account, and shared with any team members.
        - Some Unix-type environment: LINUX, Mac (with xcode installed), c9.io (a free web-based IDE).
@@ -132,4 +146,36 @@ column2, page1.
      - Go to the package definition (usually, first search return).
      - Read!
      - By the way, for some  cool notes on bnet, see [here](http://weka.sourceforge.net/manuals/weka.bn.pdf)
-     
+
+____
+
+## Working with Cloud9
+
+As of June 2015, the procedure for doing that was:
+
++ Go to Github and create an empty repository.
++ Log in to Cloud9 using your GitHub username (at `http://c9.io`, there is a button for that, top right).
++ Hit the green _CREATE NEW WORKSPACE_ button
+    + Select _Clone from URL_;
+    + Find _Source URL_ and enter in `http://github.com/you/yourRepo`
+	+ Wait ten seconds for the screen to change.
+	+ Hit the green _START EDITING_ button. 
+
+This will drop you into the wonderful Cloud9
+integrated development environment. Here, you can
+edit code and backed up your code outside Cloud9, over at
+`Github.com` (which means that if ever Cloud9 goes
+away, you will still have your code).
+
+The good news about Cloud9 is that it is very easy
+to setup and configure. The bad news is that each
+Cloud9 workspace has the same limits as Github- a
+1GB size limit. Also, for CPU-intensive
+applications, shared on-line resources like Cloud9
+can be a little slow. That said, for the newbie,
+Cloud9 is a very useful tool to jump start the
+learning process.
+
+For sites other than Cloud9, see Koding, Nitrous.IO and many more besides.
+
+
