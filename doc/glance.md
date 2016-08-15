@@ -53,7 +53,9 @@ and inspire others while at the same time, seeing options and pitfalls others do
 - Mid-October to mid-November
     - Large project
 - End-November
-    - Large essay 
+    - Large essay
+
+
 
 
 

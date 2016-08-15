@@ -11,3 +11,15 @@
 # Lecture 1
 
 ![](http://tiny.cc/lecturing)
+
+Agenda:
+
++ Hellos
++ Why this subject is different (naturalness of software)
+
+## About this subject.
+
+A (gentle) complaint about a standard Data Science subject.
++ Data science has the word ``science'' in it. S
+
+Slides: [Data Science<sup>2</sup>](https://docs.google.com/presentation/d/18kEQKcHFuJ95uEtUygryxiY9ZQdYDl6jX9PQFTdggRM/edit?usp=sharing)
