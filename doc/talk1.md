@@ -130,7 +130,7 @@ and we know how dumb we can be)
 - Otherwise, people can get hurt
      - Space shuttle Columbia ice strike (size= 1200 cm<sup>3</sup>; speed: 477 mpg)
      - Certified as “safe” by CRATER: a micro-meteorite software model
-     - Typical  CRATER training example: (size=3 cm<sup>2<s/up>; speed= 100 mpg)
+     - Typical  CRATER training example: (size=3 cm<sup>2</sup>; speed= 100 mpg)
      - Lesson: conclusions should come with “certification envelope” (aise alert when new problems fall outside of old envelope)
 
 ![](http://image.newsru.com/pict/id/large/511809_20030203102740.gif)
