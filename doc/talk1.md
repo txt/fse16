@@ -35,10 +35,12 @@ for software projects.
 _Science_ is about making and maintaining and monitoring our best current guesses about X,Y,Z...
 
 - "All models are wrong, but some are useful." -- George Box
--  Sure, data supports many models, many "truths"
-      - But there are lot more "wrongs" that are not supported in any data set
-- It is the grease beneath the wheels of insight
-      - The tool that drives us to being probably more right-er than wrong-er  
+
+Sure, data supports many models, many "truths".
+
+- But there are lot more "wrongs" that are not supported in any data set
+- Science is the grease beneath the wheels of insight
+      - Science is the tool that drives us to being probably more right-er than wrong-er  
 - And the most important moment in science is not "Eureka!" but "huh, that's odd".
 
 FYI: most "scientific" papers are a post-hoc rationalization of an essentially random process.
@@ -48,19 +50,47 @@ FYI: most "scientific" papers are a post-hoc rationalization of an essentially r
 - And, if you are dedicated enough and disciplined enough then
       - some of it will stick; and
       - you'll know enough about your field to know (a) why that is interesting and (b) how
-        to report that such that your peers will be interested.
+      to report that such that your peers will be interested.
 
 For a fine read, try [Arthur Koestler's  Sleepwalkers](https://www.amazon.com/Sleepwalkers-History-Changing-Universe-Compass/dp/0140192468/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1471281223&sr=1-1-catcorr&keywords=Arthur+Koestler%27s+-+The+Sleepwalkers):
 - What if our greatest scientific discoveries had been stumbled upon by chance? In The SleepwalkersArthur Koestler recounts the history of cosmology - from the Babylonians through to Newton - exploring how genius and progress flourished unexpectedly in the space between science and humanity, faith and reason
 -  "Some of the greatest discoveries...consist mainly in the clearing away of psychological roadblocks which obstruct the approach to reality; which is why,post factum they appear so obvious." <br>-- Arthur Koestler
 
 
+Science never stops.
+
+- "A conclusion is simply the place where you got tired of thinking."-- Dan Chaon
+- "Give me the fruitful error any time, full of seeds, bursting with its own corrections.
+  You can keep your sterile truth for yourself."<br>-- Vilfredo Pareto
+
 
 (BTW, for a formal model of science, see _Karl Popper, Conjectures and Refutations Routledge and Keagan Paul, 1963._)
 
+
 ## And what is Data Science?
 
-Sometimes, data science is _science_:
+<img src="https://qph.ec.quoracdn.net/main-qimg-97f135e0156001793cda8d586ed096f1?convert_to_webp=true">
+
+Science has escaped the lab, and now roams free.
+
+- Anyone can be a scientist (make generalizations from data) just by downloading and running freely available data miners.
+- Such data science now mediates what we see and how we act
+     - Silicon valley developers view every new feature as  an experiment, to be tested within some mash up.
+     - Chemists win  Nobel Prize for  software sims. http://goo.gl/Lwensc 
+     - Engineers use software to optical tweezers, radiation therapy, remote sensing,  chip design,   http://goo.gl/qBMyIZ  
+     - Web analysts use software  to analyze clickstreams to improve sales and marketing strategies http://goo.gl/b26CfY
+     - Stock traders write software to simulate trading strategies. http://www.quantopian.com
+     - Analysts write software  to mine   labor statistics data to review proposed gov policies. http://goo.gl/X4kgnc  
+     - Journalists use software   to analyze economic data, make visualizations of their news stories.
+       http://fivethirtyeight.com 
+     - In London or New York,  ambulances wait for your call at a location determined by a software model.
+       http://goo.gl/8SMd1p
+
+<img width=600 src="https://en.wikipedia.org/wiki/Data_science#/media/File:Data_visualization_process_v1.png">
+
+Maybe old wine in new bottles?
+
+Sadly, data science is not always about _science_:
 
 - Science is about communities discussing and improving refutable conclusions.
 - But, sadly, some data science is just about vendors selling you their latest whiz bang tool/service
