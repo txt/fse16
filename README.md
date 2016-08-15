@@ -38,7 +38,7 @@
 </td>
 <td valign=top  xwidth="100px">
 
-1. <a href="doc/talk1.md">What is SS?</a><br>
+1. <a href="doc/talk1.md">What is S.O.S.?</a><br>
 0. <a href="doc/reading12345678.md">Reading12345678</a>
 
 </td><td valign=top xwidth="100px">
