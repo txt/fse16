@@ -7,6 +7,9 @@
 [Lecturer](http://menzies.us) |
 [&copy; 2016](https://github.com/txt/fss16/blob/master/LICENSE.md) tim@menzies.us
 
+_______
+
+
 
 # <img src="../img/class.png" align=right> Lecture 1: What is The Science of Software?
 
