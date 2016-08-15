@@ -56,8 +56,10 @@ Sometimes data science is about _software science_:
                - No underlying physical/chemical theory we can rely on for reasoning from first principles.  No background theory
 (e.g. Black–Scholes or E=mc^2). Welcome to Simon's
 [science of the artificial](http://courses.washington.edu/thesisd/documents/Kun_Herbert%20Simon_Sciences_of_the_Artificial.pdf): a constantly changing phenomena which we keep changing, every time we study it.
-
-       - But general cost-effective methods for finding and revising local models
+- Software science is about refutable conclusions
+      - So all our code will be sharable, in Github
+      - Our projects will include preproduction packages that allow people to take our code and repeat
+        the analysis
        
 - Software engineering has some remarkable _natural_ properties:
        - <em>Programming languages, in theory, are complex, flexible
