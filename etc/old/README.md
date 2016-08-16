@@ -2,7 +2,7 @@
 [<img width=900 src="https://raw.githubusercontent.com/txt/fss16/master/img/fss16.png">](http://tiny.cc/fss2016)   <br>
 [overview](https://github.com/txt/fss16/blob/master/doc/overview.md) ::
 [syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) ::
-[submit](http://tiny.cc/fss2016give) ::
+[submit](http://tiny.cc/fss2016give) ::   
 [chat](https://fss16.slack.com/) 
 
 _______
