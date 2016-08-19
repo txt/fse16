@@ -11,9 +11,15 @@ _______
 
 # Homework2
 
+## Read Something
 
+Reading2
 
+## Watch Something
 
+Norving 18:13 to 
+
+## COde Something
 
 How good are you are scripting? Do you need some extra tutoring this semester
 or are you a TOP GUN or are you somewhere in-between?
