@@ -11,7 +11,6 @@ _______
 
 # Homework2
 
-<<<<<<< HEAD
 ## Write Your First Learner: ZeroR
 
 Within `ninja.rc` there are all these learners that accept a training
@@ -33,17 +32,7 @@ eg3 () {
 ```
     
 Functions like `j48` accept `arff` files as inputs; e.g.
-=======
-## Read Something
 
-Reading2
-
-## Watch Something
-
-Norving 18:13 to 
-
-## COde Something
->>>>>>> 8a91838876fd2ec91e761aa0eee35b7a398fbd5f
 
 ```
 @relation weather
@@ -130,7 +119,7 @@ or arff files, with instance variables
 When a `row` is added to a `Table`, then the summaries are updated.  Summary
 objects are either `Num`s or `Sym`s.
 
-```
+```python
 class Num:
   def reset(i):
     i.mu,i.n,i.m2,i.up,i.lo = 0,0,0,-10e32,10e32
@@ -141,7 +130,7 @@ class Num:
     if x < i.lo: i.lo=x
     delta = x - i.mu
     i.mu += delta/i.n
-    i.m2 += delta\*(x - i.mu)
+    i.m2 += delta*(x - i.mu)
     return x 
   def sub(i,x):
     i.n   = max(0,i.n - 1)
