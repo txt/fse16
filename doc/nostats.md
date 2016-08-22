@@ -4,7 +4,7 @@
 [syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) |
 [src](https://github.com/txt/fss16/blob/master/src) |
 [submit](http://tiny.cc/fss2016give) |
-[chat](https://fss16.slack.com/) 
+[chat](https://fss16.slack.com/)
 
 _______
 
@@ -21,7 +21,7 @@ designed to get the reader's attention).  I do actually like statistics:
 - Sometimes, simple parametric statistics are so quick that it can be useful to
   use them as heuristics to guide a search.
 - In the following I make extensive use of non-parametric statistics (i.e.
-  statistics that make little to no underlying assumptions about the undelying
+  statistics that make little to no underlying assumptions about the underlying
   distributions).
 
 What I do have issues with, on the other hand, are initial assumptions that the
@@ -33,8 +33,6 @@ most likely value.
 
 https://www.cs.uic.edu/~tdang/file/CHIRP-KDD.pdf
 
-It turns out< i have issues with CHIRP. Not sure 
+It turns out< i have issues with CHIRP. Not sure
 
 ## Second, Go Non-Parametric
-
-

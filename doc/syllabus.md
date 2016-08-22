@@ -4,7 +4,7 @@
 [syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) |
 [src](https://github.com/txt/fss16/blob/master/src) |
 [submit](http://tiny.cc/fss2016give) |
-[chat](https://fss16.slack.com/) 
+[chat](https://fss16.slack.com/)
 
 _______
 
@@ -37,10 +37,10 @@ presenting that data in such a way to support business-level decision
 making for software projects.
 
 **Objectives:** By the end of the course, students should be able to:
- 
+
 + Read and understand the state of the art in research on software science;
 + Analyze and critique core principles of software science;
-+ Build and run software that  execute those core principles. 
++ Build and run software that  execute those core principles.
 + Predict and explain and optimize the behavior of those models.
 + Build and evaluate software science tools.
 + Analyze, critique, and communicate clearly the software science
@@ -52,11 +52,11 @@ align=right
 width=100>
 
 + Office Hours: Wednesday, 3:00-5:00 and by request
-+ Location of Office Hours: EE II room 3298 
-+ E-Mail: tim.menzies@gmail.com 
++ Location of Office Hours: EE II room 3298
++ E-Mail: tim.menzies@gmail.com
   + Only use this email for private matters. All other class communication should be via the class Slack channels,    listed below.
 + Phone: 304-376-2859
-       + **Do not use** this number, except in the most dire of 
+       + **Do not use** this number, except in the most dire of
           circumstances (best way to contact me is via email).
 
 **Group mailing list:** During term time, all communication will be via the Slack channel
@@ -92,7 +92,7 @@ will be assumed.
   Python 2.7 for this subject. So do not get the
   absolute latest version of this book.
 
-**Expected Workload:** 
+**Expected Workload:**
 Sometimes, the lecturer/tutor will require you to attend a review session during their consultation  time. There, students may be asked to review
 code, concepts, or comment on the structure of the course. Those sessions are mandatory and failure to attend will result in marks being deducted.
 
@@ -107,7 +107,7 @@ spent on some in-depth programming tutorials). Note
 that the workload for masters and Ph.D. students
 will be different (see above).
 
-**Grading:** The following grade scale will be used: 
+**Grading:** The following grade scale will be used:
 
 + A+  (97-100), A (93-96), A-(90-92)
 + B+ (87-89), B (83-86), B-(80-82)
@@ -122,15 +122,15 @@ Grades will be added together using:
 + Paper (on the software science): 15
 + Big project (on software s): 23 (essay) 7 (presentation)
 
-The mid-term exam will be held on Tuesday October 18 
+The mid-term exam will be held on Tuesday October 18
 
 
-The final exam will be held on Wednesday  December 14
+The final exam will be held on Monday December 12
 during class time [check](https://studentservices.ncsu.edu/calendars/exam/).
 
 
 
-### Homeworks 
+### Homeworks
 
 + All deliverables are group-based (one deliverable per group)
   + 591 students: groups of three
@@ -157,7 +157,7 @@ experience in this class. Once you reach three
 unexcused absences, each additional absence will
 reduce your attendance grade by 10%.
 
-Except for officially allowed reasons, your presence in the class if required from day one. 
+Except for officially allowed reasons, your presence in the class if required from day one.
 Late-comers will have to work in their own solo groups (to avoid disruptions to existing groups).
 
 Note that absences for weddings (your own, or someone else's, is not an offically allowed reason).
@@ -206,7 +206,7 @@ academic dishonesty will be aggressively pursued.
 You should be aware of the University policy on
 academic integrity found in the Code of Student
 Conduct.
- 
+
 The  exams will be done individually.  Academic integrity is important.  Do not work together on the exams: cheating on either will be punished to the full extent permitted.  
 
 ### Disabilities
@@ -277,5 +277,3 @@ class. No such trips are currently planned. However,
 if they do happen then students are required to
 purchase liability insurance. For more information,
 see http://www2.acs.ncsu.edu/insurance/
-
-

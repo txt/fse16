@@ -4,7 +4,7 @@
 [syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) |
 [src](https://github.com/txt/fss16/blob/master/src) |
 [submit](http://tiny.cc/fss2016give) |
-[chat](https://fss16.slack.com/) 
+[chat](https://fss16.slack.com/)
 
 _______
 
@@ -18,7 +18,7 @@ _______
 We 6:00PM - 8:45PM  
 EE1. 1005  
 
-## What's Difference
+## What's Different
 
 This subject peeks inside data mining for software engineering to
 highlight the missing bits: intuitions, insight, verification, reproduction, software maintenance.
@@ -33,13 +33,13 @@ You are someone who wants to work in the Big Data industry but you want somethin
 that sets you apart from the rest of the pack. You want to be a leader, someone that can understand
 and inspire others while at the same time, seeing options and pitfalls others do not see.
 
-- Enrollment requirements 
+- Enrollment requirements
    - Graduate standing in Computer Networking
      (Computer Science or Electrical Engineering), or Computer Science
 - Prerequisites:
    - CSC 226 and CSC 316, or similar
-   - graduate or senior standing with at least 3.0 GPA
-   - good knowledge of at least one high level programming language.
+   - Graduate or senior standing with at least 3.0 GPA
+   - Good knowledge of at least one high level programming language.
 - For 500 level students
     - Group work
     - Some large project (due mid Nov), topic of your choosing
@@ -57,8 +57,3 @@ and inspire others while at the same time, seeing options and pitfalls others do
     - Large project
 - End-November
     - Large essay
-
-
-
-
-
