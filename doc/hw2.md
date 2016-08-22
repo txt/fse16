@@ -11,21 +11,28 @@ _______
 
 # Homework2
 
+## Write Your First Learner: ZeroR
 
+Within `ninja.rc` there are all these learners that accept a training
+and test set. E.g.
 
+```
+j48() {
+	local learner=weka.classifiers.trees.J48
+	$Weka $learner -p 0 -C 0.25 -M 2 -t $1 -T $2
+}
+```
+which is called like in `eg3`:
 
+```
+eg3 () {
+    echo;
+    j48 data/weather.arff data/weather.arff
+}
+```
+    
+Functions like `j48` accept `arff` files as inputs; e.g.
 
-How good are you are scripting? Do you need some extra tutoring this semester
-or are you a TOP GUN or are you somewhere in-between?
-
-Don't matter where you are, we just need to work that out and get you slotted
-into the right stream.
-
-So lets build `ZEROR`, the world's dumbest learner. It reads data files with
-a small number of
-`symbolic` values for its classes (so its a `classifier`). For example,
-this data set only
-knows 
 ```
 @relation weather
 
@@ -50,5 +57,85 @@ sunny,75,70,TRUE,yes
 overcast,72,90,TRUE,yes
 overcast,81,75,FALSE,yes
 rainy,71,91,TRUE,no
+```
+
+These functions generate output like what `eg5` generates:
 
 ```
+=== Predictions on test data ===
+
+ inst#     actual  predicted error prediction
+     1       2:no       2:no       1
+     2       2:no       2:no       1
+     3      1:yes      1:yes       1
+     4      1:yes      1:yes       1
+     5      1:yes      1:yes       1
+     6       2:no       2:no       1
+     7      1:yes      1:yes       1
+     8       2:no       2:no       1
+     9      1:yes      1:yes       1
+    10      1:yes      1:yes       1
+    11      1:yes      1:yes       1
+    12      1:yes      1:yes       1
+    13      1:yes      1:yes       1
+    14       2:no       2:no       1
+```
+
+So if one were to write a new function, one could add their own function
+providing that function read arff files and generated something like the above:
+
+```
+zeror() {
+  myNewLearner $1 $2
+}
+```
+then that learner could do anything at all as long as it copied the input output.
+
+ZeroR is the world's dumbest classifier. It finds the majority class and
+predicts that everything in the test set is that majority.
+
+Your task is to
+
+1. Implement ZeroR. and add it to the
+2. Copy `eg10` to, say, `eg11`
+3. Add your new learner to the line
+
+```
+local learners="j48 jrip nb rbfnet bnet yourLearnerHere";
+```
+
+Then run `eg11` and hand in the results.
+
+
+## Write a Table Reader
+
+Create a class `Table` that can read csv files
+or arff files, with instance variables
+
+- `row`s: a list
+- `cols`: summary objects, one per column
+
+When a `row` is added to a `Table`, then the summaries are updated.  Summary
+objects are either `Num`s or `Sym`s.
+
+```
+class Num:
+  def reset(i):
+    i.mu,i.n,i.m2,i.up,i.lo = 0,0,0,-10e32,10e32
+  def add(i,x):
+    i.n += 1
+    x = float(x)
+    if x > i.up: i.up=x
+    if x < i.lo: i.lo=x
+    delta = x - i.mu
+    i.mu += delta/i.n
+    i.m2 += delta\*(x - i.mu)
+    return x 
+  def sub(i,x):
+    i.n   = max(0,i.n - 1)
+    delta = x - i.mu
+    i.mu  = max(0,i.mu - delta/i.n)
+    i.m2  = max(0,i.m2 - delta*(x - i.mu))
+  def sd(i):
+    return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
+```    

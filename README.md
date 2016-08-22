@@ -11,7 +11,7 @@ _______
 
 # Home
 
-Most software companies now learn their policies via data-driven
+Many software companies now learn their policies via data-driven
 methods. Modern practitioners treat every planned feature as an
 experiment, of which only a few are expected to survive. Key
 performance metrics are carefully monitored and analyzed to judge the
