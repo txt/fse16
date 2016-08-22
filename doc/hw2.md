@@ -119,6 +119,8 @@ or arff files, with instance variables
 When a `row` is added to a `Table`, then the summaries are updated.  Summary
 objects are either `Num`s or `Sym`s.
 
+### Nums
+
 ```python
 def max(x,y) : return x if x>y else y
 def min(x,y) : return x if x<y else y
@@ -143,3 +145,59 @@ class Num:
   def sd(i):
     return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
 ```    
+
+### Syms
+
+```python
+class Sym:
+  def __init__(i):
+     i.counts, i.most, i.mode, i.n = {},0,None,0
+  def add(i,x):
+    i.n += 1
+    new = i.counts[x] = i.counts.get(x,0) + 1
+    if new > i.most:
+      i.most, i.mode = new,x
+    return x
+  def sub(i,x):
+    i.n -= 1
+    i.counts[x] -= 1
+    if x == i.mode:
+      i.most, i.mode = None,None
+  def ent(i):
+    tmp = 0
+    for val in i.counts.values():
+      p = val/i.n
+      if p:
+        tmp -= p*math.log(p,2)
+    return tmp  
+```
+
+### Write a CSV reader
+
+Don't confuse tables of rows with the details of reading strings from a csv file
+and generating cells. 
+
+```
+import string,re
+
+def atoms(lst):
+  return map(atom,lst)
+
+def atom(x)  :
+  try: return int(x)
+  except:
+    try:               return float(x)
+    except ValueError: return x
+    
+def rows(file,prep=same):
+  with open(file) as fs:
+    for line in fs:
+      line = re.sub(r'([\n\r\t]|#.*)', "", line)
+      row = map(lambda z:z.strip(), line.split(","))
+      if len(row)> 0:
+         yield prep(row) if prep else row
+
+for row in rows('../data/weather.csv',atoms):
+   print(row)
+
+```
