@@ -11,6 +11,7 @@ _______
 
 # Homework2
 
+<<<<<<< HEAD
 ## Write Your First Learner: ZeroR
 
 Within `ninja.rc` there are all these learners that accept a training
@@ -32,6 +33,17 @@ eg3 () {
 ```
     
 Functions like `j48` accept `arff` files as inputs; e.g.
+=======
+## Read Something
+
+Reading2
+
+## Watch Something
+
+Norving 18:13 to 
+
+## COde Something
+>>>>>>> 8a91838876fd2ec91e761aa0eee35b7a398fbd5f
 
 ```
 @relation weather
