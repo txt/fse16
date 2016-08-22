@@ -8,7 +8,7 @@ def atoms(lst): return map(atom,lst)
 def atom(x)  :
   try: return int(x)
   except:
-    try:               return float(x)
+    try: return float(x)
     except ValueError: return x
     
 def rows(file,prep=same):
