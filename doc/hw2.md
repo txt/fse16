@@ -190,32 +190,14 @@ class Sym:
 
 ### Implement a CSV reader
 
-Don't confuse tables of rows with the details of reading strings from a csv file
-and generating cells. 
+Don't confuse:
 
-```python
-import string,re
+1. reading csv files from disk
+2. from converting strings to floats,ints or strings
+3.  from storing that lot in your table class
 
-def atoms(lst):
-  return map(atom,lst)
-
-def atom(x)  :
-  try: return int(x)
-  except:
-    try:               return float(x)
-    except ValueError: return x
-    
-def rows(file,prep=same):
-  with open(file) as fs:
-    for line in fs:
-      line = re.sub(r'([\n\r\t]|#.*)', "", line)
-      row = map(lambda z:z.strip(), line.split(","))
-      if len(row)> 0:
-         yield prep(row) if prep else row
-
-for row in rows('../data/weather.csv',atoms):
-   print(row)
-```
+For example, the code [rows.py](../src/rows.py) handles tasks 1,2 as seperate things
+(leaving you to implement 3). Feel free to use that code.
 
 ### Implement a Table reader
 
@@ -233,3 +215,9 @@ reading [weather.csv](https://github.com/txt/fss16/blob/master/data/weather.csv)
 - Print mean and standard deviation of all numeric columns;
 - Print mode and entropy of all symbolic columns.
 
+Hint: add a `show` method to `Num` and `Sym` so all you have to do is:
+
+```python
+for col in table.cols:
+  print(col.show())
+```
