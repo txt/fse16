@@ -196,7 +196,7 @@ class Sym:
 Don't confuse tables of rows with the details of reading strings from a csv file
 and generating cells. 
 
-```
+```python
 import string,re
 
 def atoms(lst):
@@ -218,7 +218,6 @@ def rows(file,prep=same):
 
 for row in rows('../data/weather.csv',atoms):
    print(row)
-
 ```
 
 ### Implement a Table reader
