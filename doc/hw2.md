@@ -105,6 +105,8 @@ Your task is to
 local learners="j48 jrip nb rbfnet bnet yourLearnerHere";
 ```
 
+### What to Hand in
+
 Then run `eg11` and hand in the results.
 
 
@@ -172,7 +174,7 @@ class Sym:
     return tmp  
 ```
 
-### Write a CSV reader
+### Implement a CSV reader
 
 Don't confuse tables of rows with the details of reading strings from a csv file
 and generating cells. 
@@ -201,3 +203,19 @@ for row in rows('../data/weather.csv',atoms):
    print(row)
 
 ```
+
+### Implement a Table reader
+
+Uses the csv reader to read data, passes it into a table instance, one row
+at a time.
+
+As a side-effect of reading that row, the `Num` and `Sym` objects in
+`cols` get updated.
+
+### What to hand-in
+
+All your code and the results of
+reading [weather.csv](https://github.com/txt/fss16/blob/master/data/weather.csv).
+
+- Print mean and standard deviation of all numeric columns;
+- Print mode and entropy of all symbolic columns.
