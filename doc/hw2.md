@@ -219,3 +219,4 @@ reading [weather.csv](https://github.com/txt/fss16/blob/master/data/weather.csv)
 
 - Print mean and standard deviation of all numeric columns;
 - Print mode and entropy of all symbolic columns.
+
