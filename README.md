@@ -54,6 +54,7 @@ making for software projects.
 </td>
 <td valign=top  xwidth="100px">
 
+3. <a href="doc/talk2.md">Lecture2: Misc</a>
 2. <a href="http://99percentinvisible.org/episode/on-average/">On Average</a>
 1. <a href="doc/talk1.md">What is S.O.S.?</a><br>
 0. <a href="doc/reading12345678.md">Reading12345678</a>
@@ -66,7 +67,7 @@ making for software projects.
 </td><td valign=top xwidth="100px">
 
 
-1. <a href="doc/review1.md">Review1</a>
+
 
 
 </td><td valign=top><small>
