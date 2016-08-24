@@ -66,10 +66,12 @@ Software scientists are software engineerings
     - So they can improve them, refactor them, eliminate reducdacies, take advantage of
             the internal features
        
+
+
+
+### Examples of Building Better Learners
  
- ### Examples of Building Better Learners
- 
- Wny understand the internals of a learner? Surely the off-the shelf tools are better?
+ Why understand the internals of a learner? Surely the off-the shelf tools are better?
 
 Here is  35 likes of a Naive Bayes classifier that uses very little memory (each record is
 read one a time, summarized into a few frequency counts, then discarded). Each conclusion
@@ -142,11 +144,12 @@ Language model results (Naturalness, Devanbu).
 ### Examples of Simplicity (1)
 
  e.g. text mining defect reports
-     - reports have `W` words in `D` documents (defect reports)
-     - W is large (10,000, 100,000), too big for most data miners
-     - a word appears `w` times in `d` documents, then term-frequency inverse document frequency is
-         - `tfidf(w,d) = w/W * log(D/d)`
-     - which rewards words that appear a lot, but only in a  few documents
+     
+- reports have `W` words in `D` documents (defect reports)
+- W is large (10,000, 100,000), too big for most data miners
+- a word appears `w` times in `d` documents, then term-frequency inverse document frequency is
+    - `tfidf(w,d) = w/W * log(D/d)`
+- which rewards words that appear a lot, but only in a  few documents
  
  If that sounds complex, it ain't
  
@@ -181,7 +184,7 @@ tail -100
 
 Note that most words have a very, very low TfIdf.
 
-<img src="../img/tfidf.png">
+<img src="../img/tdidf.png">
 
 So text mining can sometimes be very easy
 
