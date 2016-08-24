@@ -5,6 +5,21 @@
 
 # Review1
 
+## Software Science is Differnce
+
+- We work with communities
+     - Results posted to web sites (intra-nets, internets) for communities to comment on
+     - Results are presented in their simplest, clearest form
+          - So brevity and visualizations and intuitive explanations are  key
+     
+- We exploit the inherent simplicity of software
+     - Language model results
+     - Feature selection (throw away spurious or attributes)
+          - e.g. text mining defect reports
+          - reports have `W` words in `D` documents (defect reports)
+          - a a word appears `w` times in `d` documents, then term-frequeny iverse document frequency is
+                -
+     
 ## Evaluation
 
 ### Classifiers (target = one column of symbols called ``classes'')
@@ -112,6 +127,8 @@ see
 
 ### Numerics Goals
 
+When the goal is numeric
+
 Results for one example
 
 - E= expected
@@ -124,6 +141,8 @@ results fro many examples
 - MdAR = median magnitude residual
 - Pred(N) = percent of examples where AR < N%
       - e.g. Pred(30)
+- SA = `1 - (MdAR/ baseline)` where the baseline is the the MdAR after doing the simplest
+  possible estimation; e.g. set expected to the median value of all the perfromance scores
 
 ### Multiple Numeric Goals
 
@@ -180,7 +199,7 @@ Continuous domination:
 
 <img src="../img/cdom.png">
 
-```
+```python
 def cdom(x, y, abouts):
   "many objective"
   x= abouts.objs(x)
