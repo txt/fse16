@@ -146,7 +146,7 @@ Area-under the curve
       - Sort each increasing by LOC
       - Track the recall
 
-<img src="../img/roc/png">
+<img src="../img/roc.png">
 
 Multi-objective-domination
 
@@ -158,7 +158,7 @@ Multi-objective-domination
 
 eg
 
- <img src="../img/pareto.png">    
+ <img src="../img/pareto.jpg">    
      
 - Space of all non-dominated solutions = Pareto frontier
 - `M` optimizers each explore a population of size `S` 
