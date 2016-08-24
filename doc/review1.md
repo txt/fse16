@@ -10,26 +10,47 @@
 ### Classifiers (target = one column of symbols called ``classes'')
 
 ```
-                   truth
-                   no yes
-detector   silent   A   B
-           loud     C   D
-           
+                     truth
+                   .----.-----.
+                   | no | yes |
+                   .----.-----.
+detector   silent  | A  |  B
+           loud    | C  |  D
+```         
 
-True negative = A
-False negagive= B
-False positive= C
-True positive = D
-Effort        = amount of code selected by detector
-              = (c.LOC + d.LOC)/(Total LOC)
+Raw
 
-recall = pd = D/(B+D)
-accuracy    = (A+D)/(A+B+C +D)
-precision   = D/(C+D)
-false alarm=pf= C/(A+C)
-pos/neg = (B+D)/(A+C)
+- True negative = A
+- False negagive= B
+- False positive= C
+- True positive = D
+- Effort        = amount of code selected by detector
+        - (c.LOC + d.LOC)/(Total LOC)
+
+Derived
+
+- recall = pd = `D/(B+D)`
+- accuracy    = `(A+D)/(A+B+C +D)`
+- precision   = `D/(C+D)`
+- false alarm=pf= `C/(A+C)`
+- pos/neg = `(B+D)/(A+C)`
 
 ```
+
+Turns out, precision and accuracy aren't very precision or accurate
+when the target class is very small (effort> 10).
+
+-  Issue of missed balanced data
+-  Standard trick: during cross-val, [SMOTE](https://www.jair.org/media/953/live-953-2037-jair.pdf) the training set
+       - take the minority class with `E` examples
+       - randomly throw away majority classes till you get to `3*E` examples
+       - randomly build new minority examples by (a) find the five nearest neighbors
+         of the same minority class X, (b) pick P, one of those five at random; (c) create a new
+         minority class member at a random point between X and P; (d) repeat till you get `3*E` examples
+       - Beginner trap: you can SMOTE to training set but not the test set.
+      
+
+<img src="../img/smote.png" width=600>
 
 PD and effort are linked. The more modules that trigger
        the detector, the higher the PD. However, effort also gets
@@ -85,9 +106,72 @@ All the above are linked as follows
 So these variables are all connected via properties of the data set. For more on this,
 see 
 
-- Priblems with Precision, 2007, http://menzies.us/07precision.pdf
+- Problems with Precision, 2007, http://menzies.us/07precision.pdf
 - [abcd.py](../src/abcd.py)
 
+
+### Numerics Goals
+
+Results for one example
+
+- E= expected
+- A= actual
+- Residual = E-A
+
+results fro many examples
+
+- AR = magnitude residual = abs(E-A)
+- MdAR = median magnitude residual
+- Pred(N) = percent of examples where AR < N%
+      - e.g. Pred(30)
+
+### Multiple Numeric Goals
+
+Some aggregation function that turns N nums into 1:
+
+- e.g. f-measure = `(2 * pd * prec) / (pd + prec)`
+      - has the property that if either are low, the product is low as well.
+- e.g. g-measure = `(2 * pd * (1-pf))/ (pd + 1 - pf)`
+      - Use if you are worried about precision
+
+Area-under the curve
+
+- useful for combining two variables
+    - e.g AUC(prec,recall)
+
+- Common on software analytics
+      - find most code after reading least code
+      - `Bad` = modules predicted defective
+      - `Other` = all other modules
+      - Sort each increasing by LOC
+      - Track the recall
+
+<img src="../img/roc/png">
+
+Multi-objective-domination
+
+- Given X examples with N goals
+     - each goal N has a direction for `better` (more, less)
+     - e.g. cost is usually better if less; i.e. minimize
+- `X1` "dominates" `X2` if
+     - binary domination: better on at least on goal and worse on none
+
+eg
+
+ <img src="../img/pareto.png">    
+     
+- Space of all non-dominated solutions = Pareto frontier
+- `M` optimizers each explore a population of size `S` 
+  while struggling to find good solutions 
+      - this create `Pm` multiple frontiers
+- The _reference frontier_ `R` is:
+       - `Q = removeDups( union(Pm))`
+       - `R = reduced( nondiminated(Q) )` where nondominated was defined above and
+         `reduced` is some sorting function that selects no more than `S` items
+- The value of `M` is how close `Pm` is to `R`
+       - `IGD` = inter-generational distance = for all items in `Pm`, what is the
+         closest item in `R`
+       - `M1` is better than `M2` if its IGDs are _smaller_.
 
 
 
