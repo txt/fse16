@@ -35,7 +35,7 @@ Derived
 - false alarm=pf= `C/(A+C)`
 - pos/neg = `(B+D)/(A+C)`
 
-```
+
 
 Turns out, precision and accuracy aren't very precision or accurate
 when the target class is very small (effort> 10).
