@@ -150,17 +150,64 @@ Area-under the curve
 
 Multi-objective-domination
 
-- Given X examples with N goals
+- Given examples X,Y,Z,.... with N goals
      - each goal N has a direction for `better` (more, less)
      - e.g. cost is usually better if less; i.e. minimize
-- `X1` "dominates" `X2` if
+- `X` "dominates" `Y` if
      - binary domination: better on at least on goal and worse on none
+            - returns true, false
+            - if many goals, then often false (so bad for 3+ goals)
+     - continuous domination: sum of different in each goal, raised to an exponential
+            - so small differences SHOUT louder
+            - X dominates Y if the the "losses" X to y are less than the "losses" y to X
+            - better for large numbers of goals
 
-eg
+```python
+def bdom(x, y, abouts):
+  x       = abouts.objs(x)
+  y       = abouts.objs(y)
+  betters = 0
+  for obj in abouts._objs:
+    x1, y1 = x[obj.pos], y[obj.pos]
+    if   obj.better(x1,y1) : 
+       betters += 1
+    elif x1 != y1: 
+       return False # must be worse, go quit
+  return betters > 0
+```
+
+Continuous domination:
+
+<img src="../img/cdom.png">
+
+```
+def cdom(x, y, abouts):
+  "many objective"
+  x= abouts.objs(x)
+  y= abouts.objs(y)
+  def w(better):
+    return -1 if better == less else 1
+  def expLoss(w,x1,y1,n):
+    return -1*math.e**( w*(x1 - y1) / n )
+  def loss(x, y):
+    losses= []
+    n = min(len(x),len(y))
+    for obj in abouts._objs:
+      x1, y1  = x[obj.pos]  , y[obj.pos]
+      x1, y1  = obj.norm(x1), obj.norm(y1)
+      losses += [expLoss( w(obj.want),x1,y1,n)]
+    return sum(losses) / n
+  l1= loss(x,y)
+  l2= loss(y,x)
+  return l1 < l2 
+ ``` 
+
+     
+Space of all non-dominated solutions = Pareto frontier
 
  <img src="../img/pareto.jpg">    
-     
-- Space of all non-dominated solutions = Pareto frontier
+
+
 - `M` optimizers each explore a population of size `S` 
   while struggling to find good solutions 
       - this create `Pm` multiple frontiers
@@ -168,11 +215,11 @@ eg
        - `Q = removeDups( union(Pm))`
        - `R = reduced( nondiminated(Q) )` where nondominated was defined above and
          `reduced` is some sorting function that selects no more than `S` items
+                - By convention, nondominated is with `bdom`
 - The value of `M` is how close `Pm` is to `R`
        - `IGD` = inter-generational distance = for all items in `Pm`, what is the
          closest item in `R`
        - `M1` is better than `M2` if its IGDs are _smaller_.
-
 
 
 what the big ms conclusion re how to predict bugs
