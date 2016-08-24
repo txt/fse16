@@ -2,13 +2,93 @@
 
 
 
-# DON'T READ THIS
-
-still rough notes fro after lecture
-
-_____
 
 # Review1
+
+## Evaluation
+
+### Classifiers (target = one column of symbols called ``classes'')
+
+```
+                   truth
+                   no yes
+detector   silent   A   B
+           loud     C   D
+           
+
+True negative = A
+False negagive= B
+False positive= C
+True positive = D
+Effort        = amount of code selected by detector
+              = (c.LOC + d.LOC)/(Total LOC)
+
+recall = pd = D/(B+D)
+accuracy    = (A+D)/(A+B+C +D)
+precision   = D/(C+D)
+false alarm=pf= C/(A+C)
+pos/neg = (B+D)/(A+C)
+
+```
+
+PD and effort are linked. The more modules that trigger
+       the detector, the higher the PD. However, effort also gets
+        increases.
+        
+        
+High PD or low PF comes at the cost of high PF or low PD
+        (respectively). This linkage can be seen in a standard
+        receiver operator curve (ROC).  Suppose, for example, LOC> x
+        is used as the detector (i.e. we assume large modules have
+        more errors). LOC > x represents a family of detectors. At
+        x=0, EVERY module is predicted to have errors. This detector
+        has a high PD but also a high false alarm rate. At x=0, NO
+        module is predicted to have errors. This detector has a low
+        false alarm rate but won't detect anything at all. At 0<x<1,
+        a set of detectors are generated as shown below:
+
+
+                 pd
+               1 |           x  x  x                KEY:
+                 |        x     .                   "."  denotes the line PD=PF
+                 |     x      .                     "x"  denotes the roc curve 
+                 |   x      .                            for a set of detectors
+                 |  x     .
+                 | x    . 
+                 | x  .
+                 |x .
+                 |x
+                 x------------------ pf    
+                0                   1
+
+Note that:
+
+- The only way to make no mistakes (PF=0) is to do nothing
+        (PD=0)
+- The only way to catch more detects is to make more
+         mistakes (increasing PD means increasing PF).
+- Our detector bends towards the "sweet spot" of
+         <PD=1,PF=0> but does not reach it.
+- The line pf=pd on the above graph represents the "no information"
+         line. If pf=pd then the detector is pretty useless. The better
+         the detector, the more it rises above PF=PD towards the "sweet spot".
+
+### Problems with precision
+
+All the above are linked as follows
+
+- Recall prec = `D/(D+C)`
+- Divide top and bottom by `D` to get `1/(1+C/D)`
+- This can be exanded to `1 / (1+ neg/pos * pf/recall)`
+- Re-arranging `pf = pos/neg * (1-prec)/prec *recall`
+
+So these variables are all connected via properties of the data set. For more on this,
+see 
+
+- Priblems with Precision, 2007, http://menzies.us/07precision.pdf
+- [abcd.py](../src/abcd.py)
+
+
 
 
 what the big ms conclusion re how to predict bugs
