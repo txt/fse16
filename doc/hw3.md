@@ -63,7 +63,7 @@ means "ask my column header where to look in the row".
   range 0 to 1.
 
 
-```
+```python
  UNKNOWN = "?"
  def distance(i,r1,r2,f=2):
     d,n = 0, 10**-32
