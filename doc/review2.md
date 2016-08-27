@@ -41,7 +41,7 @@ following aspects of    science.
             - Write down a set of 10 symbols with high entropy
             - Write down a set 10 symbols with low entropy
             - What is the equation for entropy? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
-        - Standard deviation
+       - Standard deviation
             - Write down a set of 10 numbers with high standard deviation
             - Write down a set 10  numbers with low standard deviation
             - What is the equation for standard deviation ? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
