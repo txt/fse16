@@ -37,15 +37,13 @@ following aspects of    science.
        - Where should SMOTE _**not** be applied?
 9. How does ZeroR work?
 9. Decision tree learning
-       - Entropy
-            - Write down a set of 10 symbols with high entropy
-            - Write down a set 10 symbols with low entropy
-            - What is the equation for entropy? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
-       - Standard deviation
-            - Write down a set of 10 numbers with high standard deviation
-            - Write down a set 10  numbers with low standard deviation
-            - What is the equation for standard deviation ? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
-            - How are entropy and standard deviation **similar**?
+       - Write down a set of 10 symbols with high entropy
+       - Write down a set 10 symbols with low entropy
+       - What is the equation for entropy? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
+       - Write down a set of 10 numbers with high standard deviation
+       - Write down a set 10  numbers with low standard deviation
+       - What is the equation for standard deviation ? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
+       - How are entropy and standard deviation **similar**?
        - DT is also called "iterative dichotomization". Why?        
 9. What is M*N cross-validation?
        - What happens in the M step? Why?
