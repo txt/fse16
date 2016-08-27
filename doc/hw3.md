@@ -86,6 +86,11 @@ For data/weather, for the first two rows, find the nearest and furthest rows
 Important note: in the distance calc, do not include the dependent variable (the class).
 Distance is usually computed between independent variables.
 
+### Integrated into Ninja.rc
+
+Using the tricks explored last week.
+
+
 
 ### What to hand in
 
