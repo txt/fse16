@@ -44,7 +44,8 @@ following aspects of    science.
        - Write down a set 10  numbers with low standard deviation
        - What is the equation for standard deviation ? Apply it to one of the above sets. Feel free to leave your equation in fractional form,
        - How are entropy and standard deviation **similar**?
-       - DT is also called "iterative dichotomization". Why?        
+       - Decision tree learning is also called "iterative dichotomization". Why?
+       - In five to ten lines, describe DT. Try to make your description generic to both entropy and standard deviation.
 9. What is M*N cross-validation?
        - What happens in the M step? Why?
        - What happens in the N step? Why?
