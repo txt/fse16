@@ -24,7 +24,7 @@ sorting and sampling raw data).
 
 Before we do stats, lets get some visuals going:
 
-[Chir[](https://www.cs.uic.edu/~tdang/file/CHIRP-KDD.pdf)
+[Chirp](https://www.cs.uic.edu/~tdang/file/CHIRP-KDD.pdf)
 
 
 ## Utilities
@@ -95,12 +95,12 @@ def rdiv0():
   rdivDemo([
         ["x1",0.34, 0.49, 0.51, 0.6],
         ["x2",6,  7,  8,  9] ])
+```
 
-"""
-rank ,         name ,    med   ,  iqr 
-----------------------------------------------------
-   1 ,           x1 ,      51  ,    11 (*              |              ), 0.34,  0.49,  0.51,  0.51,  0.60
-   2 ,           x2 ,     800  ,   200 (               |   ----   *-- ), 6.00,  7.00,  8.00,  8.00,  9.00
+     rank ,         name ,    med   ,  iqr 
+     ----------------------------------------------------
+       1 ,           x1 ,      51  ,    11 (*              |              ), 0.34,  0.49,  0.51,  0.51,  0.60
+       2 ,           x2 ,     800  ,   200 (               |   ----   *-- ), 6.00,  7.00,  8.00,  8.00,  9.00
 
 ### Lesson One
 
