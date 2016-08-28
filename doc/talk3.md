@@ -53,6 +53,50 @@ Tables are highly reusable:
     - When we ask which class is most like the new example, we are
       querying the column summaries in the different tables.
 
+## Everything is Pretty
+
+All my classes inherit from `Pretty` that prints attributes, sorted, while
+hiding any private attributes (marked with a leading `_`).
+
+```python
+def kv(d, private="_"):
+  def _private(key):
+    return key[0] == private
+  def pretty(x):
+    return round(x,3) if isinstance(x,float) else x
+  return '('+', '.join(['%s: %s' % (k,pretty(d[k]))
+          for k in sorted(d.keys())
+          if not _private(k)]) + ')'
+          
+class Pretty(object):
+  def __repr__(i):
+    return i.__class__.__name__ + kv(i.__dict__)
+```
+    
+## Tables have Rows
+
+`Row`s are Python arrays, plus some inferred values and a unique
+id called `rid`.
+
+The array `i.contents` holds that array and most of the `Row`s
+methods are traffic cops that redirect queries to `Row` down to
+`i.contents`.
+
+```python
+class Row(Pretty):
+  rid = 0
+  def __init__(i,lst):
+    i.rid = Row.rid = Row.rid+1
+    i.contents=lst
+  def __repr__(i)       : return '#%s,%s' % (i.rid,i.contents)
+  def __getitem__(i,k)  : return i.contents[k]
+  def __setitem__(i,k,v): i.contents[k] = v
+  def __len__(i)        : return len(i.contents)
+  def __hash__(i)       : return i.rid 
+  def __eq__(i,j)       : return i.rid == j.rid
+  def __ne__(i,j)       : return not i.__eq__(j)
+```  
+
 ## Columns are Things Containing Either Nums or Syms
 
 Some details:
@@ -91,6 +135,8 @@ def atom2(x)  :
   except ValueError: return x,Sym
 ```
 
+_____
+
 ### Nums and Syms
 
 Nums and Syms are column headers that know how to
@@ -100,6 +146,8 @@ Nums and Syms are column headers that know how to
 - find the `dist` between values
     - using `norm,dist,furthest`
 - find how much this summary `likes` some value
+
+_____
 
 #### Num
 
@@ -149,6 +197,9 @@ Here's the `like` method:
     num   = math.exp(-(x-i.mu)**2/(2*var))
     return num/denom
 ```
+
+____
+
 #### Syms
 
 ```python
@@ -186,5 +237,102 @@ Here's the `distance` methods:
 Here's the `like` method:
 ```python
   def like(i,x,prior):
-    return (i.counts.get(x,0) + THE.nbm*prior)/(i.n + THE.nbm)
+    m = 2  
+    return (i.counts.get(x,0) + m*prior)/(i.n + m)
 ```
+
+____
+
+## Table
+
+```python
+class Table(Pretty):
+  DIST  = {'decs' : lambda tbl:tbl.decs,
+           'objs' : lambda tbl:tbl.objs}[THE.dist]
+  MORE  = ">"
+  LESS  = "<"
+  KLASS = "="
+  SYM   = "!" 
+  SKIP  = "-"
+  def __init__(i,inits=[]):
+    i._rows = []
+    i.cost = 0
+    i.cols,  i.objs, i.decs = [], [], []
+    i.klass, i.gets, i.dep  = [], [], []
+    map(i.__call__, inits)
+```
+Recall that
+
+- The first row is assumed to contain the names of the columns.
+- The subsequent rows contain either `Num`bers or `Sym`bols or
+  unknown values (marked with a "?").
+- Some columns have a name marked with a "?" which means
+  lets skip that column.
+- When we use a `Table` we often run through special subsets
+  of the columns, e.g. just the numbers.
+```python
+  def __call__(i,row):
+    if i.cols:
+      row     = [i.cols[put].add(row[get])
+                 for put,get in enumerate(i.gets)]
+      row     = Row(row)
+      i._rows += [ row ]
+    else:
+      for get,cell in enumerate(row):
+        if cell[-1] != Table.SKIP:
+          i.gets += [get]
+          col     = Thing(len(i.cols) , cell)
+          i.cols += [col]
+          if   cell[0] == Table.MORE  : i.objs  += [(col,more)]
+          elif cell[0] == Table.LESS  : i.objs  += [(col,less)]
+          elif cell[0] == Table.KLASS : i.klass += [col]
+          else                        : i.decs  += [col]
+          #---------------------------------------
+          for col,_ in i.objs  : i.dep   += [col]
+          for col   in i.klass : i.dep   += [col]
+          if cell[-1] == Table.SYM:
+            col.my = Sym()
+    return row
+```
+Distance calcs:
+```python
+  def distance(i,r1,r2,cols=None,f=None):
+    cols = cols or Table.DIST(i)
+    f    = f    or THE.edist
+    d,n = 0, 10**-32
+    for col in cols:
+      x, y  = r1[col.pos], r2[col.pos]
+      if x is Thing.UNKNOWN and y is Thing.UNKNOWN:
+        continue
+      if x is Thing.UNKNOWN: x=col.my.furthest(y)
+      if y is Thing.UNKNOWN: y=col.my.furthest(x)
+      n    += 1
+      inc   = col.my.dist(x,y)**f
+      d    += inc
+    return d**(1/f)/n**(1/f)
+  def furthest(i,r1,cols=None,f=None, better=more,init= -1,ignore=set()):
+    out,d = r1,init
+    for r2 in i._rows:
+      if r1.rid != r2.rid:
+        if not r2 in ignore:
+          tmp = i.distance(r1,r2,cols,f)
+          if better(tmp, d):
+            out,d = r2,tmp
+    return out
+  def closest(i,r1,cols=None,f=None,ignore=set()):
+    return i.furthest(r1,cols=cols,f=f,better=less,
+                         init=10**32,ignore=ignore)
+```
+Misc utilities
+```Python
+  def isa(i,row):
+    "Return the class of this rows."  
+    return row[ i.klass[0].pos ]
+  def clone(i,inits=[]):
+    """Create a new blank table with 
+       the same header as this table."""
+    tbl = Table()
+    tbl([col.txt for col in i.cols])
+    map(tbl.__call__,inits)
+    return tbl
+```    
