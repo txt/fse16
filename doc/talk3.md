@@ -117,8 +117,14 @@ class Num(Summary):
     delta = x - i.mu
     i.mu  = max(0,i.mu - delta/i.n)
     i.m2  = max(0,i.m2 - delta*(x - i.mu))
+```
+Here's the variability measure:     
+```
   def sd(i):
     return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
+```
+Here's the distance methods:    
+```    
   def norm(i,x):
     if not THE.raw:
       tmp= (x - i.lo) / (i.up - i.lo + 10**-32)
@@ -130,6 +136,9 @@ class Num(Summary):
     return i.norm(x) - i.norm(y)
   def furthest(i,x) :
     return i.up if x <(i.up-i.lo)/2 else i.lo
+```
+Here's the `like` method:
+```
   def like(i,x,*_):
     var   = i.sd()**2
     denom = (2*math.pi*var)**.5
