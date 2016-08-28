@@ -170,12 +170,12 @@ class Num(Summary):
     i.mu  = max(0,i.mu - delta/i.n)
     i.m2  = max(0,i.m2 - delta*(x - i.mu))
 ```
-Here's the variability measure:     
+Here's the `Num` variability measure:     
 ```python
   def sd(i):
     return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
 ```
-Here's the distance methods:    
+Here's the `Num` distance methods:    
 ```python    
   def norm(i,x):
     if not THE.raw:
@@ -218,7 +218,7 @@ class Sym(Summary):
     if x == i.mode:
       i.most, i.mode = None,None
 ```
-Here's the variability measure:     
+Here's the `Sym` variability measure:     
 ```python
   def ent(i):
     tmp = 0
@@ -228,7 +228,7 @@ Here's the variability measure:
         tmp -= p*math.log(p,2)
     return tmp
 ```
-Here's the `distance` methods:
+Here's the `Sym` `distance` methods:
 ```python
   def norm(i,x)   : return x
   def dist(i,x,y) : return 0 if x==y else 1
