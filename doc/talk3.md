@@ -293,7 +293,7 @@ Recall that
             col.my = Sym()
     return row
 ```
-Distance calcs:
+Here's the `Table` distance calcs:
 ```python
   def distance(i,r1,r2,cols=None,f=None):
     cols = cols or Table.DIST(i)
@@ -322,7 +322,7 @@ Distance calcs:
     return i.furthest(r1,cols=cols,f=f,better=less,
                          init=10**32,ignore=ignore)
 ```
-Misc utilities
+Here's some misc `Table` utilities:
 ```Python
   def isa(i,row):
     "Return the class of this rows."  
