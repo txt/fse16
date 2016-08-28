@@ -96,8 +96,12 @@ def atom2(x)  :
 Nums and Syms are column headers that know how to
 
 - `add` and `sub` new values
+- compute the variability of the `add`ed values
 - find the `dist` between values
-     - using `norm,dist,furthest`
+    - using `norm,dist,furthest`
+- find how much this summary `likes` some value
+
+#### Num
 
 ```python
 class Num(Summary):
@@ -119,12 +123,12 @@ class Num(Summary):
     i.m2  = max(0,i.m2 - delta*(x - i.mu))
 ```
 Here's the variability measure:     
-```
+```python
   def sd(i):
     return 0 if i.n <= 2 else (i.m2/(i.n - 1))**0.5
 ```
 Here's the distance methods:    
-```    
+```python    
   def norm(i,x):
     if not THE.raw:
       tmp= (x - i.lo) / (i.up - i.lo + 10**-32)
@@ -138,15 +142,14 @@ Here's the distance methods:
     return i.up if x <(i.up-i.lo)/2 else i.lo
 ```
 Here's the `like` method:
-```
+```python
   def like(i,x,*_):
     var   = i.sd()**2
     denom = (2*math.pi*var)**.5
     num   = math.exp(-(x-i.mu)**2/(2*var))
     return num/denom
 ```
-
-`Sym`s:
+#### Syms
 
 ```python
 class Sym(Summary):
@@ -163,13 +166,9 @@ class Sym(Summary):
     i.counts[x] -= 1
     if x == i.mode:
       i.most, i.mode = None,None
-  def norm(i,x)   : return x
-  def dist(i,x,y) : return 0 if x==y else 1
-  def furthest(i,x): return "SoMEcrazyTHing"
-  def like(i,x,prior):
-    return (i.counts.get(x,0) + THE.nbm*prior)/(i.n + THE.nbm)
-  def k(i):
-    return len(i.counts.keys())
+```
+Here's the variability measure:     
+```python
   def ent(i):
     tmp = 0
     for val in i.counts.values():
@@ -177,4 +176,15 @@ class Sym(Summary):
       if p:
         tmp -= p*math.log(p,2)
     return tmp
+```
+Here's the `distance` methods:
+```python
+  def norm(i,x)   : return x
+  def dist(i,x,y) : return 0 if x==y else 1
+  def furthest(i,x): return "SoMEcrazyTHing"
+```
+Here's the `like` method:
+```python
+  def like(i,x,prior):
+    return (i.counts.get(x,0) + THE.nbm*prior)/(i.n + THE.nbm)
 ```
