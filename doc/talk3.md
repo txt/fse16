@@ -53,7 +53,7 @@ Tables are highly reusable:
     - When we ask which class is most like the new example, we are
       querying the column summaries in the different tables.
 
-## Everything is Pretty
+### Everything is Pretty
 
 All my classes inherit from `Pretty` that prints attributes, sorted, while
 hiding any private attributes (marked with a leading `_`).
@@ -73,7 +73,7 @@ class Pretty(object):
     return i.__class__.__name__ + kv(i.__dict__)
 ```
     
-## Tables have Rows
+### Tables have Rows
 
 `Row`s are Python arrays, plus some inferred values and a unique
 id called `rid`.
@@ -97,7 +97,7 @@ class Row(Pretty):
   def __ne__(i,j)       : return not i.__eq__(j)
 ```  
 
-## Columns are Things Containing Either Nums or Syms
+### Columns are Things Containing Either Nums or Syms
 
 Some details:
 
@@ -189,7 +189,7 @@ Here's the `Num` distance methods:
   def furthest(i,x) :
     return i.up if x <(i.up-i.lo)/2 else i.lo
 ```
-Here's the `like` method:
+Here's the `Num` `like` method:
 ```python
   def like(i,x,*_):
     var   = i.sd()**2
@@ -234,16 +234,15 @@ Here's the `Sym` `distance` methods:
   def dist(i,x,y) : return 0 if x==y else 1
   def furthest(i,x): return "SoMEcrazyTHing"
 ```
-Here's the `like` method:
+Here's the `Sym` `like` method:
 ```python
   def like(i,x,prior):
     m = 2  
     return (i.counts.get(x,0) + m*prior)/(i.n + m)
 ```
-
 ____
 
-## Table
+### And Finally Here's the Table Class
 
 ```python
 class Table(Pretty):
