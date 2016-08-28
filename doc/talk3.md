@@ -57,7 +57,6 @@ not unknown value.
 Before that, columns area `Thing`. On creation, `Thing`s can be initialized with
 any number of `init` values.
 
-
 ```python
 class Summary(Pretty):
   def __init__(i,init=[]):
@@ -90,8 +89,7 @@ Nums and Syms are column headers that know how to
 - find the `dist` between values
      - using `norm,dist,furthest`
 
-
-```
+```python
 class Num(Summary):
   def reset(i):
     i.mu,i.n,i.m2,i.up,i.lo = 0,0,0,-10e32,10e32
