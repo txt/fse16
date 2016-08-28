@@ -59,13 +59,13 @@ parser = argparse.ArgumentParser(
 
 p=parser.add_argument
 
-p("--demo",default=False, action="store_true")
-p("--cohen",   type=float, default=0.3, metavar='N', help="too small if delta less than N*std of the data)")
-p("--small",type=int, metavar="N",default=3,         help="too small if hold less than N items")
-p("--epsilon", type=float, default=0.01,metavar="N", help="a range is too small of its hi - lo < N")
-p("--width",type=int,default=50,metavar="N",         help="width of quintile display")
-p("--conf", type=float, default=0.01,metavar="N",    help="bootstrap tests with confidence 1-n")
-p("--a12",type=float, default=0.56, metavar="N",     help="threshold for a12 test: disable,small,med,large=0,0.56,0.64,0.71") 
+p("--demo",    default=False, action="store_true")
+p("--cohen",   type=float, default=0.3,  metavar='N', help="too small if delta less than N*std of the data)")
+p("--small",   type=int,   default=3,   metavar="N", help="too small if hold less than N items")
+p("--epsilon", type=float, default=0.01, metavar="N", help="a range is too small of its hi - lo < N")
+p("--width",   type=int,   default=50,   metavar="N", help="width of quintile display")
+p("--conf",    type=float, default=0.01, metavar="N", help="bootstrap tests with confidence 1-n")
+p("--a12",     type=float, default=0.56, metavar="N", help="threshold for a12 test: disable,small,med,large=0,0.56,0.64,0.71") 
 
 args = parser.parse_args()
 The.cohen = args.cohen
