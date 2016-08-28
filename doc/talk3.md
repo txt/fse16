@@ -11,6 +11,19 @@ _______
 
 # Lecture 3: Inside Data Mining Software
 
+### Data Verification
+
+Software Scientists are software engineers and so, they
+know that software can be quirky.
+Hence, they always fiddle and poke and prod software.
+
+
++ [tunelearners-v2.pdf](https://github.com/txt/fss16/blob/master/pdf/tunelearners-v2.pdf)
++ [Tuning-LDA.pdf](https://github.com/txt/fss16/blob/master/pdf/Tuning-LDA.pdf)
++ [citemapping.pdf](https://github.com/txt/fss16/blob/master/pdf/citemapping.pdf)
+
+### Data Structures
+
 Data miners are software. Software scientists are software
 engineers. Software engineers know how to maintain and
 improve software, including data miners.
