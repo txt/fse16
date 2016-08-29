@@ -151,3 +151,11 @@ Repeatedly split recursively:
 -   Note, final tree: not all leaves are pure
 -   Splitting stops when data can't be split any further
 -   Or too few examples left to split (the *-M 2* flag in J48)
+
+
+## Want to know More?
+
+- More on trees http://dms.irb.hr/tutorial/tut_dtrees.php
+- More on other learners:
+
+![](../img/manyLearners.png)
