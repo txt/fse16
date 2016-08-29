@@ -31,8 +31,8 @@ _may_ have some bugs.
 Many, many things are a `Table`.
 
 - Tables have rows and columns.
-- Table headers summarize the content of each _column[i]_`.
-- When a row is thrown at tables, then the "column[0], column[1]...."
+- Table headers summarize the content of each _column[i]_.
+- When a row is thrown at tables, then the _column[0], column[1]...._
   summaries are all incrementally updated.
 
 Tables are highly reusable:
