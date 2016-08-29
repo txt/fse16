@@ -151,7 +151,7 @@ _____
 
 Nums and Syms are column headers that know how to
 
-- `add` and `sub` new values
+- `add` and `sub` new values to the summary
 - compute the variability of the `add`ed values
 - find how much this summary `likes` some value
 - find the `dist` between values
