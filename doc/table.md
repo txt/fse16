@@ -27,6 +27,7 @@ in the following code is manually edited (to cull some dull bits)
 in order to make the exposition easier.  So the following code
 _may_ have a few tinee-tiny  bugs introduced for teaching purposes.
 
+<br clear=all>
 
 ## <img src="http://personal.lse.ac.uk/robert49/ebooks/PhilSciAdventures/img/kepler-table.gif" width=200 align=right>Tables
 
