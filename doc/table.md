@@ -327,16 +327,18 @@ Recall that
 - Some columns have a name marked with a "?" which means
   lets skip that column.
 - When we use a `Table` we often run through special subsets
-  of the columns, e.g. just the numbers.So when we are reading the header row,
-  we place our `Thing`s into several "convenience" lists
+  of the columns, e.g. just the numbers. So when we are reading the header row,
+  we place our `Thing`s into several groups.
 
-| list | purpose | notes |
-|------|---------|-------|
-| `gets` | getters =  all the `Thing`s |
-| `objs` | objectives = all the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
-| `klass`| class = the symbolic target attributes |
-| `deps` | dependents = `objs` + `klass` |
-| `decs` | decisions = everything that is not an objective or a dependent |
+| group | purpose | contains| notes |
+|------|---------|---------|-------|
+| `gets` | getters |  `Num`s, `Sym`s | all the `Thing`s |
+| `objs` | objectives | `Num`s |all the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
+| `klass`| class | `Sym`s |the symbolic target attributes |
+| `deps` | dependents | `Num`s, `Sym`s |`objs` + `klass` |
+| `decs` | decisions | `Num`s, `Sym`s | everything that is not an objective or a dependent |
+
+Note that this means that the _same_  `Num` or `Sym` can appear in multiple groups.
 
 
 ```python
