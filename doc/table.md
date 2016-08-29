@@ -20,11 +20,13 @@ useful cliches in data structures.
 
 ## This Code
 
+<img align=right src="http://3.bp.blogspot.com/-jVzYNoiZs-0/U8fgrTqSUUI/AAAAAAAABO4/u6kmMcGUSzc/s1600/Doubt&Fear.jpg">
 This full version of this code all works (see
 [ase.py](https://github.com/txt/ase16/blob/master/src/ase.py)). But
 in the following code is manually edited (to cull some dull bits)
 in order to make the exposition easier.  So the following code
-_may_ have some bugs. 
+_may_ have a few tinee-tiny  bugs introduced for teaching purposes.
+
 
 ## Tables
 
