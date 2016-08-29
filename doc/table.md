@@ -28,7 +28,7 @@ in order to make the exposition easier.  So the following code
 _may_ have a few tinee-tiny  bugs introduced for teaching purposes.
 
 
-## Tables
+## <img src="http://personal.lse.ac.uk/robert49/ebooks/PhilSciAdventures/img/kepler-table.gif" width=200 align=right">Tables
 
 Many, many things are a `Table`.
 
