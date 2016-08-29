@@ -293,26 +293,8 @@ overcast,81,   	75,    	FALSE, 	1
 rainy, 	71,    	 91,   	 TRUE, 	 0
 ```
 
-Those fancy letters are defined as magic constants with the `Table` class.
+ 
 
-```python
-class Table(Pretty):
-  MORE  = ">"  # objectives to maximize
-  LESS  = "<"  # objectives to minimize
-  KLASS = "="  # klasses to predict for
-  SYM   = "!"  # symbols (non-numerics)
-  SKIP  = "-"  # columns to skip over
-  #-----------------------------------
-  DIST  = {    # when doing distant calcs, use either decisions or objectives.
-           'decs' : lambda tbl:tbl.decs,
-           'objs' : lambda tbl:tbl.objs}[THE.dist]
-  def __init__(i,inits=[]):
-    i._rows = []
-    i.cost = 0
-    i.cols,  i.objs, i.decs = [], [], []
-    i.klass, i.gets, i.dep  = [], [], []
-    map(i.__call__, inits)
-```
 Here's a simple high-level drive that concerts test-based tables
 to RAM-based tables.
 
@@ -324,7 +306,8 @@ def csv2table(file):
   return tbl
 ```    
 
-The following code handles all the internal details.
+The following code handles all the internal details of converting text files
+to RAM-based files. 
 Recall that
 
 - The first row is assumed to contain the names of the columns.
@@ -349,7 +332,25 @@ Note that:
 - This means that the _same_  `Num` or `Sym` can appear in multiple groups.
 - All `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective.
 
-
+```python
+class Table(Pretty):
+  MORE  = ">"  # objectives to maximize
+  LESS  = "<"  # objectives to minimize
+  KLASS = "="  # klasses to predict for
+  SYM   = "!"  # symbols (non-numerics)
+  SKIP  = "-"  # columns to skip over
+  #-----------------------------------
+  DIST  = {    # when doing distant calcs, use either decisions or objectives.
+           'decs' : lambda tbl:tbl.decs,
+           'objs' : lambda tbl:tbl.objs}[THE.dist]
+  def __init__(i,inits=[]):
+    i._rows = []
+    i.cost = 0
+    i.cols,  i.objs, i.decs = [], [], []
+    i.klass, i.gets, i.dep  = [], [], []
+    map(i.__call__, inits)
+```
+The make `Table` update function uses `__call__`:
 ```python
   def __call__(i,row):
     if i.cols:   # if exists, then we have already seen the header
