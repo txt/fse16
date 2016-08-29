@@ -43,6 +43,10 @@ Tables are highly reusable:
     - When discretize one `Table`, we are building another `Table`.
     - The original `Table` will have some combination of `Num`bers and `Sym`bols;
     - The final `Table`'s independent variables contain only `Sym`bols.
+- Prototype generation is the process of finding a (small) number of exemplary examples, thereby focusing
+  the reasoning, removing outliers, and speeding up all subsequent processing
+    - When we generate prototypes, some new `Table` is built from just the most interesting examples
+      from a prior table.
 - When we build a nearest neighbor classifier, we use information in the
   summaries to compute distances between rows.
 - When we do decision tree learning,
@@ -68,12 +72,17 @@ To understand `likes`, think of a new value arriving into a a space of old value
 - The more we `likes` something, the more it calls towards "most common".
 
 So if the values are `Sym`bols, then we report the ratio at which this new value appeared
-within the old.
+within the old. For example, a `Sym` holding the following distribution would `like`
+"blue" twice as much as "green":
+then 
+
+![https://faculty.elgin.edu/dkernler/statistics/ch02/images/freqbar.jpg]( we more "female" than "male"):
 
 And if the old values are `Num`bers, then we assume a normal bell shaped curve and report
 where the new values falls "up the hill" towards the mean. That way, if we are trying
-to decode which distribution we fall into, we can report the one where we fall "highest up"
-(e.g. so in the following, at 160cm, we more "female" than "male"):
+to decode which distribution we fall into, we can report the one where we fall "highest up".
+For example, if the following two distributions were held as two different `Num`s (one for male
+and one for female), then females with `like` x=160 much more than males.
 
 ![](https://qph.ec.quoracdn.net/main-qimg-7ca1b9aeab2a1ef304aa5df52b2f9524?convert_to_webp=true)
 
@@ -296,7 +305,7 @@ Recall that
 
 | group  | example        | purpose  |        contains| notes                              |
 |--------|:---------------|----------|----------------|:-----------------------------------|
-| `gets` |                | getters  |  `Num`s `Sym`s | All headers                        |
+| `cols` |                | getters  |  `Num`s `Sym`s | All headers                        |
 | `objs` | >speed  <cost  |objectives| `Num`s         | All the numeric target variables.  |
 | `klass`| =disease       | class    | `Sym`s         | The symbolic target attributes     |
 | `deps` |                |dependents| `Num`s `Sym`s  |` `deps` = objs` + `klass`                    |
@@ -305,7 +314,7 @@ Recall that
 Note that:
 
 - This means that the _same_  `Num` or `Sym` can appear in multiple groups.
--  All `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective.
+- All `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective.
 
 
 ```python
@@ -332,6 +341,8 @@ Note that:
             col.my = Sym()
     return row
 ```
+In the above, `gets` is a tedious low-level thing. Some columns are marked as `SKIP`
+
 Here's the `Table` distance calcs:
 ```python
   def distance(i,r1,r2,cols=None,f=None):
