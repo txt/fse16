@@ -60,16 +60,16 @@ Tables are highly reusable:
     
 
 
-### Some Details: `likes` and `dist`
+### Some Details: `like` and `dist`
 
-Two things shown below is code for `likes` and `dist`.
+Two things shown below is code for `like` and `dist`.
 
-#### Understanding `likes`
+#### Understanding `like`
 
-To understand `likes`, think of a new value arriving into a a space of old values.
+To understand `like`, think of a new value arriving into a a space of old values.
 
 - Assume the old values are somehow divided up "least common" to "most common";
-- The more we `likes` something, the more it calls towards "most common".
+- The more we `like` something, the more it calls towards "most common".
 
 So if the values are `Sym`bols, then we report the ratio at which this new value appeared
 within the old. For example, a `Sym` holding the following distribution would `like`
@@ -162,7 +162,7 @@ Nums and Syms are column headers that know how to
 
 - `add` and `sub` new values to the summary
 - compute the variability of the `add`ed values
-- find how much this summary `likes` some value
+- find how much this summary `like` some value
 - find the `dist` between values
     - using `norm,dist,furthest`
 
@@ -421,9 +421,9 @@ def nb1(train,test):
 ```
 
 Here's the `like` function used by `nb1` that multiplies together all the
-`likes` of all the different columns.
+`like` of all the different columns.
 
-```
+```python
 def like(row, all, klasses):
   guess, best, nh, k = None, -1*10**32, len(klasses), THE.nbk
   for this,tbl in klasses.items():
@@ -433,7 +433,7 @@ def like(row, all, klasses):
       if col.my:
         x = row[col.pos]
         if x != Thing.UNKNOWN:
-          like *= col.my.like( x, prior)
+          like *= col.my.like( x, prior) # mult together all the likes
     if like > best:
       guess,best = this,like
   return guess
