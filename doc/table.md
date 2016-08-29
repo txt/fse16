@@ -334,8 +334,8 @@ Recall that
   of the columns, e.g. just the numbers. So when we are reading the header row,
   we place our `Thing`s into several groups.
 
-| group  | e.g.           | purpose | contains| notes |
-|--------|:---------------|---------|:-------|
+| group  | example        | purpose | contains| notes |
+|--------|:---------------|---------|---------|:------|
 | `gets` |                | getters |  `Num`s `Sym`s | All headers |
 | `objs` | >speed, <cost  |objectives | `Num`s |All the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
 | `klass`| =disease       | class | `Sym`s |The symbolic target attributes |
