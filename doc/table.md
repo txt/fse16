@@ -374,8 +374,42 @@ Here's some misc `Table` utilities:
     map(tbl.__call__,inits)
     return tbl
 ```
-Here's the `like` function that multiplies together all the `likes`
-of all the different columns.
+
+
+## Top-Level Drivers
+
+KNN and Naive Bayes... in 10 lines (ish).
+
+```python
+def knn(train=THE.train,test=THE.test): return learn(knn1,train,test)
+def nb( train=THE.train,test=THE.test): return learn(nb1, train,test)
+
+def learn(what, train, test):
+  print(train,test)
+  for actual, predicted in what(train, test):
+    print(actual, predicted)
+
+def knn1(train,test):
+  tbl = arff2table(train)
+  k   = tbl.klass[0].pos
+  for _,r1 in arff2rows(test):
+    r2 = tbl.closest(r1)
+    yield r1[k],r2[k]
+    
+def nb1(train,test):
+  klasses = {}
+  for all,(tbl1,row) in enumerate(arff2rows(train)):
+    k = tbl1.isa(row)
+    if not k in klasses:
+      klasses[k] = tbl1.clone()
+    klasses[k](row)
+  for tbl2,row in arff2rows(test):
+    yield tbl2.isa(row), like(row,all,klasses)
+```
+
+Here's the `like` function used by `nb1` that multiplies together all the
+`likes` of all the different columns.
+
 ```
 def like(row, all, klasses):
   guess, best, nh, k = None, -1*10**32, len(klasses), THE.nbk
@@ -391,37 +425,6 @@ def like(row, all, klasses):
       guess,best = this,like
   return guess
 ```    
-
-## Top-Level Drivers
-
-KNN and Naive Bayes... in 10 lines (ish).
-
-```python
-def knn(train=THE.train,test=THE.test): return learn(knn1,train,test)
-def nb( train=THE.train,test=THE.test): return learn(nb1, train,test)
-
-def learn(what, train, test):
-  print(train,test)
-  for actual, predicted in what(train, test):
-    print(actual, predicted)
-
-def nb1(train,test):
-  klasses = {}
-  for all,(tbl1,row) in enumerate(arff2rows(train)):
-    k = tbl1.isa(row)
-    if not k in klasses:
-      klasses[k] = tbl1.clone()
-    klasses[k](row)
-  for tbl2,row in arff2rows(test):
-    yield tbl2.isa(row), like(row,all,klasses)
-
-def knn1(train,test):
-  tbl = arff2table(train)
-  k   = tbl.klass[0].pos
-  for _,r1 in arff2rows(test):
-    r2 = tbl.closest(r1)
-    yield r1[k],r2[k]
-```
 
 ## Low-level Details
 
@@ -449,7 +452,7 @@ class Row(Pretty):
   def __hash__(i)       : return i.rid 
   def __eq__(i,j)       : return i.rid == j.rid
   def __ne__(i,j)       : return not i.__eq__(j)
-```  
+```
 
 
 ### Everything is Pretty
