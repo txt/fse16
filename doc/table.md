@@ -298,7 +298,7 @@ rainy, 	71,    	 91,   	 TRUE, 	 0
 Here's a simple high-level drive that concerts test-based tables
 to RAM-based tables.
 
-```
+```python
 def csv2table(file):
   tbl= Table()
   for row in rows(file):
