@@ -77,10 +77,7 @@ Back to tree learning...
 
 Which feature *splits* generates symbols that are less mixed up?
 
-<center>
-<img width=400 
-   src="http://unbox.org/open/trunk/472/14/spring/doc/img/splits.jpg">
-</center>
+![](http://unbox.org/open/trunk/472/14/spring/doc/img/splits.jpg)
 
 Which is the best attribute to split on?
 
