@@ -29,7 +29,7 @@ _may_ have a few tinee-tiny  bugs introduced for teaching purposes.
 
 <br clear=all>
 
-## <img src="http://personal.lse.ac.uk/robert49/ebooks/PhilSciAdventures/img/kepler-table.gif" width=200 align=right>Tables
+## <img src="http://personal.lse.ac.uk/robert49/ebooks/PhilSciAdventures/img/kepler-table.gif" width=300 align=right>Tables
 
 Many, many things are a `Table`.
 
