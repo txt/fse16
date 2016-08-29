@@ -53,7 +53,6 @@ Tables are highly reusable:
     - When we ask which class is most like the new example, we are
       querying the column summaries in the different tables.
 
-```
     
 
 
@@ -455,5 +454,7 @@ def kv(d, private="_"):
 class Pretty(object):
   def __repr__(i):
     return i.__class__.__name__ + kv(i.__dict__)
+```
+
 
 
