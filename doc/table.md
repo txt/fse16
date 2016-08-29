@@ -303,15 +303,19 @@ ____
 
 ### And Finally Here's the Table Class
 
+In the header row, column attributes can contain certain magic symbols denoting their purpose in life.
+
 ```python
 class Table(Pretty):
-  DIST  = {'decs' : lambda tbl:tbl.decs,
+  MORE  = ">"  # objectives to maximize
+  LESS  = "<"  # objectives to minimize
+  KLASS = "="  # klasses to predict for
+  SYM   = "!"  # symbols (non-numerics)
+  SKIP  = "-"  # columns to skip over
+  #-----------------------------------
+  DIST  = {    # when doing distant calcs, use either decisions or objectives.
+           'decs' : lambda tbl:tbl.decs,
            'objs' : lambda tbl:tbl.objs}[THE.dist]
-  MORE  = ">"
-  LESS  = "<"
-  KLASS = "="
-  SYM   = "!" 
-  SKIP  = "-"
   def __init__(i,inits=[]):
     i._rows = []
     i.cost = 0
