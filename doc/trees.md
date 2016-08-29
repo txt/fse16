@@ -198,11 +198,10 @@ sample as much data as can fit into RAM.
 - They extend naturally into cloud computing: just build forests on different CPUs.
 
 Like C4.5 and CART, it might be best to think of random forests as a framework
-within which we can explore multiple data mining methods:
+within which we can explore multiple data mining methods. When faced with data that is too big to process:
 
--  When faced with data that is too big to process:
-    – Repeat many times: 
-    – Learn something from subsets of the rows and features.
+– Repeat many times: 
+– Learn something from subsets of the rows and features.
 - Then make conclusions by sampling across that ensemble of learners.
 
 As seen with random forests, this strategy works well for decision tree learning, but
