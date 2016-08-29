@@ -82,7 +82,7 @@ And if the old values are `Num`bers, then we assume a normal bell shaped curve a
 where the new values falls "up the hill" towards the mean. That way, if we are trying
 to decode which distribution we fall into, we can report the one where we fall "highest up".
 For example, if the following two distributions were held as two different `Num`s (one for male
-and one for female), then females with `like` x=160 much more than males.
+and one for female), then females  `like` x=160 much more than males (and they both `like` x=170 the same amounts).
 
 ![](https://qph.ec.quoracdn.net/main-qimg-7ca1b9aeab2a1ef304aa5df52b2f9524?convert_to_webp=true)
 
