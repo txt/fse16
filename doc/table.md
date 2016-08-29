@@ -76,7 +76,7 @@ within the old. For example, a `Sym` holding the following distribution would `l
 "blue" twice as much as "green":
 then 
 
-![https://faculty.elgin.edu/dkernler/statistics/ch02/images/freqbar.jpg]( we more "female" than "male"):
+![](https://faculty.elgin.edu/dkernler/statistics/ch02/images/freqbar.jpg)
 
 And if the old values are `Num`bers, then we assume a normal bell shaped curve and report
 where the new values falls "up the hill" towards the mean. That way, if we are trying
