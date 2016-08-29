@@ -37,7 +37,7 @@ and whose internal nodes are tests on attributes?
 
 This tree is built by recursively partitioning the data:
 
-![](http://pasteboard.co/eum8YzNoJ.png)
+![](https://cdn.pbrd.co/images/eum8YzNoJ.png)
 
 (The above diagram comes from a very nice, and short, discussion of decision trees:
 [LARGE-SCALE MUSIC SIMILARITY SEARCH WITH SPATIAL TREES, Brian McFee, Gert Lanckriet, ISMIRE'11](http://ismir2011.ismir.net/papers/PS1-3.pdf)).
