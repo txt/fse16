@@ -79,7 +79,7 @@ Which feature *splits* generates symbols that are less mixed up?
 
 <center>
 <img width=400 
-   src="http://unbox.org/open/trunk/472/14/spring/doc/img/splits.jpg">
+   src="../img/splits.jpg">
 </center>
 
 Which is the best attribute to split on?
@@ -136,7 +136,7 @@ Repeatedly split recursively:
 
 <center>
 <img width=400
-    src="http://unbox.org/open/trunk/472/14/spring/doc/img/finaltree.jpg"
+    src="../img/finaltree.jpg"
 	>
 </center>
 
