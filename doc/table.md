@@ -373,6 +373,22 @@ Here's some misc `Table` utilities:
     tbl([col.txt for col in i.cols])
     map(tbl.__call__,inits)
     return tbl
+
+
+def like(row, all, klasses):
+  "Like function. should this be inside Table?"
+  guess, best, nh, k = None, -1*10**32, len(klasses), THE.nbk
+  for this,tbl in klasses.items():
+    guess = guess or this
+    like  = prior = (len(tbl._rows)  + k) / (all + k * nh)
+    for col in tbl.decs:
+      if col.my:
+        x = row[col.pos]
+        if x != Thing.UNKNOWN:
+          like *= col.my.like( x, prior)
+    if like > best:
+      guess,best = this,like
+  return guess
 ```    
 
 ## Top-Level Drivers
