@@ -496,8 +496,6 @@ def rows(file,prep=atoms):
       row = map(lambda z:z.strip(), line.split(","))
       if len(row)> 0:
          yield prep(row) if prep else row
-
-
 ```
     
 ### Tables have Rows
