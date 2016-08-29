@@ -54,9 +54,10 @@ making for software projects.
 </td>
 <td valign=top  xwidth="100px">
 
-5. <a href="doc/table.md">Tables</a><br>
-4. <a href="doc/stats.md">Stats</a><br>
-3. <a href="doc/talk3.md#data-verification">Verification studies</a><br>
+7. <a href="doc/trees,md">Decision trees</a><br>
+6. <a href="doc/table.md">Tables</a><br>
+5. <a href="doc/stats.md">Stats</a><br>
+4. <a href="doc/talk3.md#data-verification">Verification studies</a><br>
 3. <a href="doc/talk2.md">Lecture2: Misc</a><br>
 2. <a href="http://99percentinvisible.org/episode/on-average/">On Average</a><br>
 1. <a href="doc/talk1.md">What is S.O.S.?</a><br>
