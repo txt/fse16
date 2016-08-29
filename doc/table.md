@@ -348,6 +348,7 @@ Here's the `Table` distance calcs:
       inc   = col.my.dist(x,y)**f
       d    += inc
     return d**(1/f)/n**(1/f)
+  #---------------------------------    
   def furthest(i,r1,cols=None,f=None, better=more,init= -1,ignore=set()):
     out,d = r1,init
     for r2 in i._rows:
@@ -357,6 +358,7 @@ Here's the `Table` distance calcs:
           if better(tmp, d):
             out,d = r2,tmp
     return out
+  #---------------------------------    
   def closest(i,r1,cols=None,f=None,ignore=set()):
     return i.furthest(r1,cols=cols,f=f,better=less,
                          init=10**32,ignore=ignore)
