@@ -301,7 +301,7 @@ to RAM-based tables.
 ```python
 def csv2table(file):
   tbl= Table()
-  for row in rows(file):
+  for row in rows(file): # "rows" defined at the end of this file
     tbl(row)
   return tbl
 ```    
