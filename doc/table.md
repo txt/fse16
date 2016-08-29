@@ -328,19 +328,19 @@ Recall that
 - The first row is assumed to contain the names of the columns.
 - The subsequent rows contain either `Num`bers or `Sym`bols or
   unknown values (marked with a "?").
-- Some columns have a name marked with a "?" which means
+- Some columns have a name marked with a "-" which means
   lets skip that column.
 - When we use a `Table` we often run through special subsets
   of the columns, e.g. just the numbers. So when we are reading the header row,
   we place our `Thing`s into several groups.
 
-| group | purpose | contains| notes |
+| group | e.g. | purpose | contains| notes |
 |------|---------|---------|:-------|
-| `gets` | getters |  `Num`s `Sym`s | All headers |
-| `objs` | objectives | `Num`s |All the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
-| `klass`| class | `Sym`s |The symbolic target attributes |
-| `deps` | dependents | `Num`s `Sym`s |`objs` + `klass` |
-| `decs` | decisions | `Num`s `Sym`s | `gets` - `objs` - `klass`. Everything that is not an objective or a klass (i.e. all the independent variables) |
+| `gets` | | getters |  `Num`s `Sym`s | All headers |
+| `objs` | >speed, <cost |objectives | `Num`s |All the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
+| `klass`| =disease | class | `Sym`s |The symbolic target attributes |
+| `deps` | |dependents | `Num`s `Sym`s |`objs` + `klass` |
+| `decs` | |decisions | `Num`s `Sym`s | `gets` - `objs` - `klass`. Everything that is not an objective or a klass (i.e. all the independent variables) |
 
 Note that this means that the _same_  `Num` or `Sym` can appear in multiple groups.
 
