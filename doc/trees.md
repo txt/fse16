@@ -153,6 +153,90 @@ Repeatedly split recursively:
 -   Or too few examples left to split (the *-M 2* flag in J48)
 
 
+## Why Use just one decision tree?
+
+Traditional tree learners like CART and C4.5 cannot scale to Big Data problems
+since they assume that data is loaded into main memory and executed within one
+thread. There are many ways to address these issues such as the classic “peepholing”
+method of Catlett [8]. One of the most interesting, and simplest, is the random forest
+method of Breimann [7]. The motto of random forests is, “If one tree is good, why
+not build a whole bunch?” To build one tree in a random forest, pick a number m less
+than the number of features. Then, to build a forest, build many trees as follows:
+
+1. select some subset d of the training data;
+2. build a tree as above, but at each split, only consider m features (selected at random); and
+3. do not bother to post-prune.
+
+Finding the right d and m values for a particular dataset means running the forests,
+checking the error rates in the predictions, then applying engineering judgment to
+select better values. Note that d cannot be bigger than what can fit into RAM. Also,
+a useful default for m is the log of the number of features.
+
+Random forests make predictions by passing test data down each tree. The output
+is the most common conclusion made by all trees.
+
+Random forests have certain drawbacks:
+
+- Random forests do not generate a single simple model that users can browse
+and understand. On the other hand, the forests can be queried to find the most
+important features (by asking what features across all the trees were used most
+as a split criteria).
+
+Some commonly used data mining toolkits insist that all the data load into RAM
+before running random forests (But it should be emphasized that this is more an issue in the typical toolkit’s implementation than
+some fatal flaw with random forests).
+
+Nevertheless, random forests are remarkably effective:
+
+- Random forests generate predictions that are often as good as, or better than,
+many other learners [7].
+- They are fast. In [7], Breimann reports experiments where running it on a dataset
+with 50,000 cases and 100 variables, it produced 100 trees in 11 min on a
+800MHz machine. On modern machines, random forest learning is even faster.
+- They scale to datasets with very large numbers of rows or features: just repeatedly
+sample as much data as can fit into RAM.
+- They extend naturally into cloud computing: just build forests on different CPUs.
+
+Like C4.5 and CART, it might be best to think of random forests as a framework
+within which we can explore multiple data mining methods:
+
+-  When faced with data that is too big to process:
+    – Repeat many times: 
+    – Learn something from subsets of the rows and features.
+- Then make conclusions by sampling across that ensemble of learners.
+
+As seen with random forests, this strategy works well for decision tree learning, but
+it is useful for many other learners as well (later in this chapter we discuss an analog
+of random forests for the naive Bayesian classifier).
+
+Note that for this style of random learning to be practical, each model must be
+learned very fast. Hence, when building such a learner, do not “sweat the small
+stuff.” If something looks tricky, then just skip it (e.g., random forests do not do
+post-pruning). The lesson of random forests is that multiple simple samples can do
+better than fewer and more complex methods. Don’t worry, be happy.
+
+A final note on random forests: they are an example of an ensemble learning
+method. The motto of ensemble learning is that if one expert is good, then many
+are better. While N copies of the same expert is clearly a waste of resources, N
+experts all learned from slightly different data can offer N different perspectives on
+the same problem. Ensemble learning is an exciting area in data mining—and one
+that has proved most productive. For example:
+- The annual KDD-cup is an international competition between data mining
+research teams. All the first and second-placed winners for 2009–2011 used
+ensemble methods.
+- In our own work, our current best-of-breed learner for effort estimation is an
+ensemble method [34].
+
+References:
+
+- [7]  Breimann, L.: Random forests. Mach. Learn. 45(1), 5–32 (2001).
+DOI 10.1023/A:1010933404324
+- [8] Catlett, J.: Inductive learning from subsets, or, Disposal ofexcess training data considered
+harmful. In: Proceedings of the Australian Workshop on Knowledge Acquisition
+forKnowledge-Based Systems, pp. 53–67 (1991)
+- [34] . Kocaguneli, E., Menzies, T., Keung, J.: On the value of ensemble effort estimation. IEEE
+Trans. Software Eng. 38(6), 1403–1416 (2012b). DOI 10.1109/TSE.2011.111
+
 ## Want to know More?
 
 - More on trees http://dms.irb.hr/tutorial/tut_dtrees.php
