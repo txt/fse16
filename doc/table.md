@@ -339,8 +339,8 @@ Recall that
 | `gets` |                | getters  |  `Num`s `Sym`s | All headers                        |
 | `objs` | >speed  <cost  |objectives| `Num`s         | All the numeric target variables.  |
 | `klass`| =disease       | class    | `Sym`s         | The symbolic target attributes     |
-| `deps` |                |dependents| `Num`s `Sym`s  |`objs` + `klass`                    |
-| `decs` |                |decisions | `Num`s `Sym`s  | `gets` - `objs` - `klass`. Everything that is not an objective or a klass (i.e. all the independent variables) |
+| `deps` |                |dependents| `Num`s `Sym`s  |` `deps` = objs` + `klass`                    |
+| `decs` |                |decisions | `Num`s `Sym`s  | `decs` = `gets` - `objs` - `klass`. Everything that is not an objective or a klass (i.e. all the independent variables) |
 
 Note that:
 
