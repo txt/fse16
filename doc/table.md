@@ -53,49 +53,8 @@ Tables are highly reusable:
     - When we ask which class is most like the new example, we are
       querying the column summaries in the different tables.
 
-### Everything is Pretty
-
-All my classes inherit from `Pretty` that prints attributes, sorted, while
-hiding any private attributes (marked with a leading `_`).
-
-```python
-def kv(d, private="_"):
-  def _private(key):
-    return key[0] == private
-  def pretty(x):
-    return round(x,3) if isinstance(x,float) else x
-  return '('+', '.join(['%s: %s' % (k,pretty(d[k]))
-          for k in sorted(d.keys())
-          if not _private(k)]) + ')'
-          
-class Pretty(object):
-  def __repr__(i):
-    return i.__class__.__name__ + kv(i.__dict__)
 ```
     
-### Tables have Rows
-
-`Row`s are Python arrays, plus some inferred values and a unique
-id called `rid`.
-
-The array `i.contents` holds that array and most of the `Row`s
-methods are traffic cops that redirect queries to `Row` down to
-`i.contents`.
-
-```python
-class Row(Pretty):
-  rid = 0
-  def __init__(i,lst):
-    i.rid = Row.rid = Row.rid+1
-    i.contents=lst
-  def __repr__(i)       : return '#%s,%s' % (i.rid,i.contents)
-  def __getitem__(i,k)  : return i.contents[k]
-  def __setitem__(i,k,v): i.contents[k] = v
-  def __len__(i)        : return len(i.contents)
-  def __hash__(i)       : return i.rid 
-  def __eq__(i,j)       : return i.rid == j.rid
-  def __ne__(i,j)       : return not i.__eq__(j)
-```  
 
 
 ### Some Details: `likes` and `dist`
@@ -157,6 +116,8 @@ Which means that we won't know that type of a column till we `add` that first no
 
 Before that, columns are a `Thing`. On creation, `Thing`s can be initialized with
 any number of `init` values.
+
+All my classes inherit from `Pretty` which is a little detail we can ignore (but if you have to know-- see end of this page).
 
 ```python
 class Summary(Pretty):
@@ -445,5 +406,54 @@ def knn1(train,test):
     r2 = tbl.closest(r1)
     yield r1[k],r2[k]
 ```
+
+## Low-level Details
+
+### Tables have Rows
+
+`Row`s are Python arrays, plus some inferred values and a unique
+id called `rid`.
+
+- `rid` lets us do set membership very quickly.
+
+The array `i.contents` holds that array and most of the `Row`s
+methods are traffic cops that redirect queries to `Row` down to
+`i.contents`.
+
+```python
+class Row(Pretty):
+  rid = 0
+  def __init__(i,lst):
+    i.rid = Row.rid = Row.rid+1
+    i.contents=lst
+  def __repr__(i)       : return '#%s,%s' % (i.rid,i.contents)
+  def __getitem__(i,k)  : return i.contents[k]
+  def __setitem__(i,k,v): i.contents[k] = v
+  def __len__(i)        : return len(i.contents)
+  def __hash__(i)       : return i.rid 
+  def __eq__(i,j)       : return i.rid == j.rid
+  def __ne__(i,j)       : return not i.__eq__(j)
+```  
+
+
+### Everything is Pretty
+
+
+All my classes inherit from `Pretty` that prints attributes, sorted, while
+hiding any private attributes (marked with a leading `_`).
+
+```python
+def kv(d, private="_"):
+  def _private(key):
+    return key[0] == private
+  def pretty(x):
+    return round(x,3) if isinstance(x,float) else x
+  return '('+', '.join(['%s: %s' % (k,pretty(d[k]))
+          for k in sorted(d.keys())
+          if not _private(k)]) + ')'
+          
+class Pretty(object):
+  def __repr__(i):
+    return i.__class__.__name__ + kv(i.__dict__)
 
 
