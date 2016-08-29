@@ -329,12 +329,14 @@ Recall that
 - When we use a `Table` we often run through special subsets
   of the columns, e.g. just the numbers.So when we are reading the header row,
   we place our `Thing`s into several "convenience" lists
-          - `gets` : getters =  all the `Thing`s
-          - `objs` : objectives = all the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want
-                  `more` or `less` of this objective.
-          - `klass`: class = the symbolic target attributes
-          - `deps` : dependents = `objs` + `klass`
-          - `decs` : decisions = everything that is not an objective or a dependent
+
+| list | purpose | notes |
+|------|---------|-------|
+| `gets` | getters =  all the `Thing`s |
+| `objs` | objectives = all the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want `more` or `less` of this objective. |
+| `klass`| class = the symbolic target attributes |
+| `deps` | dependents = `objs` + `klass` |
+| `decs` | decisions = everything that is not an objective or a dependent |
 
 
 ```python
