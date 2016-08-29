@@ -158,7 +158,7 @@ Repeatedly split recursively:
 Traditional tree learners like CART and C4.5 cannot scale to Big Data problems
 since they assume that data is loaded into main memory and executed within one
 thread. There are many ways to address these issues such as the classic “peepholing”
-method of Catlett [8]. One of the most interesting, and simplest, is the random forest
+method of Catlett [8]. But one of the most interesting, and simplest, is the random forest
 method of Breimann [7]. The motto of random forests is, “If one tree is good, why
 not build a whole bunch?” To build one tree in a random forest, pick a number m less
 than the number of features. Then, to build a forest, build many trees as follows:

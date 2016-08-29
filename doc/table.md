@@ -97,7 +97,55 @@ class Row(Pretty):
   def __ne__(i,j)       : return not i.__eq__(j)
 ```  
 
-### Columns are Things Containing Either Nums or Syms
+
+### Some Details: `likes` and `dist`
+
+Two things shown below is code for `likes` and `dist`.
+
+#### Understanding `likes`
+
+To understand `likes`, think of a new value arriving into a a space of old values.
+
+- Assume the old values are somehow divided up "least common" to "most common";
+- The more we `likes` something, the more it calls towards "most common".
+
+So if the values are `Sym`bols, then we report the ratio at which this new value appeared
+within the old.
+
+And if the old values are `Num`bers, then we assume a normal bell shaped curve and report
+where the new values falls "up the hill" towards the mean. That way, if we are trying
+to decode which distribution we fall into, we can report the one where we fall "highest up"
+(e.g. so in the following, at 160cm, we more "female" than "male"):
+
+![](https://qph.ec.quoracdn.net/main-qimg-7ca1b9aeab2a1ef304aa5df52b2f9524?convert_to_webp=true)
+
+#### Understanding `dist`
+
+To understand the `dist` stuff, lets just preview at little bit of code from the
+end of this file. This code computes the distance between 2 rows in a table.
+In English, the following is Euclidean `dist`ance measure between the `n` number of `x,y` values
+inside `r1,r2`. And if either `x,y` is UNKNOWN, then assume the worst case (maximum distance to
+the `furthest` value).
+
+```python
+    f    = 2
+    d,n = 0, 10**-32
+    for col in cols:
+      x, y  = r1[col.pos], r2[col.pos]
+      if x is Thing.UNKNOWN and y is Thing.UNKNOWN:
+        continue
+      if x is Thing.UNKNOWN: x=col.my.furthest(y)
+      if y is Thing.UNKNOWN: y=col.my.furthest(x)
+      n    += 1
+      inc   = col.my.dist(x,y)**f
+      d    += inc
+    return d**(1/f)/n**(1/f)
+```
+
+Why the last line where we divide by `n**0.5`? Well, that ensures that our
+numbers fall 0..1 which simplifies a lot of other calculations.
+
+### Columns are `Thing`s Containing Either `Num`s or `Sym`s
 
 Some details:
 
@@ -105,23 +153,25 @@ Some details:
 - The subsequent rows contain either `Num`bers or `Sym`bols or unknown values (marked with a "?").
 - Column rows have a type (`Num` or `Sym`) which is determined by the first thing in each column that is not unknown.
 
-Which means that we won't know that type of a column till we `add` that first
-not unknown value.
+Which means that we won't know that type of a column till we `add` that first not unknown value.
 
-Before that, columns area `Thing`. On creation, `Thing`s can be initialized with
+Before that, columns are a `Thing`. On creation, `Thing`s can be initialized with
 any number of `init` values.
 
 ```python
 class Summary(Pretty):
   def __init__(i,init=[]):
-    i.reset()
+    i.reset()  
     map(i.add,init)
-
+  def reset(i):  # implemented by sub-class
+    pass
+  
 class Thing(Summary):
   UNKNOWN = "?"
   def __init__(i,pos,txt=None):
     txt = txt or pos
-    i.txt, i.pos, i.my = str(txt), pos, None
+    i.txt, i.pos  = str(txt), pos
+    i.my = None # at creation, don't know if this is Num or Sym, yet
   def add(i,x):
     if x != Thing.UNKNOWN:
       if i.my is None:
@@ -143,10 +193,12 @@ Nums and Syms are column headers that know how to
 
 - `add` and `sub` new values
 - compute the variability of the `add`ed values
+- find how much this summary `likes` some value
 - find the `dist` between values
     - using `norm,dist,furthest`
-- find how much this summary `likes` some value
 
+
+    
 _____
 
 #### Num
@@ -189,7 +241,8 @@ Here's the `Num` distance methods:
   def furthest(i,x) :
     return i.up if x <(i.up-i.lo)/2 else i.lo
 ```
-Here's the `Num` `like` method:
+Here's the `Num` `like` method (which reports how far "up the hill" you are of a Gaussian curve):
+
 ```python
   def like(i,x,*_):
     var   = i.sd()**2
@@ -198,6 +251,7 @@ Here's the `Num` `like` method:
     return num/denom
 ```
 
+Note that `like` never returns zero (just very,very small numbers if we are far away from the mean).
 ____
 
 #### Syms
@@ -240,6 +294,11 @@ Here's the `Sym` `like` method:
     m = 2  
     return (i.counts.get(x,0) + m*prior)/(i.n + m)
 ```
+    
+In the above, the `m` and `prior` stuff is some math tricks for handling very low frequency calculations.
+Without it, `like` could return zero which  means that we multiplying together many `like` values
+then one very rare one would zap out all the others, even if the others are `like`d a lot.
+
 ____
 
 ### And Finally Here's the Table Class
@@ -268,11 +327,20 @@ Recall that
 - Some columns have a name marked with a "?" which means
   lets skip that column.
 - When we use a `Table` we often run through special subsets
-  of the columns, e.g. just the numbers.
+  of the columns, e.g. just the numbers.So when we are reading the header row,
+  we place our `Thing`s into several "convenience" lists
+       - `gets` : getters =  all the `Thing`s
+       - `objs` : objectives = all the numeric target variables. Note that all `objs` are paired with a goal statement; i.e. do we want
+                  `more` or `less` of this objective.
+       - `klass`: class = the symbolic target attributes
+       - `deps` : dependents = `objs` + `klass`
+       - `decs` : decisions = everything that is not an objective or a dependent
+
+
 ```python
   def __call__(i,row):
-    if i.cols:
-      row     = [i.cols[put].add(row[get])
+    if i.cols:   # if exists, then we have already seen the header
+      row     = [i.cols[put].add(row[get])  # adding the row updates all the headers
                  for put,get in enumerate(i.gets)]
       row     = Row(row)
       i._rows += [ row ]
@@ -340,7 +408,7 @@ Here's some misc `Table` utilities:
 
 KNN and Naive Bayes... in 10 lines (ish).
 
-```
+```python
 def knn(train=THE.train,test=THE.test): return learn(knn1,train,test)
 def nb( train=THE.train,test=THE.test): return learn(nb1, train,test)
 
@@ -365,4 +433,6 @@ def knn1(train,test):
   for _,r1 in arff2rows(test):
     r2 = tbl.closest(r1)
     yield r1[k],r2[k]
-```  
+```
+
+
