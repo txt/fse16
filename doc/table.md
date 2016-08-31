@@ -488,7 +488,7 @@ def atoms(lst):
     except:
       try: return float(x)
       except ValueError:
-        return Sym
+        return x
   return map(atom,lst)
         
 def rows(file,prep=atoms):
