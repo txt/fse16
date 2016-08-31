@@ -489,7 +489,7 @@ def atoms(lst):
       try: return float(x)
       except ValueError:
         return Sym
-        return map(atom,lst)
+  return map(atom,lst)
         
 def rows(file,prep=atoms):
   "Kill comments, white space, blank lines,divide rows on ','"        
