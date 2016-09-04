@@ -4,6 +4,16 @@
 How to turn a Naive Bayes classifier into an incremental learner:
 
 + Classify new examples BEFORE adding examples to training set
+[home](http://tiny.cc/fss2016) | [copyright](https://github.com/txt/fss16/blob/master/LICENSE.md) &copy;2016, tim&commat;menzies.us<br>
+[<img width=900 src="https://raw.githubusercontent.com/txt/fss16/master/img/fss16.png">](http://tiny.cc/fss2016)   <br>
+[overview](https://github.com/txt/fss16/blob/master/doc/overview.md) |
+[syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) |
+[src](https://github.com/txt/fss16/blob/master/src) |
+[submit](http://tiny.cc/fss2016give) |
+[chat](https://fss16.slack.com/) 
+
+_______
+
 
 How to turn any learner into an incremental learning (premise: that
 learner stabilizes on new examples faster than mode changes
@@ -21,14 +31,11 @@ How to turn any recursive splitting algorithm into an incremental learner:
         turn on learning for that leaf cluster starting with `S` + `B` 
 + Unsupervised: read `era` examples and cluster. For all subsequent eras,
         if new examples fall into old clusters then forgetaboutit. Else. sometimes,
-        build new clusters. For more, see Farnstrom,
-        F., Lewis, J., and Elkan, C. 2000. Scalability for
-        clustering algorithms revisited. SIGKDD Explor. Newsl.
-        2, 1 (Jun. 2000), 51-57.  http://portal.acm.org/citation.cfm?id=360419
+        build new clusters. For more, see below.
 
-## Some details
+## Simple single pass k-means
 
-Simple single pass k-means
+A sample incremental method
 
 Farnstrom, F., Lewis, J., and Elkan, C. 2000. Scalability for clustering algorithms revisited. SIGKDD Explor. Newsl. 2, 1 (Jun. 2000), 51-57.  http://portal.acm.org/citation.cfm?id=360419
 
