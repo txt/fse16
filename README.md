@@ -54,6 +54,7 @@ making for software projects.
 </td>
 <td valign=top  xwidth="100px">
 
+8. <a href="doc/inc.md">Incremental learning</a><br>
 7. <a href="doc/trees.md">Decision trees</a><br>
 6. <a href="doc/table.md">Tables</a><br>
 5. <a href="doc/stats.md">Stats</a><br>
