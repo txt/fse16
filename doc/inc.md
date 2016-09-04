@@ -12,9 +12,18 @@ _______
 
 # Incremental Learning
 
+## Overview
+
+I used to think that incremental learning was REALLY HARD.
+
+Now I think its just some for-loops around existing learners.
+
+
 How to turn a Naive Bayes classifier into an incremental learner:
 
 + Classify new examples BEFORE adding examples to training set
+
+## Examples
 
 How to turn any learner into an incremental learning (premise: that
 learner stabilizes on new examples faster than mode changes
