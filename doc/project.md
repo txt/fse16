@@ -24,7 +24,7 @@ Anything that supports _science_ and data mining and software engineering. Where
 + explaining new ideas succinctly (feature selection, row selection, visualizations)
       + open issue: does _explaining_ means simplying things so they no logner _perform_ as well
 + sharing new ideas so others can check (packaging
-      + open issue: how to packagge such that most people can use it? Hint: [it ain't easy](https://github.com/SoftwareEngineeringToolDemos/Paper/blob/master/Publication%20-%20Conference%20-%20Tool%20Demos/document.pdf_ Package managers? Virtual machines? Docker? Makefiles? what?
+      + open issue: how to packagge such that most people can use it? Hint: [it ain't easy](https://github.com/SoftwareEngineeringToolDemos/Paper/blob/master/Publication%20-%20Conference%20-%20Tool%20Demos/document.pdf) Package managers? Virtual machines? Docker? Makefiles? what?
 + recognizing when old ideas are not working anymore (manual replication studies, automatic anomaly detection, certification envelopes)
      + open issue: how to reduce the human time, CPU, RAM, disk storage  associated with   these? And what about data privacy?
  + repairing old ideas (stream mining, repair)

@@ -66,6 +66,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
+4. <a href="doc/hw4.md">hw4</a><br>
 3. <a href="doc/project.md">Project notes</a><br>
 2. <a href="doc/hw3.md">hw3</a><br>
 1. <a href="doc/hw2.md">hw2</a><br>
