@@ -31,7 +31,9 @@ Anything that supports _science_ and data mining and software engineering. Where
      + open issue: how?
 
 
-## Verifications
+## Project Ideas (incompelte)
+
+### Verifications
 
 Take any data set and look for instabilities in either:
 
@@ -40,7 +42,7 @@ Take any data set and look for instabilities in either:
 
 across different groupings of the data, or across the same data set at different times.
 
-## Anomaly Detection
+### Anomaly Detection
 
 Write some gizmo that recognizes when new test examples are far away from what has been seen before.
 
@@ -51,7 +53,7 @@ Write some gizmo that recognizes when new test examples are far away from what h
 
 
 
-## Replications
+### Replications
 
 Convert some prior papers into reproduction package (e.g. make them a Pyton Pip Package). Use
 any paper that is interesting but, just a suggestion, use something where you can
