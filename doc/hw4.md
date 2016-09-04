@@ -14,3 +14,12 @@ _______
 
 Write 1 page on what your big project in November. No need to have all the details worked out but
 what are the broad strokes?
+
+Note, there are some project ideas at the [projects](projects.md) page, but don't feel bound by them.
+
+## Nearest neighbor
+
+Using your table class, code up a [mini-batch K-means classifier](http://www.eecs.tufts.edu/~dsculley/papers/fastkmeans.pdf)  and [KD-trees](http://code.activestate.com/recipes/577497-kd-tree-for-nearest-neighbor-search-in-a-k-dimensi/).
+
++ Compare the runtimes between kNN and KD-trees
++ Compare the performance between kNN and KD-trees (does doing it faster mean doing it wrong?)
