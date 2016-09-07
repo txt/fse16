@@ -12,7 +12,7 @@ _______
 
 # Review 3
 
-## Spatial TRees
+## Spatial Trees
 
 Spatial  tree use some _measure of confusion_ M to _split_ S the data, the recurse on each split
 till some _halting_ H criteria is meet, after which some _condensation_ operator C is applied
@@ -25,9 +25,9 @@ to the summarize the leaf splits. Describe M,S,H,C for
 - X Tree. Hint: this is a generalization of NB tree
 - PDDP: Hint. PCA:
 
-[!](https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg)
+![](https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg)
 
-
+BTW, for more on spatial trees, see [http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.226.5060]
 ## Random Forests
 
 What is the difference between a spatial tree learner and a random forest?
