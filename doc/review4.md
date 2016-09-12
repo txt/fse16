@@ -162,19 +162,33 @@ List some magic tuning parameters for
 - Decision tree learners
 - Random forests
 
-Here's pseudo-code for an optimizer called differential evolution (fyi- a [full working version](https://github.com/txt/ase16/blob/master/src/ase.py#L1209-L1235) is on-line):
+Here's pseudo-code for an optimizer called differential evolution (fyi- a
+[full working version](https://github.com/txt/ase16/blob/master/src/ase.py#L1209-L1235)
+is on-line). In summary:
+
+- Run over a population _pop_ of possibilities
+- At each step, build a new possibility by smearing together
+  three old possibilities
+- If new better than old, replace old in _pop_.
+
+This means that, as the search progress, we are building new
+ideas from old ideas that are growing steadily better and better.
+
 
 ```python
 def any(n)       : # returns a number 0.... n-1
 def ok(x)        : # returns true of false if the decisions in x are value
 def score(x)     : # returns 1 or more objective scores for decisions in x
 def better(this,that): # return True if this is  preferred to that
+
 #-------------------------------------------------------------
 cf          = 0.5 # probability of crossing over during mutation
 f           = 0.5 # how "far" we cross over
-generations = 25
-np          = decisions*10
+generations = 100 # default. may be smaller or larger
+np          = decisions*10 # the recommended size
 budget      = np*generations  # when to stop
+
+#------------------------------------------------------------
 pop         = [ anything() for _ in 1,np ]
 scores      = { id(x) : score(x) for x in pop }
 while budget > 0:
@@ -190,7 +204,7 @@ while budget > 0:
     j = any(decisions)
     kid[j] = mum[j] # mum has at least one item from kid
     if ok(kid):
-      scores[id(kid)] = score(kid)
+      scores[ id(kid) ] = score(kid)
       budget = budget - 1 
       if better(kid, mum):
          pop[i] = kid
@@ -203,6 +217,8 @@ we consider each objective _x,y_ indivdually in _this_ and _that_
 and look at what at _loss_ if we travel from _this_ to _that_
 versus _that_ to _this_ (and the one we prefer is the one
 that _loss_es least).
+
+Formally, this is a domination test across the Pareto frontier.
 
 - First, we normalize _x,y_ to  0..1
 - Then we adjust the direction of the comparison depending on
@@ -239,4 +255,12 @@ def expLoss(i,x1,y1,n):
   return -1*math.e**( w*(x1 - y1) / n )
   
 ```      
-       
+
+Questions:
+
+- In the above, what would be one item in the frontier when tuning
+  a data miner?
+- What is the [Fu result](http://arxiv.org/abs/1609.01759)
+  regarding tuning and defect prediction?
+- What is the [Agrawal result](http://arxiv.org/abs/1608.08176)
+  regarding tuning and text mining? 
