@@ -182,8 +182,8 @@ def score(x)     : # returns 1 or more objective scores for decisions in x
 def better(this,that): # return True if this is  preferred to that
 
 #-------------------------------------------------------------
-cf          = 0.5 # probability of crossing over during mutation
-f           = 0.5 # how "far" we cross over
+cf          = 0.3 # probability of crossing over during mutation
+f           = 0.7 # how "far" we cross over
 generations = 100 # default. may be smaller or larger
 np          = decisions*10 # the recommended size
 budget      = np*generations  # when to stop
@@ -197,17 +197,19 @@ while budget > 0:
     kid   = mum[:]  # copy dad
     for j,(a1,b1,c1) in enumerate( zip(a,b,c) ):
        if rand() >  cf:
-          if isa(a1,float):  
+          if isa(a1,float): 
              kid[j]  = a1 + f*(b1-c1)
          else:
              kid[j]  = a1 if r() > f else (b1 if r() > f else c1)    
     j = any(decisions)
     kid[j] = mum[j] # mum has at least one item from kid
     if ok(kid):
-      scores[ id(kid) ] = score(kid)
-      budget = budget - 1 
-      if better(kid, mum):
+       scores[ id(kid) ] = score(kid)
+       if better(kid, mum):
          pop[i] = kid
+       budget = budget - 1
+       if budget < 1:
+          break  
 return pop
 ```
 
