@@ -54,6 +54,8 @@ making for software projects.
 </td>
 <td valign=top  xwidth="100px">
 
+10. <a href="http://www.cs.waikato.ac.nz/~remco/weka.bn.pdf">Bayes nets</a>
+9. <a href="doc/bayes.md">Bayes classifiers</a><br>
 8. <a href="doc/inc.md">Incremental learning</a><br>
 7. <a href="doc/trees.md">Decision trees</a><br>
 6. <a href="doc/table.md">Tables</a><br>
@@ -66,6 +68,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
+5. <a href="doc/hw4.md">hw5</a><br>
 4. <a href="doc/hw4.md">hw4</a><br>
 3. <a href="doc/project.md">Project notes</a><br>
 2. <a href="doc/hw3.md">hw3</a><br>
