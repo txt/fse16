@@ -55,7 +55,7 @@ making for software projects.
 <td valign=top  xwidth="100px">
 
 
-9. <a href="doc/bayes.md">Bayes classifiers</a><br>
+9. <a href="doc/nb.md">Bayes classifiers</a><br>
 8. <a href="doc/inc.md">Incremental learning</a><br>
 7. <a href="doc/trees.md">Decision trees</a><br>
 6. <a href="doc/table.md">Tables</a><br>
