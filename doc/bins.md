@@ -88,7 +88,11 @@ Some details on cliff learning (from https://list.scms.waikato.ac.nz/pipermail/w
 
 Example, FayyadIrani discretizer (widely used). Splits on InfoGain
 
+**BEFORE:**
+
 ![before](../img/diabetes0.png)
+
+**AFTER:**
 
 ![before](../img/diabetes1.png)
 
