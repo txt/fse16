@@ -15,7 +15,7 @@ Pre-processing of numerics. Also, half way to an explanation facility.
 - Not every learning can handle numerics
 - Not every learning can handle numerics very well
 - Discretization: convert numbers to a finite number of bins.
-- Simple schemes (like nbins), are surprisingly effective (see [Dougherty95]("http://robotics.stanford.edu/users/sahami/papers-dir/disc.pdf).
+- Simple schemes (like nbins), are surprisingly effective (see [Dougherty95](http://robotics.stanford.edu/users/sahami/papers-dir/disc.pdf).
 - E.g. really helps for NaiveBayes.
 
 Two kinds of discretization (from Dougherty95 ): Supervised and Unsupervised
