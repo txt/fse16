@@ -86,9 +86,9 @@ making for software projects.
 
 </td><td valign=top><small>
 
-4. <a href="http://sci2s.ugr.es/keel/pdf/algorithm/congreso/fayyad1993.pdf">Discretization2</a>
-3. <a href="http://robotics.stanford.edu/users/sahami/papers-dir/disc.pdf">Discretization1</a>
-4. <a href="http://menzies.us/pdf/05sawtooth.pdf">Anomaly detection</a>
+4. <a href="http://sci2s.ugr.es/keel/pdf/algorithm/congreso/fayyad1993.pdf">Discretization2</a><br>
+3. <a href="http://robotics.stanford.edu/users/sahami/papers-dir/disc.pdf">Discretization1</a><br>
+4. <a href="http://menzies.us/pdf/05sawtooth.pdf">Anomaly detection</a><br>
 1. <a href="http://www.cs.waikato.ac.nz/~remco/weka.bn.pdf">Bayes nets</a>
 </td>
 </tr></table>
