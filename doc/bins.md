@@ -131,10 +131,10 @@ When should we recreate layer2? Here are three policies:
     rebuild layer2. If we have seen "n" examples, and our bins have min
     and max counts of "cmin" and "cmax" then rebuild layer2 when we see
     an interval with:
-    -   count below (1-Î²)\*cmin/n or
-    -   count above (1+Î²)\*cmax/n
+    -   count below (1-&alpha;)\*cmin/n or
+    -   count above (1+&alpha;)\*cmax/n
 
-    Gama and Pinto comment that Î²=1/100 seems to be a useful value.
+    Gama and Pinto comment that &alpha;=1/100 seems to be a useful value.
 -   For other discretization policies, recreate layer2 after seeing N
     examples (say, N=100).
 
@@ -178,8 +178,8 @@ than no one cares:
          } 
       }   
       NrB = NrB + 1 
-    } 
-    ```
+  }
+```
     
 ## Applications of Incremental Discretization: Anomaly Detection and Repair
 
