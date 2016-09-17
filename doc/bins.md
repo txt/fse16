@@ -10,7 +10,7 @@ _______
 
 # Discretization
 
-Pre-processing of numerics.
+Pre-processing of numerics. Also, half way to an explanation facility.
 
 - Not every learning can handle numerics
 - Not every learning can handle numerics very well
@@ -205,18 +205,6 @@ Fuse numeric bins whose min and max values differences are _tiny_.
 
 - Cohen's rule : small effect if (max - min) less that less than 30\% of standard deviation
 
-Only show ranges that change the target class distribution
-
-- i.e. apply FayyadIrani
-- BTW, when implementing FayyadIrani,
-     - sort data only once they keep the sort order
-       in all recursive parts
-     - At each level of the recursion, run _once_ over the numbers to learn _all_ the stats. Then run _twice_ from left to right, incrementally accumulating to _left_ while incrementally decrementing to the _right_ (saves multiple passes, but needs an `add` and a `sub` on `Num` class)
-     - Do not create _tiny_ bins
-     - Set a minimum _enough_ size for a bin (same, sqrt of the data).
-     - Only recursively divide if the expected value of variability after the split is less
-       than before.
-     - Before recursion, check the FayyadIrani information theory statistic.
      
 Only show users _sharp_ and _relevant_ ranges:
 
@@ -233,6 +221,20 @@ Applications to clustering
 - Cluster, mark each cluster class1,class2, etc
 - Apply Fayyad Irrani
 - Apply the above rules to show very few parts of very few clusters.
+
+Only show ranges that change the target class distribution
+
+- i.e. apply FayyadIrani
+- BTW, when implementing FayyadIrani,
+     - sort data only once they keep the sort order
+       in all recursive parts
+     - At each level of the recursion, run _once_ over the numbers to learn _all_ the stats. Then run _twice_ from left to right, incrementally accumulating to _left_ while incrementally decrementing to the _right_ (saves multiple passes, but needs an `add` and a `sub` on `Num` class)
+     - Do not create _tiny_ bins
+     - Set a minimum _enough_ size for a bin (same, sqrt of the data).
+     - Only recursively divide if the expected value of variability after the split is less
+       than before.
+     - Before recursion, check the FayyadIrani information theory statistic.
+
 
 In the following, how many of the above rules can you find:
 
