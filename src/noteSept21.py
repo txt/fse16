@@ -25,6 +25,47 @@ def row_distance(self, row1, row2) :
         return math.sqrt(distance)
 
 
+###########
+# can i do this easier?
+
+
+ def find_nearest(self, row) :
+        nearest = None
+        distance = sys.maxint
+        for r in self.rows:
+            if r != row:
+                current_distance = self.row_distance(row, r)
+                if distance >= current_distance:
+                    nearest = r
+                    distance = current_distance
+        return nearest
+        
+    def find_furthest(self, row) :
+        furthest = None
+        distance = -sys.maxint - 1
+        for r in self.rows:
+            if r != row:
+                current_distance = self.row_distance(row, r)
+                if distance <= current_distance:
+                    furthest = r
+                    distance = current_distance
+        return furthest
+
+
+
+  def furthest(i,r1,cols=None,f=None, better=more,init= -1,ignore=set()):
+    out,d = r1,init
+    for r2 in i._rows:
+      if r1.rid != r2.rid:
+        if not r2 in ignore:
+          tmp = i.distance(r1,r2,cols,f)
+          if better(tmp, d):
+            out,d = r2,tmp
+    return out
+    
+  def closest(i,r1,cols=None,f=None,ignore=set()):
+    return i.furthest(r1,cols=cols,f=f,better=less, init=10**32,ignore=ignore)        
+
 
 # ##########
 # faster equality test
