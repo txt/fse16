@@ -95,4 +95,51 @@ class Row(Pretty):
   def __hash__(i)       : return i.rid #hash(set(i.contents))
   def __eq__(i,j)       : return i.rid == j.rid
   def __ne__(i,j)       : return not i.__eq__(j)
+  
+##########################
+# why convenince lists
 
+
+  def add( self, x):
+    if( self.invalid ) :
+      return 
+
+    try :
+      x = float(x)
+    except Exception:
+      self.invalid = True
+      return
+
+    self.n += 1
+    self.max = max( self.max, x )
+    self.min = min( self.min, x )
+
+    delta    = x - self.mu
+    self.mu  += delta/self.n
+    self.m2  += delta*(x - self.mu)
+    return x 
+
+# e: ech column is a thing whose "my" initializes to None
+# if my is None, then work out type and the right thing
+# if mu is not Noen then fast to work out
+
+class Thing(Summary):
+  "some thing that can handle  Nums or Syms"
+  UNKNOWN = "?"
+  def __init__(i,pos,txt=None):
+    txt = txt or pos
+    i.txt, i.pos, i.my, i.samples = str(txt), pos, None, Sample()
+  def sample(i):
+    return i.samples.sample()
+  def add(i,x):
+    if x != Thing.UNKNOWN:
+      if i.my is None:
+        x,what  = atom2(x)
+        i.my = what() # Num() or Sym()
+      x = i.my.add(x)
+      i.samples.add(x)
+    return x
+    
+def atom2(x)  :
+  try: return float(x),Num
+  except ValueError: return x,Sym
