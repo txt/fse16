@@ -122,7 +122,7 @@ Grades will be added together using:
 + Paper (on the software science): 15
 + Big project (on software s): 23 (essay) 7 (presentation)
 
-The mid-term exam will be held on Tuesday October 18
+The mid-term exam will be held on Wednesday October 19
 
 
 The final exam will be held on Monday December 12
