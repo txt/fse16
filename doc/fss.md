@@ -11,7 +11,17 @@ _______
 
 # Feature and Instance Selection
 
--   Occam's Razor - The English philosopher, William of
+Timm's rule: the best thing to do with data is to throw most of it away.
+
+- Simpler models,
+- Quicker to explain, audit
+- Less work for anything down stream that has to watch or act on any
+  variable
+
+
+Occam's Razor
+
+-   English philosopher, William of
     Occam (1300-1349) propounded Occam's Razor:
     -   Entia non sunt multiplicanda praeter necessitatem.
     -   (Latin for "Entities should not be multiplied more
@@ -421,6 +431,12 @@ Best or rest
           that rewards things that occur more often
 - in the usual case, very rew ranges with `b > r`
 
+Generate rules using just the ranges with s>0
+
+- The [TAR2 treatment learner](http://menzies.us/pdf/03tar2.pdf)
+- When compared to [state-of-the-art optimizer](http://menzies.us/pdf/03tar2.pdf), does better. Application: optimizing rocket re-entry tactics.
+        - G. Gay, T. Menzies, M. Davies, and K. Gundy-Burlet. [Automatically finding the control variables for complex system behavior](http://www.greggay.com/pdf/10tar3.pdf) Automated Software Engineering 17(4), December 2010, pp 439-468.
+ 
 ## Instance Selection
 
 ### Prototype Selection with Clusters
