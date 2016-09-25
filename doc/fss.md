@@ -428,7 +428,7 @@ Best or rest
 - Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.
 - Step2: Cluster: return one example pre centroid.
 
-![](../img/cluster.png)
+![](../img/clusters.png)
 
 Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows
 
