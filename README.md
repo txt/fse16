@@ -55,6 +55,7 @@ making for software projects.
 <td valign=top  xwidth="100px">
 
 
+11. <a href="doc/fss.md">Data reduction</a><br>
 10. <a href="doc/bins.md">Discretization</a><br>
 9. <a href="doc/nb.md">Bayes classifiers</a><br>
 8. <a href="doc/inc.md">Incremental learning</a><br>
@@ -79,7 +80,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
-3. <a href="doc/review5.md">Review5</a><br>
+4. <a href="doc/review5.md">Review5</a><br>
 3. <a href="doc/review4.md">Review4</a><br>
 2. <a href="doc/review3.md">Review3</a><br>
 1. <a href="doc/review2.md">Review2</a>
