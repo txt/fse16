@@ -54,6 +54,9 @@ making for software projects.
 </td>
 <td valign=top  xwidth="100px">
 
+
+10. <a href="doc/bins.md">Discretization</a><br>
+9. <a href="doc/nb.md">Bayes classifiers</a><br>
 8. <a href="doc/inc.md">Incremental learning</a><br>
 7. <a href="doc/trees.md">Decision trees</a><br>
 6. <a href="doc/table.md">Tables</a><br>
@@ -66,6 +69,8 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
+6. <a href="doc/hw6.md">hw6</a><br>
+5. <a href="doc/hw5.md">hw5</a><br>
 4. <a href="doc/hw4.md">hw4</a><br>
 3. <a href="doc/project.md">Project notes</a><br>
 2. <a href="doc/hw3.md">hw3</a><br>
@@ -74,14 +79,17 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
-
+3. <a href="doc/review5.md">Review5</a><br>
+3. <a href="doc/review4.md">Review4</a><br>
 2. <a href="doc/review3.md">Review3</a><br>
 1. <a href="doc/review2.md">Review2</a>
 
-
-
 </td><td valign=top><small>
 
+4. <a href="http://sci2s.ugr.es/keel/pdf/algorithm/congreso/fayyad1993.pdf">Discretization2</a><br>
+3. <a href="http://robotics.stanford.edu/users/sahami/papers-dir/disc.pdf">Discretization1</a><br>
+2. <a href="http://menzies.us/pdf/05sawtooth.pdf">Anomaly detection</a><br>
+1. <a href="http://www.cs.waikato.ac.nz/~remco/weka.bn.pdf">Bayes nets</a>
 </td>
 </tr></table>
 
