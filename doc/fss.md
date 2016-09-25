@@ -378,5 +378,95 @@ Other methods not explored by Hall and Holmes...
     -   The amount by which this new error exceeds the original test set
         error is defined as the importance of the mth variable.
 -   Use the Nomogram scores
-    [![](../img/nomofss.png)](../img/nomofss.png)
+
+## Range Selection
+
+From before: use only sharp and relevant ranges.
+
+Using [Nomograms](http://www.saedsayad.com/docs/Nomograms.pdf)
+
+- Martin Možina, Janez Demšar, Michael Kattan, and Blaž Zupan. 2004. 
+       Nomograms for visualization of naive Bayesian classifier. In Proceedings of the 
+       8th European Conference on Principles and Practice of Knowledge Discovery in Databases (PKDD '04)
+- if there are two classes _best_ and _rest_ with `B` and `R` examples
+- and `x` occurs  with frequency `n1,n2` in `B,R` 
+- then the odds of `x` in _best_ and _rest_ are `b=n1/B` and `r=n2/R`
+- then the log of the odds ratio LOR = 0 if `b &le; r` else `log(b/r)`
+- and if we normalize LOR to 0,1 min,max
+- then we can draw some pretty diagrams and do some simple `what if` queries:
+
+[![](../img/nomo1.png)](../img/nomo1.png)
+  
+- The reverse function LOR to  probability with a class occuring a probability `p`
+is:
+
+```
+function points2p(lor, p) { 
+    E = 2.7182818285
+    return 1 / (1 + E^(-1*log(p/(1 - p)) - lor )) }
+```
+
+Many variables have [low nomogram scores https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png
+
+Best or rest
+
+- given a numeric class, sort the values then divide them into 90% rest
+  and 10% best.
+- if there are two classes _best_ and _rest_ with `B` and `R` examples
+- and `x` occurs  with frequency `n1,n2` in `B,R`
+- then the odds of `x` in _best_ and _rest_ are `b=n1/B` and `r=n2/R`
+- then we "like" x at strength 
+       - `s= b^2/(b+r) if b > r else 0`
+        - the `b^2`  term muliples Bayes odds `b/(b+r)` times a support term
+          that rewards things that occur more often
+- in the usual case, very rew ranges with `b > r`
+
+## Instance Selection
+
+### Active Learning with Quick
+
+Experimental technique. Works well with small data sets.
+
+Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013. 
+[Active Learning and Effort Estimation: Finding the Essential Content of Software Effort Estimation Data](../pdf/active.pdf)
+IEEE Trans. Softw. Eng. 39, 8 (August 2013), 1040-1053. 
+
+QUICK is an active learning method that assists in reducing the
+complexity of data interpretation by identifying the essential
+content of SEE datasets. QUICK works as follows:
+
+1. Group rows and columns by their similarity;
+2. Discard redundant columns (synonyms) that are too similar;
+3. Sort rows by their outlier score (i.e. ones that are too distant);
+4. Ask expert's opinion about sorted rows 1..x
+5. Run CART on 1..x then check estimates on rows x+1...x+5.
+6. Stop when accuracy no longer improves  
+
+Details
+
+- Input data matrix D (`D` may not have 
+- Normalized all ranges min..max, 0..1
+- Discard redundant columns (those that repeat information in other columns)
+     - Transpose matrix (columns become rows);      
+       `D1 = transpose(D)`
+     - Compute RNN = reverse nearest neighbor score  between "rows"
+       (count `popularity`; i.e. how often row X is someone else's nearest neighbor)
+     - Reject the popular columns (contain repeated information)    
+       `D2 = reject(D1)`
+- Discard outlier rows (those taht are too wierd)
+     - Transpose matrix (now columns are columns again);     
+       `D3 = transpose(D2)`
+     - Compute row popularity again
+     - sort the rows by their popularity (most popular ones are most informative)    
+       `D4 = sort(D3)`
+- Ask in sorted order
+
+
+![](../img/quick1.png)
+
+![](../img/quick2.png)
+
+
+### Prototype Selection
+
 
