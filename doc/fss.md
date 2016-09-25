@@ -406,7 +406,7 @@ function points2p(lor, p) {
     return 1 / (1 + E^(-1*log(p/(1 - p)) - lor )) }
 ```
 
-Many variables have [low nomogram scores https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png
+Many variables have [low nomogram scores](https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png)
 
 Best or rest
 
@@ -423,11 +423,29 @@ Best or rest
 
 ## Instance Selection
 
+### Prototype Selection with Clusters
+
+- Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.
+- Step2: Cluster: return one example pre centroid.
+
+![](../img/cluster.png)
+
+Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows
+
+![](../img/fssvasil.png)
+
+For many data sets:
+
+![](../img/reductions.png)
+
+Note that for classification by weighted scores from 2 nearest neighbors,
+the reduced data as accurate as the full data.
+
 ### Active Learning with Quick
 
-Experimental technique. Works well with small data sets.
+Estimation data sets (a few dozen rows)
 
-Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013. 
+- Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013. 
 [Active Learning and Effort Estimation: Finding the Essential Content of Software Effort Estimation Data](../pdf/active.pdf)
 IEEE Trans. Softw. Eng. 39, 8 (August 2013), 1040-1053. 
 
@@ -461,11 +479,13 @@ Details
        `D4 = sort(D3)`
 - Ask in sorted order
 
+Results: #1:  Need data on just a few projects
 
 ![](../img/quick1.png)
 
-![](../img/quick2.png)
+Results #2: uses very little of the data.
 
+![](../img/quick2.png)
 
 ### Prototype Selection
 
