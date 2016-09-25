@@ -33,7 +33,7 @@ The case for FSS
 
 Repeated result: throwing out features rarely damages a theory
 
-[![](../doc/fsses.gif)](../doc/fsses.gif)
+[![](../img/fsses.gif)](../img/fsses.gif)
 
 And, sometimes, feature removal is very useful:
 
