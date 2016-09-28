@@ -15,7 +15,7 @@ _______
 ## Descritization
 
 - Implement equal-width discretization in your `Num` class
-- Implement equal-size descritzation in your `Sym` class
+- Implement equal-size descritzation in your `Num` class
 - For five data sets, check the Doughery et al. result; i.e.
      - Discretization rarely hurts NB
      - Sometimes, discretization really helps NB.
