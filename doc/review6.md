@@ -78,8 +78,8 @@ Normalize all numbers by subtracting the mean and dividing by the standard devia
 Then divide the numbers according to the desired number of bins using breaks take from
 the following table.
 
-    bins                        breaks
-  ---- -------------------------------------------------
+      bins                        breaks
+      ---- -------------------------------------------------
       2:                           0                    
       3:                     -0.43   0.43               
       4:                     -0.67 0 0.67               
