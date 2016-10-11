@@ -55,6 +55,8 @@ making for software projects.
 <td valign=top  xwidth="100px">
 
 
+13. <a href="https://docs.google.com/presentation/d/1bIv1xRsMOckDUi345CZGkKgYng9M4IqHzk5_4iDGaM8/edit#slide=id.g179ee7cef2_0_14">Privacy</a></br>
+12. <a href="http://www.slideshare.net/timmenzies/msr13-mistake">Mistakes</a></br>
 11. <a href="doc/fss.md">Data reduction</a><br>
 10. <a href="doc/bins.md">Discretization</a><br>
 9. <a href="doc/nb.md">Bayes classifiers</a><br>
