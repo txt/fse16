@@ -55,6 +55,7 @@ making for software projects.
 <td valign=top  xwidth="100px">
 
 
+14. <a href="https://github.com/txt/mase/blob/master/transfer.md">Defect prediction</a><br>
 13. <a href="https://docs.google.com/presentation/d/1bIv1xRsMOckDUi345CZGkKgYng9M4IqHzk5_4iDGaM8/edit?usp=sharing">Privacy</a><br>
 12. <a href="http://www.slideshare.net/timmenzies/msr13-mistake">Mistakes</a></br>
 11. <a href="doc/fss.md">Data reduction</a><br>
@@ -84,6 +85,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
+6. <a href="doc/review7.md">Review7</a><br>
 5. <a href="doc/review6.md">Review6</a><br>
 4. <a href="doc/review5.md">Review5</a><br>
 3. <a href="doc/review4.md">Review4</a><br>
