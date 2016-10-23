@@ -10,11 +10,28 @@ _______
 
 # Visualizations
 
+## Overview
+
+This talk: an attempt at offering guidelines for visual communication for
+software science.
+
+## Notes
+
+"Just add a graphic" is never _just_.
+When writing papers, even the smallest graphic is hours of work and rework
+to tune the graphic and the text into the overall story of the paper.
+
+And we've seen how... variable... graphics can be:
+
+![](../img/vis/thediagram.png)
+
+Other examples:
+
 <img width=800 src="../img/manhatten.png">
 
 <a href="../img/galielo.jpg"><img width=300 align=right src="../img/galileo.jpg"></a>
 
-My fav visualizations:
+## My fav visualizations
 
 - Galileo's lack-of-seperation of text and graphics (at  right: observations
   of Jupiter 15th-century)
@@ -45,7 +62,9 @@ Explanations and Explorations are an inference procedure that must be tuned to:
 - the goals of the inference
 - the background knowledge of the inference.
 
-So when we do visualizations, what are the tricks to add in
+## Exercise1
+
+When we do visualizations, what are the tricks to add in
 "the story" to the picture? There is no easy, or short, answer
 this question. So we will other questions:
 
@@ -59,3 +78,11 @@ to reverse engineering a list of useful operators for improving
 visualizations.
 
 Ready? [Go!](../img/vis).
+
+## Exercise2
+
+What are
+
+- The principles of software science?
+- How might they lend themselves to visual components?
+
