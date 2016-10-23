@@ -25,9 +25,6 @@ And we've seen how... variable... graphics can be:
 
 ![](../img/vis/thediagram.png)
 
-Other examples:
-
-<img width=800 src="../img/manhatten.png">
 
 <a href="../img/galielo.jpg"><img width=300 align=right src="../img/galileo.jpg"></a>
 
@@ -39,9 +36,12 @@ Other examples:
 - Anything by Edward Tufte:
       - an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. 
       - noted for his writings on information design and as a pioneer in the field of data visualization. 
+      - One of this principles is "to clarify, add details". Eg. Manhatten map, below.
       - <object data="../img/tufte.pdf" type="application/pdf" width="800" >
-        See slides 1..53 of <a href="../img/tufte.pdf">this lecture on Edward 
+        For other Tufte principles, see slides 1..53 of <a href="../img/tufte.pdf">this lecture on Edward 
         Tufte</a></object>
+
+<img width=800 src="../img/manhatten.png">
 
 ## Some Rules of Thumb
 
