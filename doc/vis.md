@@ -16,6 +16,12 @@ Papers containing _"N"_ visualizations contain at least three types:
 - Conclusive: pictures that lead to some conclusion;
 - Silly:  pointless, waste of ink
 
+
+
+<object data="tufte.pdf" type="application/pdf" width="800" >
+  <p>Alternative text - include a link <a href="tufte.pdf">to the PDF!</a></p>
+  </object>
+
 ## Conclusive
 
 Conclusive
