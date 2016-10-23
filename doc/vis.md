@@ -10,21 +10,32 @@ _______
 
 # Visualizations
 
+My fav visualizations:
+
+- First six minutes of [Hans Rosling's the best stats you've ever seen](https://www.youtube.com/watch?v=hVimVzgtD6w)
+- Anything by Edward Tufte:
+      - an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. 
+      - noted for his writings on information design and as a pioneer in the field of data visualization. 
+      - <object data="../img/tufte.pdf" type="application/pdf" width="800" >
+        See slides 1..53 of <a href="../img/tufte.pdf">this lecture on Edward 
+        Tufte</a></object>
+
+## Some Rules of Thumb
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/s5GMZVDXKVWJIV" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/idigdata/data-visualization-best-practices-2013" title="Data Visualization Best Practices 2013" target="_blank">Data Visualization Best Practices 2013</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/idigdata">Jen Underwood</a></strong> </div>
+
+## Types of Papers
+
 Papers containing _"N"_ visualizations contain at least three types:
 
-- Expositional: illustrations or elaborations of some point;
-- Conclusive: pictures that lead to some conclusion;
+- Explanation: illustrations or elaborations of some point;
+- Exploration: pictures that lead to some conclusion;
 - Silly:  pointless, waste of ink
 
 
 ## Tufte
 
-Edward Rolf Tufte is an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. He is noted for his writings on information design and as a pioneer in the field of data visualization. 
 
-<object data="../img/tufte.pdf" type="application/pdf" width="800" >
-  <p>See slides 1..53 of <a href="../img/tufte.pdf">this lecture on Edward 
-  Tufte</a></p>
-  </object>
 
 ## Conclusive
 
