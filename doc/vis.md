@@ -26,7 +26,7 @@ And we've seen how... variable... graphics can be:
 ![](../img/vis/thediagram.png)
 
 
-<a href="../img/galielo.jpg"><img width=300 align=right src="../img/galileo.jpg"></a>
+<a href="../img/galileo.jpg"><img width=300 align=right src="../img/galileo.jpg"></a>
 
 ## My fav visualizations
 
