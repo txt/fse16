@@ -17,9 +17,13 @@ Papers containing _"N"_ visualizations contain at least three types:
 - Silly:  pointless, waste of ink
 
 
+## Tufte
+
+Edward Rolf Tufte is an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. He is noted for his writings on information design and as a pioneer in the field of data visualization. 
 
 <object data="../img/tufte.pdf" type="application/pdf" width="800" >
-  <p>Alternative text - include a link <a href="../img/tufte.pdf">to the PDF!</a></p>
+  <p>See slides 1..53 of <a href="../img/tufte.pdf">this lecture on Edward 
+  Tufte</a></p>
   </object>
 
 ## Conclusive
