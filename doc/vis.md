@@ -18,8 +18,8 @@ Papers containing _"N"_ visualizations contain at least three types:
 
 
 
-<object data="tufte.pdf" type="application/pdf" width="800" >
-  <p>Alternative text - include a link <a href="tufte.pdf">to the PDF!</a></p>
+<object data="../img/tufte.pdf" type="application/pdf" width="800" >
+  <p>Alternative text - include a link <a href="../img/tufte.pdf">to the PDF!</a></p>
   </object>
 
 ## Conclusive
