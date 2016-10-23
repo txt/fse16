@@ -34,15 +34,9 @@ Papers containing _"N"_ visualizations contain at least three types:
 - Exploration: pictures that lead to some conclusion;
 - Silly:  pointless, waste of ink
 
+## Explorations
 
-## Tufte
-
-
-
-## Conclusive
-
-Conclusive
-explanations are an inference procedure that must be tuned to:
+Explorations are an inference procedure that must be tuned to:
 
 - the goals of the inference
 - the background knowledge of the inference.
