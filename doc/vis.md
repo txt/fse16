@@ -10,8 +10,14 @@ _______
 
 # Visualizations
 
+<img width=800 src="../img/manhatten.png">
+
+<a href="../img/galielo.jpg"><img width=300 align=right src="../img/galileo.jpg"></a>
+
 My fav visualizations:
 
+- Galileo's lack-of-seperation of text and graphics (at  right: observations
+  of Jupiter 15th-century)
 - First six minutes of [Hans Rosling's the best stats you've ever seen](https://www.youtube.com/watch?v=hVimVzgtD6w)
 - Anything by Edward Tufte:
       - an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. 
@@ -34,19 +40,19 @@ Papers containing _"N"_ visualizations contain at least three types:
 - Exploration: pictures that lead to some conclusion;
 - Silly:  pointless, waste of ink
 
-## Explorations
-
-Explorations are an inference procedure that must be tuned to:
+Explanations and Explorations are an inference procedure that must be tuned to:
 
 - the goals of the inference
 - the background knowledge of the inference.
 
 So when we do visualizations, what are the tricks to add in
 "the story" to the picture? There is no easy, or short, answer
-this question. So we will ask another question:
+this question. So we will other questions:
 
 - Given a visualization, what change could be made to make
-  the explanation worse/better?
+  the exploration/exploration worse/better?
+- For explorations, what additional _questions_ are raised by the visualization
+  that might inform future analysis?
 
 In the following, we apply this test to _"N"_ visualizations
 to reverse engineering a list of useful operators for improving
