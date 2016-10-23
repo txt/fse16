@@ -22,6 +22,8 @@ My fav visualizations:
 
 ## Some Rules of Thumb
 
+<a href="http://img.labnol.org/di/data-chart-type.png"><img src="http://img.labnol.org/di/data-chart-type.png" width=800></a>
+
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/s5GMZVDXKVWJIV" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/idigdata/data-visualization-best-practices-2013" title="Data Visualization Best Practices 2013" target="_blank">Data Visualization Best Practices 2013</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/idigdata">Jen Underwood</a></strong> </div>
 
 ## Types of Papers
