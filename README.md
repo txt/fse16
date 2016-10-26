@@ -74,7 +74,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
-6. <a href="doc/hw8.md">hw8</a><br>
+8. <a href="doc/hw8.md">hw8</a><br>
 7. <a href="doc/hw7.md">hw7</a><br>
 6. <a href="doc/hw6.md">hw6</a><br>
 5. <a href="doc/hw5.md">hw5</a><br>
@@ -86,6 +86,7 @@ making for software projects.
 
 </td><td valign=top xwidth="100px">
 
+7. <a href="doc/review8.md">Review8</a><br>
 6. <a href="doc/review7.md">Review7</a><br>
 5. <a href="doc/review6.md">Review6</a><br>
 4. <a href="doc/review5.md">Review5</a><br>
