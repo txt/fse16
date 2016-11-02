@@ -55,6 +55,7 @@ making for software projects.
 <td valign=top  xwidth="100px">
 
 
+16. <a href="doc/ethics.md">Ethics</a><br>
 15. <a href="doc/vis.md">Visualizations</a><br>
 14. <a href="https://github.com/txt/mase/blob/master/transfer.md">Defect prediction</a><br>
 13. <a href="https://docs.google.com/presentation/d/1bIv1xRsMOckDUi345CZGkKgYng9M4IqHzk5_4iDGaM8/edit?usp=sharing">Privacy</a><br>
