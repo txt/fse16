@@ -3,7 +3,7 @@
 [overview](https://github.com/txt/fss16/blob/master/doc/overview.md) |
 [syllabus](https://github.com/txt/fss16/blob/master/doc/syllabus.md) |
 [src](https://github.com/txt/fss16/blob/master/src) |
-[submit](http://tiny.cc/fss2016give) |
+[submit](http://tiny.cc/fss2016give) |    
 [chat](https://fss16.slack.com/) 
 
 _______
