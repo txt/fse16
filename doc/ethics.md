@@ -12,7 +12,7 @@ _______
 
 # Ethics
 
-"Software engineers generate options faster than society can recognize,  faster than lawyers can understand, and faster than courts can react. While everyone else catches up, it will be up to use to fret and worry and decide what options are (are not) imposed on society. And understand this-- when the world does catch up, they may question, condone, even prosecute those decisions."   
+"Software engineers generate options faster than society can recognize,  faster than lawyers can understand, and faster than courts can react. While everyone else catches up, it will be up to us to fret and worry and decide what options are (are not) imposed on society. And know this-- when the world does catch up, they may question, condone, even prosecute our decisions."   
 -- timm
 
 Before we begin (from the Markkula Center for Applied Ethics):
