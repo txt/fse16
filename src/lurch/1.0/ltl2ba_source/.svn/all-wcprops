@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/LICENSE
+END
+rewrt.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/rewrt.c
+END
+cache.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/cache.c
+END
+alternating.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/alternating.c
+END
+parse.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/parse.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/README
+END
+mem.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/mem.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/main.c
+END
+ltl2ba.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/ltl2ba.h
+END
+trans.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/trans.c
+END
+lex.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/lex.c
+END
+generalized.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/generalized.c
+END
+buchi.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/buchi.c
+END
+set.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/set.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/wisp/!svn/ver/951/tags/lurch/1.0/ltl2ba_source/Makefile
+END
